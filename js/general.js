@@ -3,19 +3,19 @@
   
     // đang có bug
     // Thanh NAV Khi Cuộn
-    // var prevScrollpos = window.pageYOffset;
-    // window.addEventListener("scroll", function () {
-    //   var currentScrollPos = window.pageYOffset;
-    //   var header = document.getElementById("header");
-    //   if (prevScrollpos > currentScrollPos) {
-    //     header.style.transform = "translateY(0)";
-    //     header.style.opacity = "1";
-    //   } else {
-    //     header.style.transform = "translateY(-100%)";
-    //     header.style.opacity = "0";
-    //   }
-    //   prevScrollpos = currentScrollPos;
-    // });
+    var prevScrollpos = window.pageYOffset;
+    window.addEventListener("scroll", function () {
+      var currentScrollPos = window.pageYOffset;
+      var header = document.getElementById("header");
+      if (prevScrollpos > currentScrollPos) {
+        header.style.transform = "translateY(0)";
+        header.style.opacity = "1";
+      } else {
+        header.style.transform = "translateY(-100%)";
+        header.style.opacity = "0";
+      }
+      prevScrollpos = currentScrollPos;
+    });
   // End Thanh NAV Khi Cuộn
   
   // Moblie nav
