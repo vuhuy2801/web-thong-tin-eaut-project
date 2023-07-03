@@ -346,3 +346,25 @@ header{
   }
   
   /* end footer */
+
+
+  /* breadcrumb area */
+.breadcrumb.custom {
+  padding-top: 16px;
+  margin-bottom: 0px;
+}
+
+.breadcrumb.custom a {
+  color: #09316b;
+  text-decoration: none;
+}
+
+.breadcrumb.custom A:hover {
+  color: #f9690e;
+}
+
+.hr-breadcrumb {
+  margin-top: 0px;
+}
+
+/* end breadcrumb area */
