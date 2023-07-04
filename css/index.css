@@ -441,6 +441,35 @@ font-size: 42px;
 .selection-eaut .img-content-one{
   margin-top: 100px;
 }
+/* 
+.selection-eaut .img-content-one {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(12, 1fr);
+} */
+
+/* 
+.selection-eaut .img-content-one .img-back {
+  grid-column: 4/-1;
+  grid-row: 1;
+  width: 100%;
+  z-index: 1;
+}
+
+.selection-eaut .img-content-one .img-front {
+  grid-row: 1;
+  grid-column: 1/span 8;
+  margin-top: 20%;
+  width: 100%;
+  z-index: 2;
+} */
+
+.img-content-one img {
+  border: 6px solid;
+  color: white;
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
 
 .header-content {
   margin-top: 100px;
@@ -465,6 +494,8 @@ font-size: 42px;
   font-size: 18px;
 }
 
+
+
 /*  */
 
 .selection-eaut .img-selection{
@@ -480,6 +511,8 @@ font-size: 42px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
+
 
 .content-two h3 {
   font-weight: bold;
@@ -558,7 +591,11 @@ font-size: 42px;
     margin-top: 30px;
   }
 }
-
+.img-content-three img {
+  border: 6px solid;
+  color: white;
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+}
 /*  */
 
 .working {
@@ -582,6 +619,11 @@ font-size: 42px;
   font-weight: bold;
   text-align: right;
   font-size: 18px;
+}
+.img-content-four img {
+  border: 6px solid;
+  color: white;
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
 }
 
 .content-four .content-under h3 {
@@ -650,6 +692,8 @@ font-size: 42px;
   margin-right: 0px;
 }
 }
+
+
 /* end */
 
 /*  giảng viên  */
