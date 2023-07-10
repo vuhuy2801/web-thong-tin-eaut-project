@@ -16,20 +16,21 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-
+    
+    <link rel="stylesheet" href="vendor/swiperjs/swiper-bundle.min.css">
+    
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- CSS here -->
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="/css/index.css" />
+
   </head>
   <body>
     <!-- Nav -->
-    <header id="header" class="d-flex align-items-center">
+    <header id="header" class="d-flex align-items-center header-scroll">
       <div class="container d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo"
-          ><img
-            src="images/z4414451766740_6956b07fce539bd73d065174157ec93e.jpg"
-            alt=""
+          ><img src="images/logo-final.png" alt=""
         /></a>
         <nav id="navbar" class="navbar">
           <ul>
@@ -42,43 +43,46 @@
               <a class="nav-link scrollto" href="about.html">GIỚI THIỆU</a>
             </li>
             <li><a class="nav-link scrollto" href="#">ĐÀO TẠO</a></li>
-            <li><a class="nav-link scrollto" href="#">TIN TỨC & SỰ KIỆN</a></li>
+            <li><a class="nav-link scrollto" href="#">NGHIÊN CỨU</a></li>
+            <li><a class="nav-link scrollto" href="#">HỢP TÁC</a></li>
             <li><a class="nav-link scrollto" href="#">Q&A</a></li>
             <li>
-              <a class="nav-link scrollto btn-tuyensinh" href="">TUYỂN SINH</a>
+              <a class="nav-link scrollto btn-tuyensinh" href="">TIN TỨC</a>
             </li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+
+        <nav id="sub-navbar" class="sub-navbar container">
+          <div class="subnav-wrapper">
+            <ul>
+              <li>
+                <a class="nav-link scrollto active" href="/index.html"
+                  ><span class="icon-square"></span
+                  ><i class="fas fa-home icon-home"></i
+                ></a>
+              </li>
+              <li>
+                <a class="nav-link scrollto" href="about.html">GIỚI THIỆU</a>
+              </li>
+              <li><a class="nav-link scrollto" href="#">ĐÀO TẠO</a></li>
+              <li>
+                <a class="nav-link scrollto" href="#">NGHIÊN CỨU</a>
+              </li>
+              <li><a class="nav-link scrollto" href="#">HỢP TÁC</a></li>
+              <li><a class="nav-link scrollto" href="#">Q&A</a></li>
+              <li>
+                <a class="nav-link scrollto btn-tuyensinh" href="">TIN TỨC</a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </div>
     </header>
     <!-- End NAV -->
 
     <section class="banner-home">
-      <img src="/images/trang chủ main.png" alt="" />
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <div
-              class="banner-content d-lg-flex flex-lg-column align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1 content-margin"
-              data-aos="fade-up"
-            >
-              <h1>CHẮP CÁNH ƯỚC MƠ<br />ĐẠI HỌC</h1>
-              <h2>
-                Trường Đại học Công nghệ Đông Á là trường đại học ứng dụng.
-                <br />
-                Đào tạo đa ngành với 3 hệ: Đại học và Sau đại học cùng nhiều<br />
-                Loại hình đào tạo: Liên thông và Chính quy. Hiện nay,<br />
-                Trường đang đào tạo 18 ngành đại học chính quy và<br />
-                02 ngành Sau đại học (Kế toán, Quản trị kinh doanh).
-              </h2>
-              <div class="d-flex">
-                <a href="#" class="btn-get-started scrollto">ĐĂNG KÝ NGAY</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <img src="images/img-index.png" alt="" />
     </section>
 
     <!-- End Banner -->
@@ -89,226 +93,125 @@
         <div class="container" data-aos="fade-up">
           <hr class="custom-hr" />
           <div class="row">
-            <div class="col-lg-5">
+            <div class="col-lg-6">
               <div class="education-left">
                 <div class="title-wrapper">
                   <h1>
-                    Chương trình <br />
-                    học tại EAUT
+                    CHƯƠNG TRÌNH <br />
+                    ĐÀO TẠO
                   </h1>
                 </div>
                 <h2>
-                  Chương trình học tại eaut là một hệ thống giáo dục đột phá,
-                  tập trung vào việc cung cấp những khóa học chất lượng cao và
-                  đa dạng để phát triển kỹ năng và kiến thức của các học viên.
-                  Chúng tôi cam kết mang đến một môi trường học tập đầy cảm hứng
-                  và hỗ trợ, giúp học viên tự tin vươn tới thành công và khám
-                  phá tiềm năng của mình.
+                  Cung cấp cho sinh viên các kiến thức và kỹ <br> năng cần thiết
+                  để trở thành những chuyên gia <br> trong lĩnh vực công nghệ thông tin.
+                  Sinh viên có <br> thể lựa chọn một trong bốn ngành sau:
                 </h2>
+                
+                <div class="d-flex">
+                  <a href="#" class="btn-get-started scrollto">Tìm Hiểu Thêm <i class="fa fa-arrow-right"></i></a>
+                  <a href="https://youtu.be/c69TGT3Qe-8" class="btn-watch-video" target="_blank"><i class="fa fa-play"></i><span>Xem Video</span></a>
+                </div>
               </div>
             </div>
-            <div class="col-lg-7 mt-5 mt-lg-0">
+            <div class="col-lg-6">
               <div class="education-right">
-                <div class="row align-items-center gy-6">
-                  <div
-                    class="col-md-6"
-                    data-aos="zoom-out"
-                    data-aos-delay="200"
-                  >
-                    <div class="education-box">
-                      <ul class="education-column" id="educationList">
-                        <li><a href="#">Công nghệ chế tạo máy</a></li>
-                        <li><a href="#">Quản trị kinh doanh</a></li>
-                        <li><a href="#">Công nghệ thông tin</a></li>
-                        <li>
-                          <a href="#"
-                            >Công nghệ Kỹ thuật điều khiển – tự động hóa</a
-                          >
-                        </li>
-                        <li><a href="#">Marketing</a></li>
-                        <li class="hidden">
-                          <a href="#">Công nghệ kỹ thuật điện – điện tử</a>
-                        </li>
-                        <li class="hidden"><a href="#">Điều dưỡng</a></li>
-                        <li class="hidden"><a href="#">Marketing</a></li>
-                        <li class="hidden"><a href="#">Luật</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div
-                    class="col-md-6"
-                    data-aos="zoom-out"
-                    data-aos-delay="200"
-                  >
-                    <div class="education-box">
-                      <ul class="education-column" id="educationList">
-                        <li><a href="#">Tài chính ngân hàng</a></li>
-                        <li><a href="#">Kế toán</a></li>
-                        <li>
-                          <a href="#"
-                            >Công nghệ kỹ thuật nhiệt (điện lạnh-nhiệt)</a
-                          >
-                        </li>
-                        <li><a href="#">Dược học</a></li>
-                        <li><a href="#">Kỹ thuật xây dựng</a></li>
-                        <li class="hidden">
-                          <a href="#">Quản trị dịch vụ du lịch và lữ hành</a>
-                        </li>
-                        <li class="hidden">
-                          <a href="#">Quản trị khách sạn</a>
-                        </li>
-                        <li class="hidden">
-                          <a href="#">Công nghệ kỹ thuật ô tô</a>
-                        </li>
-                        <li class="hidden"><a href="#">Ngôn ngữ Anh</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row align-items-center gy-4">
-                  <div
-                    class="col-md-6"
-                    data-aos="zoom-out"
-                    data-aos-delay="200"
-                  >
-                    <div class="feature-box">
-                      <ul class="btn-down">
-                        <li class="dropdown">
-                          <a class="dropdown-link">
-                            <span class="dropdown-text">Tất cả nghành học</span>
-                            <i class="bi bi-chevron-down"></i>
-                          </a>
-                        </li>
-                      </ul>
+                <div class="row">
+                  <div class="col-md-12" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="education-box1">
+                          <img src="/images/index-cnpm.png" class="img-fluid animated" alt="" style="max-width: 100%; height: auto;">
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="education-box2">
+                          <img src="/images/index-mtmedia.png" class="img-fluid animated" alt="" style="max-width: 100%; height: auto;">
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="education-box1">
+                          <img src="/images/index-khmt.png" class="img-fluid animated" alt="" style="max-width: 100%; height: auto;">
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="education-box2">
+                          <img src="/images/index-htttql.png" class="img-fluid animated" alt="" style="max-width: 100%; height: auto;">
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+           
           </div>
         </div>
       </div>
-      <div class="overlay"></div>
+      
 
       <!-- why selection -->
 
       <div class="selection-eaut">
         <div class="container" data-aos="fade-up">
-
-
-          <div class="row gy-4 align-items-stretch justify-content-between features-item">
-            <div class="col-lg-5 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="row gy-4 align-items-stretch justify-content-between features-item"
+          >
+            <div
+              class="col-lg-5 pt-4 pt-lg-0 content d-flex flex-column justify-content-center"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <div class="content-one">
-                <h2>TẠI SAO LỰA CHỌN <span>EAUT ?</span></h2>
+                <h2>Khoa Công Nghệ Thông Tin có gì ?</h2>
                 <h3>Cơ sở vật chất hiện đại</h3>
                 <p>
-                  Không gian học tập 4.0 gồm các phòng học<br />
-                  máy chiếu, điều hoà nhiệt độ hai chiều, hệ<br />
-                  thống chiếu sáng, thang máy…<br />
-                  Phòng thực hành thí nghiệm do Tập đoàn<br />ROCK-WELL và tập
-                  đoàn SIEMENS tài trợ, gồm<br />các thiết bị điều khiển, thực
-                  hành tự động hoá<br />tối tân nhất.
+                  Khoa Công nghệ thông tin tại Trường Đại học <br>
+                  Công nghệ Đông Á được<br>
+                  trang bị cơ sở vật chất hiện đại, đáp ứng đầy<br>
+                  đủ các yêu cầu của một môi trường học tập và<br>
+                  nghiên cứu công nghệ thông tin.<br>
                 </p>
               </div>
             </div>
-            <div class="col-lg-7 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
+            <div
+              class="col-lg-7 d-flex align-items-center"
+              data-aos="fade-right"
+              data-aos-delay="100"
+            >
               <div class="img-content-one">
-                <img src="images/plc.png" class="img-fluid" alt="">
+                <img src="images/eaut-csvc.png" class="img-fluid" alt="" />
               </div>
             </div>
           </div>
-          
 
           <div class="row">
-            <div class="col-lg-5" data-aos="fade-right" data-aos-delay="100">
-              <div class="img-selection">
-                <div class="row">
-                  <div class="col-4" data-aos="fade-right" data-aos-delay="100">
-                    <div class="img-content-two">
-                      <img src="/images/LGO/eit.png" class="img-fluid" alt="" />
-                    </div>
-                  </div>
-                  <div class="col-4" data-aos="fade-right" data-aos-delay="100">
-                    <div class="img-content-two">
-                      <img src="/images/LGO/pw.jpg" class="img-fluid" alt="" />
-                    </div>
-                  </div>
-                  <div class="col-4" data-aos="fade-right" data-aos-delay="100">
-                    <div class="img-content-two">
-                      <img src="/images/LGO/mau.jpg" class="img-fluid" alt="" />
-                    </div>
-                  </div>
-                </div>
-                <!--  -->
-                <div class="row">
-                  <div class="col-4" data-aos="fade-right" data-aos-delay="100">
-                    <div class="img-content-two2">
-                      <img
-                        src="/images/LGO/sonla.png"
-                        class="img-fluid"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="col-4" data-aos="fade-right" data-aos-delay="100">
-                    <div class="img-content-two2">
-                      <img src="/images/LGO/mnc.jpg" class="img-fluid" alt="" />
-                    </div>
-                  </div>
-                  <div class="col-4" data-aos="fade-right" data-aos-delay="100">
-                    <div class="img-content-two2">
-                      <img src="/images/LGO/vo.jpg" class="img-fluid" alt="" />
-                    </div>
-                  </div>
-                </div>
-                <!--  -->
-                <div class="row">
-                  <div class="col-4" data-aos="fade-right" data-aos-delay="100">
-                    <div class="img-content-two">
-                      <img
-                        src="/images/LGO/truyenthong.jpg"
-                        class="img-fluid"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="col-4" data-aos="fade-right" data-aos-delay="100">
-                    <div class="img-content-two">
-                      <img
-                        src="/images/LGO/english.jpg"
-                        class="img-fluid"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="col-4" data-aos="fade-right" data-aos-delay="100">
-                    <div class="img-content-two">
-                      <img src="/images/LGO/cl.jpg" class="img-fluid" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div
+            class="col-lg-7 d-flex align-items-center"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
+            <div class="img-content-two">
+              <img src="images/eaut-clb.png" class="img-fluid" alt="" />
             </div>
+          </div>
 
             <div
-              class="col-lg-7 pt-4 pt-lg-0 content d-flex flex-column justify-content-center"
+              class="col-lg-5 pt-4 pt-lg-0 content d-flex flex-column justify-content-center"
               data-aos="fade-up"
               data-aos-delay="100"
             >
               <div class="content-two">
                 <h3>Môi trường năng động</h3>
                 <p>
-                  Hoạt động CLB sinh viên sôi nổi: CLB Tin học, CLB Tiếng Anh,
-                  CLB Beer for life,<br />CLB Karate, CLB Cầu lông, CLB truyền
-                  thông – Marketing, CLB Bóng đá, CLB <br />Dancing, CLB Board
-                  game,…<br />Sinh viên thường xuyên tham giá các cuộc thi trong
-                  và ngoài trường: Robocon,<br />Futsal, Cuộc thi Tiếng Anh
-                  không chuyên, Giải bóng đá cụm công nghiệp Từ <br />
-                  Liêm,… <br />Đoàn Thanh niên, Hội sinh viên tổ chức các hoạt
-                  động đoàn thể quanh năm cho<br />sinh viên: Tiếp sức mùa thi,
-                  Đông ấm vùng cao, Phát cơm tình nguyện, Đạp xe<br />xuyên phố,
-                  Chuỗi hoạt động chào tân sinh viên, Chuỗi hoạt động 26/03,…
+                  Khoa Công nghệ thông tin tại Trường Đại
+                   học Công nghệ Đông Á tạo môi trường năng
+                    động cho sinh viên tham gia vào câu lạc
+                     bộ Tin học (EIT) và câu lạc bộ thể dục thể thao.
+                      Khoa tổ chức các cuộc thi lập trình, thiết kế ứng
+                       dụng và nghiên cứu khoa học để khuyến khích sự sáng
+                        tạo và thử thách. Sinh viên được hướng dẫn bởi giảng
+                         viên và chuyên gia trong lĩnh vực CNTT để ứng dụng kiến 
+                         thức vào thực tế và phát triển kỹ năng.
                 </p>
               </div>
             </div>
@@ -317,68 +220,40 @@
           <div class="scholarship">
             <div class="row">
               <div
-                class="col-lg-5 pt-4 pt-lg-0 content d-flex flex-column justify-content-center"
-                data-aos="fade-up"
-                data-aos-delay="100"
-              >
-                <div class="content-three">
-                  <h3>
-                    Học bổng<br />
-                    POLYCO SCHOLARSHIP
-                  </h3>
-                  <p>
-                    Đối tượng được nhận học bổng: Học sinh lớp 12 trên toàn
-                    quốc. Học bổng chỉ áp dụng với các học sinh đăng ký chương
-                    trình đào tạo chuẩn. <br />
-                    Điều kiện nhận học bổng: Học sinh có điểm thi THPT Quốc gia
-                    từ 26 điểm trở lên hoặc học sinh đạt giải học sinh giỏi
-                    tỉnh/thành phố. Để duy trì học bổng này, các em phải duy trì
-                    điểm GPA các năm tiếp theo từ 8.0 trở lên. <br />Giá trị học
-                    bổng: 100% học phí, tối đa 100 triệu đồng/ 4 năm học.
-                  </p>
-                </div>
-              </div>
-
-              <div class="col-lg-7" data-aos="fade-right" data-aos-delay="100">
-                <div class="img-content-three">
-                  <img src="images/hocbong.png" class="img-fluid" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="working">
-            <div class="row">
-              <div class="col-lg-5" data-aos="fade-right" data-aos-delay="100">
-                <div class="img-content-four">
-                  <img src="images/work1.png" class="img-fluid" alt="" />
-                </div>
-              </div>
-
-              <div
                 class="col-lg-7 pt-4 pt-lg-0 content d-flex flex-column justify-content-center"
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
                 <div class="content-four">
                   <div class="content-top">
-                    <h3 class="mt-lg-0 ml-lg-0">Cơ hội việc làm</h3>
+                    <h3 class="mt-lg-0 ml-lg-0">Đào tạo theo hướng ứng dụng</h3>
                     <p class="mt-3 ml-lg-0">
-                      Cung cấp các cơ hội việc làm cho sinh viên khi<br />
-                      đi học và sau khi tốt nghiệp. Đặc biệt hỗ trợ<br />
-                      đầu ra cho sinh viên sau tốt nghiệp tại trong và<br />
-                      ngoài nước:<br />
-                      Đối tác của trường Đại học Công nghệ Đông Á.<br />
+                      Chương trình đào tạo theo hướng Ứng dụng trong lĩnh vực <br>
+                       Khoa công nghệ thông tin nhằm cung cấp cho sinh viên <br>
+                        kiến thức và kỹ năng cần thiết để áp dụng công nghệ thông <br>tin
+                         vào các lĩnh vực thực tế và giải quyết các vấn đề thực tế.
                     </p>
                   </div>
+
+                  <div class="content-body">
+                    <h3 class="percent ml-lg-0">70<span>%</span></h3>
+                    <p>
+                      Thực Hành
+                    </p>
+                  </div>
+
                   <div class="content-under">
-                    <h3 class="percent ml-lg-0">90.9<span>%</span></h3>
-                    <p class="mt-3 ml-lg-0">
-                      Sinh viên Đại học Công Nghệ<br />
-                      Đông Á ra trường có việc làm ngay<br />
-                      trong năm đầu tiên
+                    <h3 class="percent ml-lg-0">30<span>%</span></h3>
+                    <p>
+                      Lý Thuyết
                     </p>
                   </div>
+                </div>
+              </div>
+
+              <div class="col-lg-5" data-aos="fade-right" data-aos-delay="100">
+                <div class="img-content-four">
+                  <img src="images/eaut-ungdung.png" class="img-fluid" alt="" />
                 </div>
               </div>
             </div>
@@ -391,7 +266,7 @@
       <section id="teachers" class="teachers section-bg">
         <div class="container" data-aos="fade-up">
           <div class="section-title">
-            <h3>Giảng viên tiêu biểu</h3>
+            <h3>GIẢNG VIÊN TIÊU BIỂU</h3>
           </div>
           <div class="row">
             <div
@@ -558,12 +433,78 @@
           </div>
         </div>
       </section>
-      <!-- End giảng viên Section -->
+    <!-- End giảng viên Section -->
+   
+    <!-- Hợp tác -->
+      <section id="testimonials" class="testimonials">
+        <div class="container" data-aos="fade-up">
+          <hr class="custom-hr" />
+          <div class="section-title">
+            <h3>HỢP TÁC VỚI DOANH NGHIỆP</h3>
+          </div>
+          <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonial-item">                       
+                  <div class="profile mt-auto">
+                    <a href="https://codetot.vn/"target="_blank">
+                    <img src="/images/LGO/logo-codetot.png" class="testimonial-img" alt="">
+                  </a>                 
+                  </div>
+                </div>
+              </div>
+  
+              <div class="swiper-slide">
+                <div class="testimonial-item">                       
+                  <div class="profile mt-auto">
+                    <a href="https://www.misa.vn/cong-ty/"target="_blank">
+                    <img src="images/LGO/Logo_MISA.svg.png" class="testimonial-img" alt="">
+                    </a>                 
+                  </div>
+                </div>
+              </div>
+  
+              <div class="swiper-slide">
+                <div class="testimonial-item">                       
+                  <div class="profile mt-auto">
+                    <a href="https://votc.com.vn/"target="_blank">
+                    <img src="/images/LGO/votc-group-map.png" class="testimonial-img" alt="">       
+                    </a>          
+                  </div>
+                </div>
+              </div>
+  
+              <div class="swiper-slide">
+                <div class="testimonial-item">                       
+                  <div class="profile mt-auto">
+                    <a href="https://ezcloud.vn/"target="_blank">
+                    <img src="/images/LGO/ezcloud-thay-doi-logo-nhan-dien-thuong-hieu-2.png" class="testimonial-img" alt="">     
+                    </a>            
+                  </div>
+                </div>
+              </div>
+            
+              <div class="swiper-slide">
+                <div class="testimonial-item">                       
+                  <div class="profile mt-auto">
+                    <a href="  https://polyco.com.vn/"target="_blank">
+                    <img src="/images/LGO/logopolyco.png" class="testimonial-img" alt="">      
+                    </a>           
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+  
       <!-- Comment Section -->
       <section id="team" class="team section-bg">
         <div class="container" data-aos="fade-up">
           <div class="comment-title">
-            <h3>Sinh Viên Nói Gì Về EAUT?</h3>
+            <h3>SINH VIÊN NÓI GÌ VỀ TRẢI NGHIỆM NGÀNH CNTT ?</h3>
           </div>
 
           <div class="row">
@@ -685,9 +626,9 @@
                   thú vị
                 </h3>
                 <h4 class="description">
-                   Ngày 15/05/2023 vừa qua, Trường Đại học Thăng Long <br>tổ chức Job
-                  Fair 2023. Đây là kỳ Job Fair thứ 3 được <br> Trường tổ chức, sau 2
-                  kỳ năm 2019 và 2022. Job...
+                  Ngày 15/05/2023 vừa qua, Trường Đại học Thăng Long <br />tổ
+                  chức Job Fair 2023. Đây là kỳ Job Fair thứ 3 được <br />
+                  Trường tổ chức, sau 2 kỳ năm 2019 và 2022. Job...
                 </h4>
               </div>
             </div>
@@ -707,9 +648,9 @@
                   thú vị
                 </h3>
                 <h4 class="description">
-                  Ngày 15/05/2023 vừa qua, Trường Đại học Thăng Long <br>tổ chức Job
-                  Fair 2023. Đây là kỳ Job Fair thứ 3 được <br> Trường tổ chức, sau 2
-                  kỳ năm 2019 và 2022. Job...
+                  Ngày 15/05/2023 vừa qua, Trường Đại học Thăng Long <br />tổ
+                  chức Job Fair 2023. Đây là kỳ Job Fair thứ 3 được <br />
+                  Trường tổ chức, sau 2 kỳ năm 2019 và 2022. Job...
                 </h4>
               </div>
             </div>
@@ -729,9 +670,9 @@
                   thú vị
                 </h3>
                 <h4 class="description">
-                   Ngày 15/05/2023 vừa qua, Trường Đại học Thăng Long <br>tổ chức Job
-                  Fair 2023. Đây là kỳ Job Fair thứ 3 được <br> Trường tổ chức, sau 2
-                  kỳ năm 2019 và 2022. Job...
+                  Ngày 15/05/2023 vừa qua, Trường Đại học Thăng Long <br />tổ
+                  chức Job Fair 2023. Đây là kỳ Job Fair thứ 3 được <br />
+                  Trường tổ chức, sau 2 kỳ năm 2019 và 2022. Job...
                 </h4>
               </div>
             </div>
@@ -751,9 +692,9 @@
                   thú vị
                 </h3>
                 <h4 class="description">
-                   Ngày 15/05/2023 vừa qua, Trường Đại học Thăng Long <br>tổ chức Job
-                  Fair 2023. Đây là kỳ Job Fair thứ 3 được <br> Trường tổ chức, sau 2
-                  kỳ năm 2019 và 2022. Job...
+                  Ngày 15/05/2023 vừa qua, Trường Đại học Thăng Long <br />tổ
+                  chức Job Fair 2023. Đây là kỳ Job Fair thứ 3 được <br />
+                  Trường tổ chức, sau 2 kỳ năm 2019 và 2022. Job...
                 </h4>
               </div>
             </div>
@@ -773,9 +714,9 @@
                   thú vị
                 </h3>
                 <h4 class="description">
-                   Ngày 15/05/2023 vừa qua, Trường Đại học Thăng Long <br>tổ chức Job
-                  Fair 2023. Đây là kỳ Job Fair thứ 3 được <br> Trường tổ chức, sau 2
-                  kỳ năm 2019 và 2022. Job...
+                  Ngày 15/05/2023 vừa qua, Trường Đại học Thăng Long <br />tổ
+                  chức Job Fair 2023. Đây là kỳ Job Fair thứ 3 được <br />
+                  Trường tổ chức, sau 2 kỳ năm 2019 và 2022. Job...
                 </h4>
               </div>
             </div>
@@ -795,9 +736,9 @@
                   thú vị
                 </h3>
                 <h4 class="description">
-                   Ngày 15/05/2023 vừa qua, Trường Đại học Thăng Long <br>tổ chức Job
-                  Fair 2023. Đây là kỳ Job Fair thứ 3 được <br> Trường tổ chức, sau 2
-                  kỳ năm 2019 và 2022. Job...
+                  Ngày 15/05/2023 vừa qua, Trường Đại học Thăng Long <br />tổ
+                  chức Job Fair 2023. Đây là kỳ Job Fair thứ 3 được <br />
+                  Trường tổ chức, sau 2 kỳ năm 2019 và 2022. Job...
                 </h4>
               </div>
             </div>
@@ -814,8 +755,8 @@
         <div class="container">
           <div class="row gy-4">
             <div class="col-lg-4 col-md-12 footer-info">
-              <a href="index.html" class="eaut"
-                >Đại Học Công Nghệ Đông Á <br />Hà Nội</a
+              <a href="https://eaut.edu.vn/" class="eaut" target="_blank"
+                >Đại Học Công Nghệ Đông Á <br/> <span>Hà Nội</span></a
               >
               <p>
                 Cơ sở đào tạo thực hành: <br />
@@ -830,16 +771,19 @@
 
             <div class="col-lg-4 col-md-12 footer-info">
               <a href="index.html" class="eaut"
-                >Đại Học Công Nghệ Đông Á <br />Bắc Ninh</a
+                >Đại Học Công Nghệ Đông Á <br>
+                <span>
+                  Khoa Công Nghệ Thông Tin
+                </span></a
               >
               <p>
                 Cơ sở đào tạo thực hành: <br />
                 <br />
                 Toà Nhà Polyco, Trịnh Văn Bô, Nam Từ Liêm, Hà Nội<br />
                 <br />
-                <strong>Điện thoại:</strong> 0243.555.2008 <br />
+                <strong>Điện thoại:</strong> 024.6262.7797 <br />
                 <br />
-                <strong>Email:</strong> tuyensinh@eaut.edu.vn<br />
+                <strong>Email:</strong> thanhct@eaut.edu.vn<br />
               </p>
             </div>
 
@@ -871,20 +815,20 @@
             </div>
             <div class="col-lg-6">
               <div class="social-links mt-6">
-                <a href="https://www.facebook.com/dhcnDongA" class="facebook"
-                  ><i class="fab fa-facebook"></i
+                <a href="https://www.facebook.com/khoacntteaut" class="facebook"
+                target="_blank"><i class="fab fa-facebook"></i
                 ></a>
                 <a
                   href="https://www.tiktok.com/@daihoccongnghedonga"
-                  class="tiktok"
+                  class="tiktok" target="_blank"
                   ><i class="fab fa-tiktok"></i
                 ></a>
-                <a href="https://www.youtube.com/@dhcnDongA" class="youtube"
+                <a href="https://www.youtube.com/@dhcnDongA" class="youtube" target="_blank"
                   ><i class="fab fa-youtube"></i
                 ></a>
                 <a
-                  href="https://www.facebook.com/messages/t/198721740270305"
-                  class="messenger"
+                  href="https://www.facebook.com/messages/t/105486557893424"
+                  class="messenger" target="_blank"
                   ><i class="fab fa-facebook-messenger"></i
                 ></a>
               </div>
@@ -897,6 +841,11 @@
     <!-- JS File -->
     <script src="vendor/jquery/jquery-3.6.3.min.js"></script>
     <script src="vendor/AOS/aos@2.3.1_dist_aos.js"></script>
+    <script src="vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="vendor/swiperjs/swiper-bundle1.min.js"></script>
+
+
     <script>
       AOS.init();
     </script>

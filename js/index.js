@@ -1,27 +1,28 @@
-const dropdownLink = document.querySelector('.dropdown-link');
-const dropdownText = document.querySelector('.dropdown-text');
-const educationColumns = document.querySelectorAll('.education-column');
-const overlay = document.querySelector('.overlay');
 
-dropdownLink.addEventListener('click', function() {
-  educationColumns.forEach(function(column) {
-    column.classList.toggle('expanded');
+new Swiper('.testimonials-slider', {
+    speed: 600,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 40
+      },
+
+      1200: {
+        slidesPerView: 3,
+      }
+    }
   });
-  
-  dropdownText.textContent = educationColumns[0].classList.contains('expanded') ? 'Thu gọn' : 'Tất cả nghành học';
-  dropdownLink.querySelector('i').classList.toggle('bi-chevron-down');
-  dropdownLink.querySelector('i').classList.toggle('bi-chevron-up');
-  overlay.classList.toggle('active');
 
-  if (!educationColumns[0].classList.contains('expanded')) {
-    const allCourses = document.querySelectorAll('#educationList li');
-    allCourses.forEach(function(course, index) {
-      setTimeout(function() {
-        course.style.transform = 'translateY(0)';
-        course.style.opacity = '1';
-      }, index * 100);
-    });
-  }
-  
-});
 
+  
