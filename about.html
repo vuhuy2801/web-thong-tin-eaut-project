@@ -5,51 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/swiper@9_swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
+  />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/about.css" />
-
     <title>EAUT</title>
   </head>
   <body>
-      <!-- Nav -->
-      <header id="header" class="d-flex align-items-center">
-        <div class="container d-flex align-items-center justify-content-between">
-          <a href="index.html" class="logo"
-            ><img
-              src="images/z4414451766740_6956b07fce539bd73d065174157ec93e.jpg"
-              alt=""
-          /></a>
-          <nav id="navbar" class="navbar">
+    <!-- Nav -->
+    <header id="header" class="d-flex align-items-center header-scroll">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo"
+          ><img src="images/logo-final.png" alt=""
+        /></a>
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li>
+              <a class="nav-link scrollto" href="/index.html">TRANG CHỦ</a>
+            </li>
+            <li>
+              <a class="nav-link scrollto active" href="about.html"
+                >GIỚI THIỆU</a
+              >
+            </li>
+            <li><a class="nav-link scrollto" href="#">ĐÀO TẠO</a></li>
+            <li><a class="nav-link scrollto" href="#">NGHIÊN CỨU</a></li>
+            <li><a class="nav-link scrollto" href="#">HỢP TÁC</a></li>
+            <li><a class="nav-link scrollto" href="#">Q&A</a></li>
+            <li>
+              <a class="nav-link scrollto btn-tuyensinh" href="">TIN TỨC</a>
+            </li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+
+        <nav id="sub-navbar" class="sub-navbar container">
+          <div class="subnav-wrapper">
             <ul>
-              <li><a class="nav-link scrollto " href="index.html">TRANG CHỦ</a></li>
               <li>
-                <a class="nav-link scrollto active" href="about.html">GIỚI THIỆU</a>
+                <a class="nav-link scrollto active" href="/index.html"
+                  ><span class="icon-square"></span
+                  ><i class="fas fa-home icon-home"></i
+                ></a>
+              </li>
+              <li>
+                <a class="nav-link scrollto" href="about.html">GIỚI THIỆU</a>
               </li>
               <li><a class="nav-link scrollto" href="#">ĐÀO TẠO</a></li>
-              <li><a class="nav-link scrollto" href="#">TIN TỨC & SỰ KIỆN</a></li>
+              <li>
+                <a class="nav-link scrollto" href="#">NGHIÊN CỨU</a>
+              </li>
+              <li><a class="nav-link scrollto" href="#">HỢP TÁC</a></li>
               <li><a class="nav-link scrollto" href="#">Q&A</a></li>
               <li>
-                <a class="nav-link scrollto btn-tuyensinh" href="">TUYỂN SINH</a>
+                <a class="nav-link scrollto btn-tuyensinh" href="">TIN TỨC</a>
               </li>
             </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-          </nav>
-        </div>
-      </header>
-      <!-- End NAV -->
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End NAV -->
 
     <!-- banner Area -->>
     <section class="banner-area">
-      <img src="images/banner-gioi-thieu.png" alt="" />
-      <div class="container">
-        <div class="row">
-          <div class="banner-text col-6 col-sm-5 col-lg-4">
-            <h2>XIN CHÀO, ĐÂY LÀ</h2>
-            <b class="text-sm">EAUT</b> <br />
-            <p>Trường đại học đa ngành</p>
-          </div>
-        </div>
-      </div>
+      <img src="images/banner-about.png" alt="" />
     </section>
     <!-- end banner Area -->
     <!-- breadcrumb area -->
@@ -59,7 +86,7 @@
           <li class="breadcrumb-item"><a href="#">TRANG CHỦ</a></li>
           <li class="breadcrumb-item"><a href="#">GIỚI THIỆU</a></li>
           <li class="breadcrumb-item active" aria-current="page">
-            TRƯỜNG ĐẠI HỌC CÔNG NGHỆ ĐÔNG Á
+            KHOA CÔNG NGHỆ THÔNG TIN
           </li>
         </ol>
       </nav>
@@ -73,25 +100,26 @@
         <div class="row">
           <div class="intro-left col-md-6 col-xl-6">
             <div class="introduce-text">
-              <h2 class="title">TỰ HÀO LÀ TRƯỜNG ĐẠI HỌC TRONG DOANH NGHIỆP</h2>
+              <h2 class="title">
+                Khoa Công nghệ Thông tin theo hướng ứng dụng
+              </h2>
               <p class="col-10 mx-auto">
-                Trường được thủ tướng chính phủ ký quyết định thành lập ngày
-                09/12/2008 theo quyết định số 1777/QĐ-TTg. Trường Đại Học Công
-                Nghệ Đông Á là trường đại học đa ngành nằm trong hệ thống giáo
-                dục quốc dân. Triết lý giáo dục của nhà trường “Học phải có việc
-                làm”, EAUT khẳng định là trường đại học đào tạo sinh viên phát
-                triển toàn diện kiến thức chuyên môn và kỹ năng nghề nghiệp,
-                năng động – bản lĩnh – tự tin hội nhập với cộng đồng quốc tế,
-                đảm nhận tốt công việc trong môi trường đa lĩnh vực, đa văn hóa.
+                Khoa Công nghệ thông tin được thành lập theo Quyết định số
+                xxxx/QĐ-xxx của Hiệu trưởng Trường Đại học Công Nghệ Đông Á ngày
+                xx/xx/20xx. Hiện nay, Khoa gồm có 04 chuyên ngành đào tạo: Mạng
+                máy tính & truyền thông, Công nghệ phần mềm, Khoa học máy tính
+                và Hệ thống thông tin quản lý. Với nhiệm vụ đào tạo nguồn nhân
+                lực chất lượng cao thuộc lĩnh vực công nghệ thông tin, và tham
+                gia các hoạt động nghiên cứu khoa học và chuyển giao công nghệ.
               </p>
             </div>
-            <div class="introduce-img">
-              <img src="images/intro-1.jpg" alt="dai-hoc-cong-nghe-dong-a" />
+            <div class="introduce-img-1">
+              <img src="images/about-img2.png" alt="dai-hoc-cong-nghe-dong-a" />
             </div>
           </div>
           <div class="intro-right col-md-6 col-xl-6">
             <div class="introduce-img">
-              <img src="images/intro-2.jpg" alt="dai-hoc-cong-nghe-dong-a" />
+              <img src="images/about-img1.png" alt="dai-hoc-cong-nghe-dong-a" />
             </div>
           </div>
         </div>
@@ -107,53 +135,87 @@
         <div class="swiper historySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="item-date">09.12.2008</div>
+              <div class="item-date">17.02.2012</div>
               <div class="item-text">
-                Thành lập Đại học Công Nghệ Đông Á ,theo quyết định số 1777/QĐ –
-                TTg của Thủ tướng Chính phủ.
+                Khoa Công nghệ thông tin được thành lập theo Quyết định số
+                xxxx/xxxx của Hiệu trưởng Trường Đại học Công Nghệ Đông Á
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="item-date">2009</div>
+              <div class="item-date">2018</div>
               <div class="item-text">
-                Khóa 1 của trường bắt đầu từ năm học 2009-2010.
+                Sinh Viên khóa 5 khoa Công Nghệ Thông Tin bảo vệ đồ án tốt
+                nghiệp
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="item-date">2014</div>
+              <div class="item-date">2020</div>
               <div class="item-text">
-                Tập đoàn Cơ Nhiệt Điện Lạnh Bách Khoa (POLYCO GROUP) đầu tư
+                Sinh Viên khóa 5 khoa Công Nghệ Thông Tin bảo vệ đồ án tốt
+                nghiệp
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="item-date">2015</div>
+              <div class="item-date">2021</div>
               <div class="item-text">
-                2015: Trường Đại học Công nghệ Đông Á mở thêm 4 ngành đào tạo:
-                Công nghệ Kỹ thuật Nhiệt, CNKT Điều khiển – Tự động hóa, Công
-                nghệ chế tạo máy, Công nghệ Thực phẩm.
+                Mở thêm 10 phòng máy thực hành với màn hình ASUS ips27” full HD,
+                cấu hình chip core i5 đời mới nhất ram 8G, card màn hình rời 2G
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="item-date">2016</div>
+              <div class="item-date">2022</div>
               <div class="item-text">
-                2015: Trường Đại học Công nghệ Đông Á mở thêm 4 ngành đào tạo:
-                Công nghệ Kỹ thuật Nhiệt, CNKT Điều khiển – Tự động hóa, Công
-                nghệ chế tạo máy, Công nghệ Thực phẩm.
+                Giải ba, giải thưởng Khoa Học và Công Nghệ dành cho sinh viên
+                2022
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="item-date">2017</div>
-              <div class="item-text">
-                2015: Trường Đại học Công nghệ Đông Á mở thêm 4 ngành đào tạo:
-                Công nghệ Kỹ thuật Nhiệt, CNKT Điều khiển – Tự động hóa, Công
-                nghệ chế tạo máy, Công nghệ Thực phẩm.
-              </div>
+              <div class="item-date">2023</div>
+              <div class="item-text">Chưa có thông tin chi tiết</div>
             </div>
           </div>
         </div>
       </div>
     </section>
     <!-- end history begin area-->
+
+    <!-- core values -->
+    <section class="core-values">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h3>Giá trị cốt lõi</h3>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="core-values-box">
+              <div class="icon-value">
+                <i class="fas fa-wifi"></i>
+              </div>
+              <h4 class="core-values-content">Chất Lượng</h4>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="core-values-box">
+              <div class="icon-value">
+                <i class="fas fa-wifi"></i>
+              </div>
+              <h4 class="core-values-content">Ứng Dụng</h4>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="core-values-box">
+              <div class="icon-value">
+                <i class="fas fa-wifi"></i>
+              </div>
+              <h4 class="core-values-content">Sáng Tạo</h4>
+            </div>
+          </div>
+        </div>
+        <hr class="core-values-hr" />
+      </div>
+    </section>
 
     <!-- infrastructure area -->
     <section class="infrastructure">
@@ -162,19 +224,15 @@
           <div class="col-md-7 col-xl-7">
             <h2>Cơ sở vật chất</h2>
             <p>
-              Trường đại học Công nghệ Đông Á với tư duy đào tạo mở luôn đặt
-              tiêu chí ngoài nâng cao chất lượng giáo dục còn trang bị cơ sở vật
-              chất hiện đại nhất. Qua quá trình hình thành và phát triển từ năm
-              2008 đến nay, trường đã liên tục nâng cấp hệ thống cơ sở vật chất
-              để tạo môi trường học tập và rèn luyện tốt nhất cho học viên, cũng
-              như đáp ứng tốt yêu cầu giảng dạy và làm việc của giảng viên, cán
-              bộ và công nhân viên nhà trường..
+              Khoa Công nghệ Thông tin tại trường tự hào sở hữu một cơ sở vật
+              chất hiện đại và đầy đủ nhằm đáp ứng nhu cầu học tập và nghiên cứu
+              của sinh viên. Nhà trường đã đầu tư một hệ thống máy tính đồng bộ
+              tiên tiến, mang lại trải nghiệm tốt nhất cho sinh viên. Hệ thống
+              máy tính tại phòng thực hành được trang bị màn hình ASUS IPS27,
+              đem lại chất lượng hình ảnh sắc nét và màu sắc chân thực. Máy tính
+              được cấu hình với chip Core i5 đời mới nhất, RAM 8GB và card đồ
+              họa rời 2GB chuyên dụng cho đồ họa 3D.
             </p>
-          </div>
-          <div class="col-md-5 col-xl-5">
-            <a href="#"
-              >Khám phá cơ sơ vật chất <i class="fa-solid fa-angle-right"></i
-            ></a>
           </div>
         </div>
         <div class="row">
@@ -317,36 +375,24 @@
       <div class="container">
         <hr />
         <div class="row">
-          <h2>Ban Giám Hiệu</h2>
+          <h2>Ban chủ nghiệm Khoa</h2>
         </div>
         <div class="row pt-5">
           <div class="card-info">
             <div class="content">
               <div class="image-box">
-                <img src="images/gs-dinh-van-thuan.png" alt="dinh van thanh" />
+                <img src="images/tranxuanthanh.png" alt="dinh van thanh" />
               </div>
               <div class="details">
-                <div class="name">GS.TS. ĐINH VĂN THUẬN</div>
-                <div class="job">Chủ tịch hội đồng trường</div>
+                <div class="name">THS. Trần Xuân Thanh</div>
+                <div class="job">Trưởng Khoa</div>
                 <div class="date-of-birt"><b>Năm Sinh:</b>1954</div>
                 <div class="specialization">
-                  <b>Chuyên Ngành:</b>Công nghệ điện lạnh
+                  <b>Chuyên Ngành:</b> Khoa học máy tính
                 </div>
-                <div class="history">
-                  <b>Quá Trình công tác:</b>
-                  <p>
-                    1978 – 1995: Cán bộ giảng dạy tại trường Bách khoa Đà Nẵng
-                    <br />
-                    1995 – 2015: Cán bộ giảng dạy tại trường Bách khoa Hà Nội
-                    <br />
-                    2015 – 2020: Hiệu trưởng Trường Đại học Công nghệ Đông Á
-                    <br />
-                    2020 – Nay: Chủ tịch Hội đồng trường Đại học Công nghệ Đông
-                    Á <br />
-                    1995 – 2013: TGĐ Tập đoàn POLYCO <br />
-                    2013 – nay: Chủ tịch HĐQT Tập đoàn POLYCO
-                  </p>
-                </div>
+                <div class="d-flex">
+                  <a href="#" class="btn-get-started scrollto">Xem Chi Tiết<i class="fa fa-arrow-right"></i></a>
+                </div>            
               </div>
             </div>
           </div>
@@ -355,142 +401,18 @@
           <div class="card-info">
             <div class="content">
               <div class="image-box">
-                <img src="images/THANH-DINH-3.jpg" alt="dinh van thanh" />
+                <img src="/images/maivanlinh.png" alt="dinh van thanh" />
               </div>
               <div class="details">
-                <div class="name">TS. ĐINH VĂN THÀNH</div>
-                <div class="job">Hiệu Trưởng</div>
-                <div class="date-of-birt"><b>Năm Sinh:</b>1986</div>
+                <div class="name">THS. Mai Văn Linh</div>
+                <div class="job">Phó Trưởng Khoa</div>
+                <div class="date-of-birt"><b>Năm Sinh:</b>1954</div>
                 <div class="specialization">
-                  <b>Chuyên Ngành:</b>TS Kỹ thuật Điện – Điện tử đào tạo tại
-                  Trường Đại học Southampton Vương quốc Anh
+                  <b>Chuyên Ngành:</b> Khoa học máy tính
                 </div>
-                <div class="history">
-                  <b>Quá Trình công tác:</b>
-                  <p>
-                    2009 – 2013: Phó TGĐ Tập đoàn POLYCO <br />
-                    2013 – nay: TGĐ Tập đoàn POLYCO <br />
-                    2013 – 2015: PHT trường ĐHCN Vinh <br />
-                    2015 – 2020: PHT Trường Đại học Công nghệ Đông Á <br />
-                    2020 – nay: Hiệu trưởng Trường Đại học Công nghệ Đông Á
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row pt-5">
-          <div class="card-info col-xl-6">
-            <div class="content">
-              <div class="image-box">
-                <img src="images/dinhvannha.png" alt="dinh van nha" />
-              </div>
-              <div class="details">
-                <div class="name">GS. VS NGƯT. ĐINH VĂN NHÃ</div>
-                <div class="job">Phó Hiệu Trưởng</div>
-                <div class="date-of-birt"><b>Năm Sinh:</b>1948</div>
-                <div class="specialization">
-                  <b>Chuyên Ngành:</b>Diều khiển tự độngv
-                </div>
-                <div class="history">
-                  <b>Quá Trình công tác:</b>
-                  <p>
-                    1976 – 2013: Giảng viên cao cấp, Giám đốc Trung Tâm Tự động
-                    hóa – Trường Đại học Bách khoa Hà Nội <br />
-                    2013 – 2015: PHT trường Đại học CN Vinh <br />
-                    2008 – nay: VT viện KHCN và Đào tạo Omega <br />
-                    2015 – nay: PHT, Chủ tịch Hội đồng Khoa học và Đào tạo, Chủ
-                    nhiệm ngành Công nghệ Kỹ thuật Điều khiển – Tự động hoá
-                    Trường Đại học Công nghệ Đông Á.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-info col-xl-6">
-            <div class="content">
-              <div class="image-box">
-                <img src="images/dinhphuongthao.png" alt="dinh van thanh" />
-              </div>
-              <div class="details">
-                <div class="name">TS. ĐINH PHƯƠNG THẢO</div>
-                <div class="job">Phó Hiệu Trưởng</div>
-                <div class="date-of-birt"><b>Năm Sinh:</b>1978</div>
-                <div class="specialization">
-                  <b>Chuyên Ngành:</b>Quản trị Kinh Doanh
-                </div>
-                <div class="history">
-                  <b>Quá Trình công tác:</b>
-                  <p>
-                    2009 – nay: Phó TGĐ Tập đoàn POLYCO <br />
-                    2017 – nay: PHT Trường Đại học Công nghệ Đông Á <br />
-                    2003 – nay: GĐ Công ty Cổ phần Đầu tư và Thương mại Thuận
-                    Thành <br />
-                    2008 – nay: Chủ tịch Công ty Cổ phần SAHA
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row pt-5">
-          <div class="card-info col-xl-6">
-            <div class="content">
-              <div class="image-box">
-                <img src="images/cngoc.png" alt="nguyen thi thanh ngoc" />
-              </div>
-              <div class="details">
-                <div class="name">TS. NGUYỄN THỊ THANH NGỌC</div>
-                <div class="job">Phó Hiệu Trưởng</div>
-                <div class="date-of-birt"><b>Năm Sinh:</b>1981</div>
-                <div class="specialization">
-                  <b>Chuyên Ngành:</b>Tiến sĩ Công nghệ thực phẩm – Trường Đại
-                  học Bách khoa Hà Nội
-                </div>
-                <div class="history">
-                  <b>Quá Trình công tác:</b>
-                  <p>
-                    2011 – nay: Viện phó Viện Công nghệ Đức Việt – Tập đoàn
-                    POLYCO <br />
-                    2020 – nay: TP R&D – Tập đoàn POLYCO <br />
-                    2018 – nay: TP Khoa học Công nghệ – Trường Đại học Công nghệ
-                    Đông Á <br />
-                    2019 – nay: Trưởng khoa Công nghệ Thực phẩm – Trường Đại học
-                    Công nghệ Đông Á <br />
-                    2020 – nay: PHT, TP Quản lý Đào tạo – Trường Đại học Công
-                    nghệ Đông Á <br />
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-info col-xl-6">
-            <div class="content">
-              <div class="image-box">
-                <img src="images/Thái Thế Hùng.png" alt="thai the hung" />
-              </div>
-              <div class="details">
-                <div class="name">PGS.TS Thái Thế Hùng</div>
-                <div class="job">Phó hiệu trưởng</div>
-                <div class="date-of-birt"><b>Năm Sinh:</b>1962</div>
-                <div class="specialization">
-                  <b>Chuyên Ngành:</b>Tiến sĩ cơ khí – Université de Savoie –
-                  Cộng hòa Pháp
-                </div>
-                <div class="history">
-                  <b>Quá Trình công tác:</b>
-                  <p>
-                    1985-1992: Giảng viên Trường Đại học Bách khoa Đà Nẵng
-                    <br />
-                    1992-2001: Nghiên cứu sinh Tiến sĩ và sau Tiến sĩ tại Cộng
-                    hòa Pháp <br />
-                    2002-2021: Giảng viên-Trưởng bộ môn cơ học vật liệu và kết
-                    cấu, Viện trưởng viện Sư phạm kỹ thuật , Đại học Bách khoa
-                    Hà Nội <br />
-                    2022-nay: Phó Hiệu Trưởng Trường Đại học Công nghệ Đông Á,
-                    Phụ trách NCKH và khoa Cơ Khí <br />
-                  </p>
-                </div>
+                <div class="d-flex">
+                  <a href="#" class="btn-get-started scrollto">Xem Chi Tiết<i class="fa fa-arrow-right"></i></a>
+                </div>            
               </div>
             </div>
           </div>
@@ -506,8 +428,9 @@
         <div class="container">
           <div class="row gy-4">
             <div class="col-lg-4 col-md-12 footer-info">
-              <a href="index.html" class="eaut"
-                >Đại Học Công Nghệ Đông Á <br />Hà Nội</a
+              <a href="https://eaut.edu.vn/" class="eaut" target="_blank"
+                >Đại Học Công Nghệ Đông Á <br />
+                <span>Hà Nội</span></a
               >
               <p>
                 Cơ sở đào tạo thực hành: <br />
@@ -522,16 +445,17 @@
 
             <div class="col-lg-4 col-md-12 footer-info">
               <a href="index.html" class="eaut"
-                >Đại Học Công Nghệ Đông Á <br />Bắc Ninh</a
+                >Đại Học Công Nghệ Đông Á <br />
+                <span> Khoa Công Nghệ Thông Tin </span></a
               >
               <p>
                 Cơ sở đào tạo thực hành: <br />
                 <br />
                 Toà Nhà Polyco, Trịnh Văn Bô, Nam Từ Liêm, Hà Nội<br />
                 <br />
-                <strong>Điện thoại:</strong> 0243.555.2008 <br />
+                <strong>Điện thoại:</strong> 024.6262.7797 <br />
                 <br />
-                <strong>Email:</strong> tuyensinh@eaut.edu.vn<br />
+                <strong>Email:</strong> thanhct@eaut.edu.vn<br />
               </p>
             </div>
 
@@ -563,20 +487,28 @@
             </div>
             <div class="col-lg-6">
               <div class="social-links mt-6">
-                <a href="https://www.facebook.com/dhcnDongA" class="facebook"
+                <a
+                  href="https://www.facebook.com/khoacntteaut"
+                  class="facebook"
+                  target="_blank"
                   ><i class="fab fa-facebook"></i
                 ></a>
                 <a
                   href="https://www.tiktok.com/@daihoccongnghedonga"
                   class="tiktok"
+                  target="_blank"
                   ><i class="fab fa-tiktok"></i
                 ></a>
-                <a href="https://www.youtube.com/@dhcnDongA" class="youtube"
+                <a
+                  href="https://www.youtube.com/@dhcnDongA"
+                  class="youtube"
+                  target="_blank"
                   ><i class="fab fa-youtube"></i
                 ></a>
                 <a
-                  href="https://www.facebook.com/messages/t/198721740270305"
+                  href="https://www.facebook.com/messages/t/105486557893424"
                   class="messenger"
+                  target="_blank"
                   ><i class="fab fa-facebook-messenger"></i
                 ></a>
               </div>
@@ -586,12 +518,15 @@
       </div>
     </footer>
 
-      <!-- end Footer -->
+    <!-- end Footer -->
 
     <!-- bootstrap, Swiper, query  -->
     <script src="vendor/swiperjs/swiper-bundle.min.js"></script>
     <script src="vendor/bootstrap/bootstrap.min.js"></script>
     <script src="vendor/jquery/jquery-3.6.3.min.js"></script>
+    <script src="vendor/swiperjs/swiper-bundle1.min.js"></script>
+    <script src="vendor/AOS/aos@2.3.1_dist_aos.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
 
     <!-- fontawesome icon -->
     <script
@@ -599,9 +534,11 @@
       crossorigin="anonymous"
     ></script>
 
+    <script>
+      AOS.init();
+    </script>
+
     <script src="js/general.js"></script>
     <script src="js/about.js"></script>
-   
-    
   </body>
 </html>
