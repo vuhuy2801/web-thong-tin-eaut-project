@@ -137,10 +137,31 @@ body {
   margin-bottom: 50px;
 }
 
+
+@media (max-width: 1200px) {
+  .education-left h1 {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  .education-left h1 {
+    margin-top: 0px;
+  }
+  .education-left {
+    padding-bottom: 50px;
+  }
+
+}
+
 @media (max-width: 420px) {
   .custom-hr {
     margin-top: 50px; 
     margin-bottom:0px;
+  }
+
+  .education-left {
+    padding-bottom: 0px;  
   }
 
   .education-left h1 {
@@ -185,12 +206,11 @@ body {
 
 .selection-eaut .content-one{
   margin-bottom: 0px;
-}
-.selection-eaut .img-content-one{
-  margin-top: 100px;
+  padding-top: 80px;
 }
 
 .img-content-one img {
+  margin-top: 80px;
   border: 6px solid;
   color: white;
   box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
@@ -245,7 +265,12 @@ body {
   
   .selection-eaut .img-content-one{
     margin-top: 10px;
-
+  }
+  .selection-eaut .content-one{
+    padding-top: 0px;
+  }
+  .img-content-one img {
+    margin-top: 0px;
   }
 }
 
@@ -327,7 +352,7 @@ body {
 }
 }
 
-/*  */
+/* Khoa công nghệ thông tin có gì */
 
 .scholarship {
   margin-top: 100px;
@@ -353,7 +378,7 @@ body {
 .content-four .content-body h3 {
   font-weight: bold;
   text-align: left;
-  font-size: 144px;
+  font-size: 128px;
   margin-bottom: -10px;
 }
 
@@ -367,14 +392,15 @@ body {
   float: left;
   text-align: center;
   font-size: 26px;
-  padding-left: 15px;
+  padding-left: 0px;
 }
 
 .content-four .content-under h3 {
   font-weight: bold;
   text-align: right;
-  font-size: 144px;
+  font-size: 128px;
   padding-right: 110px;
+  margin-bottom: -0.5rem;
 }
 
 .content-four .content-under h3 span {
@@ -387,9 +413,112 @@ body {
   float: right;
   text-align: center;
   font-size: 26px;
-  padding-right: 165px;
+  padding-right: 155px;
   
 }
+
+
+  @media (max-width: 1286px) {
+    .content-four .content-body h3 {
+      font-size: 100px;
+    }
+    
+    .content-four .content-body h3 span {
+      font-size: 44px;
+
+    }
+    .content-four .content-body p {
+      font-size: 20px;
+
+    }
+    
+    .content-four .content-under h3 {
+      font-size: 100px;
+      padding-right: 170px;
+
+    }
+    
+    .content-four .content-under h3 span {
+      font-size: 44px;
+
+    }
+    .content-four .content-under p {
+      font-size: 20px;
+      padding-right: 220px;
+
+    }
+  }
+
+  @media (max-width: 1206px) {
+    .content-four .content-body h3 {
+      font-size: 100px;
+    }
+    
+    .content-four .content-body h3 span {
+      font-size: 44px;
+
+    }
+    .content-four .content-body p {
+      font-size: 20px;
+
+    }
+    
+    .content-four .content-under h3 {
+      font-size: 100px;
+      padding-right: 60px;
+
+    }
+    
+    .content-four .content-under h3 span {
+      font-size: 44px;
+
+    }
+    .content-four .content-under p {
+      font-size: 20px;
+      padding-right: 110px;
+
+    }
+  }
+
+  @media (max-width: 769px) {
+ 
+    .content-four .content-under h3 {
+      padding-left: 350px;
+      padding-right: 0px;
+    }
+    
+    .content-four .content-under p {
+      padding-left: 340px;
+      padding-right: 0px;
+      
+    }
+  }
+
+  @media (max-width: 546px) {
+    .content-four .content-under h3 {
+      padding-left: 290px;
+      padding-right: 0px;
+    }
+    
+    .content-four .content-under p {
+      padding-left: 280px;
+      padding-right: 0px;
+      
+    }
+  }
+
+  @media (max-width: 484px) {
+    .content-four .content-under h3 {
+      padding-left: 220px;
+      padding-right: 0px;
+    }
+    
+    .content-four .content-under p {
+      padding-left: 210px;
+      padding-right: 0px;
+      
+    }
+  }
 
 @media (max-width: 420px) {
   
@@ -425,10 +554,9 @@ body {
 
 .content-four .content-under h3 {
   font-weight: bold;
-  text-align: right;
   font-size: 100px;
   margin-bottom: -8px;
-  padding-right: 0px
+  padding-left: 170px;
   
 }
 
@@ -442,7 +570,7 @@ body {
   float: right;
   text-align: center;
   font-size: 20px;
-  padding-left: 75px;
+  padding-left: 165px;
   padding-right: 0px;
 }
 }
@@ -506,8 +634,6 @@ body {
   flex-direction: column;
   text-align: center;
   transition: 0.3s;
-  width: auto;
-  height: 180px;
   overflow: hidden;
 }
 .testimonials h3 {
@@ -525,6 +651,7 @@ body {
 .testimonials .swiper-pagination {
   margin-top: 20px;
   position: relative;
+  padding-left: 30px;
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet {
@@ -567,6 +694,9 @@ body {
     font-size: 32px;
   
   }
+  .testimonials .swiper-pagination {
+    padding-left: 10px;
+  }
 }
 
 /* end */
@@ -591,25 +721,24 @@ background: #fff;
 }
 
 .teachers .teacher {
-margin-bottom: 20px;
-overflow: hidden;
-border-radius: 4px;
-background: #fff;
-box-shadow: 0px 2px 15px rgba(16, 110, 234, 0.15);
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #fff;
+  width: 100%;
+  box-shadow: 0px 2px 15px rgba(16, 110, 234, 0.15);
 }
 
 .teacher-img img {
-width: 100%; 
-height: 100%; 
-object-fit: cover; 
+  width: 100%;
+  height: 300px;
+  object-fit: cover; 
 }
 
-
 .teachers .teacher .teacher-img {
-position: relative;
-overflow: hidden;
-width: 300px;
-height: 300px;
+  position: relative;
+  overflow: hidden;
+  
 }
 
 .teachers .teacher .teacher-info {
@@ -631,15 +760,15 @@ font-weight: 400;
 color: #aaaaaa;
 text-align: center;
 }
+@media (max-width: 992px) {
+  .teachers .teacher {
+    width: 100%;
+  }
+}
 
 @media (max-width: 420px) {
   .teacher-img img {
-    flex: 0 0 50%;
-    max-width: 60%;
-    max-height: 70%;
-  }
-  .teachers .teacher .teacher-info{
-    margin-top: -100px;
+   height: 230px;
   }
 
   .section-title h3 {
@@ -769,15 +898,13 @@ display: flex;
 flex-direction: column;
 }
 .post-box .post-img {
-width: 350px; 
-height: 200px;
-overflow: hidden;
+  overflow: hidden;
 }
 
 .post-box .post-img img {
-width: 100%;
-height: 100%;
-object-fit: cover;
+  width: 100%; 
+  height: 200px;
+  object-fit: cover;
 }
 
 .recent-blog-posts .post-box .post-img img {
@@ -815,14 +942,22 @@ color:#1e3769;
 margin-bottom: 10px;
 }
 
+@media (max-width: 1200px) {
+  .post-box .post-img img {
+    height: 150px;
+  }
+}
+@media (max-width: 992px) {
+  .post-box .post-img img {
+    height: 300px;
+  }
+}
 
 
 @media (max-width: 420px) {
   .post-box .post-img img {
-    width: 100%;
-    height: 100%;
+    height: 170px;
     object-fit: cover;
-    padding-right: 40px;
     }
 
 .post-box .description {
