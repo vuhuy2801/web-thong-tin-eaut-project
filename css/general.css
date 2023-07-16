@@ -655,3 +655,12 @@ body{
 }
 
 /* end breadcrumb area */
+
+.banner-area img {
+  width: 100%;
+}
+
+.hr-custom{
+  border: 1px solid;
+  opacity: 1;
+}
