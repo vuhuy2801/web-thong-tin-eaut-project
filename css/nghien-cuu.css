@@ -164,9 +164,18 @@
     padding-bottom: 25px;
   }
   .table tbody td{
-    color: #1e3769;
-
+    color: #1e3769;   
   }
+
+  .year-table table {
+    width: 100%;
+    text-align: center;
+  }
+  .year-table table td {
+    text-align: center;
+    vertical-align: middle;
+  }
+
   .year-button {
     padding-right: 20px;
   }
@@ -233,6 +242,20 @@
     .year-table table th,
     .year-table table td {
       white-space: nowrap;
+    }
+
+    
+    .year-table table td:nth-child(2) {
+      min-width: 200px;
+      width: auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+      word-wrap: break-word;
+    }
+    .year-table table td {
+      text-align: left;
+      vertical-align: middle;
     }
   }
 
