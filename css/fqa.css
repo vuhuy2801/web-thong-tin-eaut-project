@@ -20,7 +20,7 @@
   .search-bar {
     position: absolute;
     top: 90%;
-    width: 70%;
+    width: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -51,6 +51,7 @@
     .search-bar {
       top: 70%;
       padding: 3px;
+      
     }
   }
 

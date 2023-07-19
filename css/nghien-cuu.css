@@ -272,7 +272,8 @@
   }
 
   .page-item .page-link {
-    color: #000;
+    color: rgb(46, 44, 44);
+    border: none;
   }
 
   .pagination .page-item.active .page-link {
@@ -280,4 +281,6 @@
     color: #fff;
   }
 
-  
+  .page-item.disabled {
+    background: #fff  ;
+  }
