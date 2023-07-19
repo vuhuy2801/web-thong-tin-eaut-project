@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Roboto", sans-serif;
+    color: #1e3769;
+  }
+
+  .banner-nghien-cuu {
+    position: relative;
+    padding-top: 5rem;
+  }
+  
+  .banner-nghien-cuu img{
+    width: 100%;
+  }
+
+  .hr-breadcrumb {
+    margin-bottom: 40px;
+  }
+
+.hr-cus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .hr-custom {
+    width: 95%;
+    height: 1px;
+    background-color: #000;
+  }
+  .post-img {
+    margin-bottom: 5px;
+  }
+
+  .blog-title h3 {
+    font-weight: bold;
+    font-size: 48px;
+    text-align: left;
+    margin-bottom: 70px;
+  }
+  .post-title a {
+    text-decoration: none;
+    color: #1e3769;
+
+  }
+  
+  .post-date {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 6px 12px;
+    background-color: #1e3769;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid #fff;
+    top: 43%;
+    left: 5%;
+    text-align: center;
+  }
+
+  .post-date span{
+    font-size: 13px;
+    font-weight: lighter;
+    color: #f0f0f0;
+    text-align: center;
+  }
+
+  .recent-blog-posts .post-box {
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+  transition: 0.3s;
+  height: 100%;
+  overflow: hidden;
+  padding: 30px;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  }
+  .post-box .post-img {
+    overflow: hidden;
+  }
+  
+  .post-box .post-img img {
+    width: 100%; 
+    height: 250px;
+    object-fit: cover;
+    position: relative;
+
+  }
+  
+  .recent-blog-posts .post-box .post-img img {
+  transition: 0.5s;
+  }
+  
+  
+  .recent-blog-posts .post-box .post-title {
+  font-size: 18px;
+  color: #1e3769;
+  font-weight: 700;
+  position: relative;
+  transition: 0.3s;
+  }
+  
+  .recent-blog-posts .post-box:hover .post-title a{
+    color: #4154f1;
+  }
+  
+  .recent-blog-posts .post-box:hover .post-img img {
+    transform: translateY(-10px);
+  
+  }
+  
+  .post-box .description {
+  font-size: 13px;
+  color:#1e3769;
+  margin-bottom: 10px;
+  padding-bottom: 7px;
+  }
+
+  .btn-get-watch {
+    margin-top: 50px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    display: inline-block;
+    border-radius: 4px;
+    transition: 0.5s;
+    color: #fff;
+    background: #1e3769;
+    text-decoration: none; 
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+    padding: 8px 28px 8px 28px;
+    position: relative;
+    margin-bottom: 60px;
+  }
+
+  .btn-get-watch:hover {
+    color: #fff;
+    background-color: #f9690e;
+  }
+
+  .scientific-title {
+    margin-top: 40px;
+  }
+  .scientific-title h3{
+    font-weight: bold;
+    font-size: 48px;
+    text-align: left;
+    margin-bottom: 70px;
+  }
+  .table thead th {
+    color: #fff; 
+    background-color: #1e3769; 
+  }
+
+  .table tbody td {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .table tbody td{
+    color: #1e3769;
+
+  }
+  .year-button {
+    padding-right: 20px;
+  }
+
+  .pagination{
+    margin-top: 50px;
+  }
+  .year-buttons {
+    display: flex;
+    margin-bottom: 5px;
+  }
+  .year-buttons .year-button {
+    font-weight: bold;
+    font-size: 18px;
+    color: #1e3769;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 4px;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .year-button.active {
+    background-color: #1e3769;
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .year-buttons .year-button {
+    font-size: 16px;
+    padding: 5px 10px;
+    }
+    .scientific-title h3{
+      font-size: 32px;
+    }
+    .blog-title h3{
+      font-size: 32px;
+    }
+
+    .year-table {
+      overflow-x: auto;
+    }
+  
+    .year-table::-webkit-scrollbar {
+      height: 8px;
+      background-color: #f5f5f5;
+    }
+  
+    .year-table::-webkit-scrollbar-thumb {
+      background-color: #888;
+      border-radius: 4px;
+    }
+  
+    .year-table::-webkit-scrollbar-thumb:hover {
+      background-color: #555;
+    }
+  
+    .year-table table {
+      min-width: 100%;
+    }
+  
+    .year-table table th,
+    .year-table table td {
+      white-space: nowrap;
+    }
+  }
+
+  .pagination {
+    border: none;
+  }
+  .page-item.disabled .page-link{color: #69696c;}
+  
+  .pagination .page-link {
+    border: none;
+  }
+  .pagination .page-item.disabled .page-link {
+    background-color: transparent;
+  }
+
+  .page-item .page-link {
+    color: #000;
+  }
+
+  .pagination .page-item.active .page-link {
+    background-color: #1e3769;
+    color: #fff;
+  }
+
+  

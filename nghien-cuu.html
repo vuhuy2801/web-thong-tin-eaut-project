@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>EAUT</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="vendor/swiperjs/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="/css/nghien-cuu.css" />
+  </head>
+  <body>
+    <!-- Nav -->
+    <header id="header" class="d-flex align-items-center header-scroll">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo"
+          ><img src="images/logo-final.png" alt=""
+        /></a>
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li>
+              <a class="nav-link scrollto" href="/index.html">TRANG CHỦ</a>
+            </li>
+            <li class="dropdown">
+              <a class="nav-link scrollto" href="about.html">GIỚI THIỆU</a>
+              <ul>
+                <li><a href="#">Khoa CNTT</a></li>
+                <li><a href="#">Giảng viên</a></li>
+                <li><a href="#">Cơ sở vật chất</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link scrollto" href="dao-tao.html">ĐÀO TẠO</a></li>
+            <li>
+              <a class="nav-link scrollto active" href="nghien-cuu.html"
+                >NGHIÊN CỨU</a
+              >
+            </li>
+            <li><a class="nav-link scrollto" href="#">HỢP TÁC</a></li>
+            <li><a class="nav-link scrollto" href="q&a.html">Q&A</a></li>
+            <li class="dropdown">
+              <a class="nav-link scrollto" href="news.html">TIN TỨC</a>
+              <ul>
+                <li><a href="news.html">Tin tức chung</a></li>
+                <li><a href="#">Tin thông báo</a></li>
+                <li><a href="#">Tin tuyển dụng</a></li>
+                <li><a href="#">Hoạt động đối ngoại</a></li>
+              </ul>
+            </li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+
+        <nav id="sub-navbar" class="sub-navbar container">
+          <div class="subnav-wrapper">
+            <ul>
+              <li>
+                <a class="nav-link scrollto" href="/index.html"
+                  ><span class="icon-square"></span
+                  ><i class="fas fa-home icon-home"></i
+                ></a>
+              </li>
+              <li>
+                <a class="nav-link scrollto" href="about.html">GIỚI THIỆU</a>
+              </li>
+              <li><a class="nav-link scrollto" href="dao-tao.html">ĐÀO TẠO</a></li>
+              <li>
+                <a class="nav-link scrollto active" href="nghien-cuu.html">NGHIÊN CỨU</a>
+              </li>
+              <li><a class="nav-link scrollto" href="#">HỢP TÁC</a></li>
+              <li><a class="nav-link scrollto" href="q&a.html">Q&A</a></li>
+              <li>
+                <a class="nav-link scrollto" href="news.html">TIN TỨC</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End NAV -->
+
+    <section class="banner-nghien-cuu">
+      <img src="images/banner-nghien-cuu.png" alt="" />
+    </section>
+
+    <!-- End Banner -->
+
+    <main id="main">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb custom">
+            <li class="breadcrumb-item"><a href="#">TRANG CHỦ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              NGHIÊN CỨU
+            </li>
+          </ol>
+        </nav>
+        <hr class="hr-breadcrumb" />
+      </div>
+      <!--Section: nghiencuu-->
+      <section id="recent-blog-posts" class="recent-blog-posts">
+        <div class="container" data-aos="fade-up">
+          <div class="blog-title">
+            <h3>Hoạt động nghiên cứu</h3>
+          </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="post-box">
+                <div class="post-img">
+                  <img src="images/jobfairchild.png" class="img-fluid" alt="" />
+                </div>
+                <h3 class="post-title">
+                  <a href="new.html"
+                    >HỘI THẢO KHOA HỌC KHOA CÔNG NGHỆ THÔNG TIN: “KHAI PHÁ TRI
+                    THỨC TRONG NÂNG CAO CHẤT LƯỢNG ĐÀO TẠO”
+                  </a>
+                </h3>
+                <p class="description">
+                  Ngày 24/06, tại tầng 7 tòa Đinh Trọng Dật – Trường Đại học
+                  Công Nghệ...
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="post-box">
+                <div class="post-img">
+                  <img src="images/nghiencuu2.png" class="img-fluid" alt="" />
+                </div>
+                <h3 class="post-title">
+                  <a href="new.html"
+                    >HỘI THẢO KHOA HỌC - Những điều cần biết về Công cụ Phân
+                    tích và Trực quan hoá dữ liệu Tableau</a
+                  >
+                </h3>
+                <p class="description">
+                  Dữ liệu ở khắp mọi nơi — nhu cầu truy cập và phân tích dữ liệu
+                  cũng vậy...
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="post-box">
+                <div class="post-img">
+                  <img src="images/nghiencuu3.png" class="img-fluid" alt="" />
+                </div>
+                <h3 class="post-title">
+                  <a href="new.html"
+                    >HỘI THẢO KHOA HỌC “MÔI TRƯỜNG TÍNH TOÁN THÔNG MINH”</a
+                  >
+                </h3>
+                <p class="description">
+                  Ngày 03.06.2022, tại trường ĐH Công nghệ Đông Á, khoa Công
+                  nghệ thông...
+                </p>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center">
+              <a href="#" class="btn-get-watch scrollto"
+                >Xem Thêm <i class="fa fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <hr class="custom-hr" />
+        </div>
+        <!-- Section hđ nghien cuu -->
+      </section>
+      
+      <section id="scientific-research" class="scientific-research">
+        <div class="container" data-aos="fade-up">
+          <div class="scientific-title">
+            <h3>Nghiên cứu khoa học sinh viên</h3>
+          </div>
+          <div class="year-buttons">
+            <button class="year-button active" data-year="2023">2023</button>
+            <button class="year-button" data-year="2022">2022</button>
+            <button class="year-button" data-year="2021">2021</button>
+            <button class="year-button" data-year="2020">2020</button>
+            <button class="year-button" data-year="2019">2019</button>
+          </div>
+          <div id="year-tables">
+            <div id="table-2023" class="year-table">
+              <table class="table table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th>STT</th>
+                    <th>Tên đề tài</th>
+                    <th>Giảng viên hướng dẫn</th>
+                    <th>Sinh viên</th>
+                    <th>Lớp</th>
+                  </tr>
+                </thead>
+                <tbody>                 
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      Xây dựng hệ thống Chatbot thông qua những bình luận bằng
+                      Tiếng Anh
+                    </td>
+                    <td>ThS. Nguyễn Viết Hùng <br>ThS. Nguyễn Thị Thúy Nga</td>
+                    <td>Nguyễn Hồng Quân <br> Nguyễn Tấn</td>
+                    <td>DCCNTT11.10.1 <br> DCCNTT11.10.2</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>
+                      Xây dựng hệ thống Chatbot thông qua những bình luận bằng
+                      Tiếng Anh
+                    </td>
+                    <td>ThS. Nguyễn Viết Hùng <br>ThS. Nguyễn Thị Thúy Nga</td>
+                    <td>Nguyễn Hồng Quân <br> Nguyễn Tấn</td>
+                    <td>DCCNTT11.10.1 <br> DCCNTT11.10.2</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>
+                      Xây dựng hệ thống Chatbot thông qua những bình luận bằng
+                      Tiếng Anh
+                    </td>
+                    <td>ThS. Nguyễn Viết Hùng <br>ThS. Nguyễn Thị Thúy Nga</td>
+                    <td>Nguyễn Hồng Quân <br> Nguyễn Tấn</td>
+                    <td>DCCNTT11.10.1 <br> DCCNTT11.10.2</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>
+                      Xây dựng hệ thống Chatbot thông qua những bình luận bằng
+                      Tiếng Anh
+                    </td>
+                    <td>ThS. Nguyễn Viết Hùng <br>ThS. Nguyễn Thị Thúy Nga</td>
+                    <td>Nguyễn Hồng Quân <br>Nguyễn Tấn</td>
+                    <td>DCCNTT11.10.1 <br> DCCNTT11.10.2</td>
+                  </tr>
+          
+                </tbody>
+              </table>
+            </div>
+            <div id="table-2022" class="year-table">        
+              <table class="table table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th>STT</th>
+                    <th>Tên đề tài</th>
+                    <th>Giảng viên hướng dẫn</th>
+                    <th>Sinh viên</th>
+                    <th>Lớp</th>
+                  </tr>
+                </thead>
+                <tbody>                 
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      Xây dựng hệ thống Chatbot thông qua những bình luận bằng
+                      Tiếng Anh
+                    </td>
+                    <td>ThS. Nguyễn Viết Hùng <br>ThS. Nguyễn Thị Thúy Nga</td>
+                    <td>Nguyễn Hồng Quân <br> Nguyễn Tấn</td>
+                    <td>DCCNTT11.10.1 <br> DCCNTT11.10.2</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>
+                      Xây dựng hệ thống Chatbot thông qua những bình luận bằng
+                      Tiếng Anh
+                    </td>
+                    <td>ThS. Nguyễn Viết Hùng <br>ThS. Nguyễn Thị Thúy Nga</td>
+                    <td>Nguyễn Hồng Quân <br> Nguyễn Tấn</td>
+                    <td>DCCNTT11.10.1 <br> DCCNTT11.10.2</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>
+                      Xây dựng hệ thống Chatbot thông qua những bình luận bằng
+                      Tiếng Anh
+                    </td>
+                    <td>ThS. Nguyễn Viết Hùng <br>ThS. Nguyễn Thị Thúy Nga</td>
+                    <td>Nguyễn Hồng Quân <br> Nguyễn Tấn</td>
+                    <td>DCCNTT11.10.1 <br> DCCNTT11.10.2</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>
+                      Xây dựng hệ thống Chatbot thông qua những bình luận bằng
+                      Tiếng Anh
+                    </td>
+                    <td>ThS. Nguyễn Viết Hùng <br>ThS. Nguyễn Thị Thúy Nga</td>
+                    <td>Nguyễn Hồng Quân <br>Nguyễn Tấn</td>
+                    <td>DCCNTT11.10.1 <br> DCCNTT11.10.2</td>
+                  </tr>              
+                </tbody>
+              </table>
+            </div>
+
+            <div id="table-2021" class="year-table">        
+              <table class="table table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th>STT</th>
+                    <th>Tên đề tài</th>
+                    <th>Giảng viên hướng dẫn</th>
+                    <th>Sinh viên</th>
+                    <th>Lớp</th>
+                  </tr>
+                </thead>
+                <tbody>                 
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      Xây dựng hệ thống Chatbot thông qua những bình luận bằng
+                      Tiếng Anh
+                    </td>
+                    <td>ThS. Nguyễn Viết Hùng <br>ThS. Nguyễn Thị Thúy Nga</td>
+                    <td>Nguyễn Hồng Quân <br> Nguyễn Tấn</td>
+                    <td>DCCNTT11.10.1 <br> DCCNTT11.10.2</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>
+                      Xây dựng hệ thống Chatbot thông qua những bình luận bằng
+                      Tiếng Anh
+                    </td>
+                    <td>ThS. Nguyễn Viết Hùng <br>ThS. Nguyễn Thị Thúy Nga</td>
+                    <td>Nguyễn Hồng Quân <br> Nguyễn Tấn</td>
+                    <td>DCCNTT11.10.1 <br> DCCNTT11.10.2</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>
+                      Xây dựng hệ thống Chatbot thông qua những bình luận bằng
+                      Tiếng Anh
+                    </td>
+                    <td>ThS. Nguyễn Viết Hùng <br>ThS. Nguyễn Thị Thúy Nga</td>
+                    <td>Nguyễn Hồng Quân <br> Nguyễn Tấn</td>
+                    <td>DCCNTT11.10.1 <br> DCCNTT11.10.2</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>
+                      Xây dựng hệ thống Chatbot thông qua những bình luận bằng
+                      Tiếng Anh
+                    </td>
+                    <td>ThS. Nguyễn Viết Hùng <br>ThS. Nguyễn Thị Thúy Nga</td>
+                    <td>Nguyễn Hồng Quân <br>Nguyễn Tấn</td>
+                    <td>DCCNTT11.10.1 <br> DCCNTT11.10.2</td>
+                  </tr>              
+                </tbody>
+              </table>
+            </div>
+
+            <div id="table-2020" class="year-table">        
+              <table class="table table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th>STT</th>
+                    <th>Tên đề tài</th>
+                    <th>Giảng viên hướng dẫn</th>
+                    <th>Sinh viên</th>
+                    <th>Lớp</th>
+                  </tr>
+                </thead>
+                <tbody>                 
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      Xây dựng hệ thống Chatbot thông qua những bình luận bằng
+                      Tiếng Anh
+                    </td>
+                    <td>ThS. Nguyễn Viết Hùng <br>ThS. Nguyễn Thị Thúy Nga</td>
+                    <td>Nguyễn Hồng Quân <br> Nguyễn Tấn</td>
+                    <td>DCCNTT11.10.1 <br> DCCNTT11.10.2</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>
+                      Xây dựng hệ thống Chatbot thông qua những bình luận bằng
+                      Tiếng Anh
+                    </td>
+                    <td>ThS. Nguyễn Viết Hùng <br>ThS. Nguyễn Thị Thúy Nga</td>
+                    <td>Nguyễn Hồng Quân <br> Nguyễn Tấn</td>
+                    <td>DCCNTT11.10.1 <br> DCCNTT11.10.2</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>
+                      Xây dựng hệ thống Chatbot thông qua những bình luận bằng
+                      Tiếng Anh
+                    </td>
+                    <td>ThS. Nguyễn Viết Hùng <br>ThS. Nguyễn Thị Thúy Nga</td>
+                    <td>Nguyễn Hồng Quân <br> Nguyễn Tấn</td>
+                    <td>DCCNTT11.10.1 <br> DCCNTT11.10.2</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>
+                      Xây dựng hệ thống Chatbot thông qua những bình luận bằng
+                      Tiếng Anh
+                    </td>
+                    <td>ThS. Nguyễn Viết Hùng <br>ThS. Nguyễn Thị Thúy Nga</td>
+                    <td>Nguyễn Hồng Quân <br>Nguyễn Tấn</td>
+                    <td>DCCNTT11.10.1 <br> DCCNTT11.10.2</td>
+                  </tr>              
+                </tbody>
+              </table>
+            </div>
+
+            <div id="table-2019" class="year-table">        
+              <table class="table table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th>STT</th>
+                    <th>Tên đề tài</th>
+                    <th>Giảng viên hướng dẫn</th>
+                    <th>Sinh viên</th>
+                    <th>Lớp</th>
+                  </tr>
+                </thead>
+                <tbody>                 
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      Xây dựng hệ thống Chatbot thông qua những bình luận bằng
+                      Tiếng Anh
+                    </td>
+                    <td>ThS. Nguyễn Viết Hùng <br>ThS. Nguyễn Thị Thúy Nga</td>
+                    <td>Nguyễn Hồng Quân <br> Nguyễn Tấn</td>
+                    <td>DCCNTT11.10.1 <br> DCCNTT11.10.2</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>
+                      Xây dựng hệ thống Chatbot thông qua những bình luận bằng
+                      Tiếng Anh
+                    </td>
+                    <td>ThS. Nguyễn Viết Hùng <br>ThS. Nguyễn Thị Thúy Nga</td>
+                    <td>Nguyễn Hồng Quân <br> Nguyễn Tấn</td>
+                    <td>DCCNTT11.10.1 <br> DCCNTT11.10.2</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>
+                      Xây dựng hệ thống Chatbot thông qua những bình luận bằng
+                      Tiếng Anh
+                    </td>
+                    <td>ThS. Nguyễn Viết Hùng <br>ThS. Nguyễn Thị Thúy Nga</td>
+                    <td>Nguyễn Hồng Quân <br> Nguyễn Tấn</td>
+                    <td>DCCNTT11.10.1 <br> DCCNTT11.10.2</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>
+                      Xây dựng hệ thống Chatbot thông qua những bình luận bằng
+                      Tiếng Anh
+                    </td>
+                    <td>ThS. Nguyễn Viết Hùng <br>ThS. Nguyễn Thị Thúy Nga</td>
+                    <td>Nguyễn Hồng Quân <br>Nguyễn Tấn</td>
+                    <td>DCCNTT11.10.1 <br> DCCNTT11.10.2</td>
+                  </tr>              
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-end">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+              </li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+
+    <footer id="footer" class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-4 col-md-12 footer-info">
+              <a href="https://eaut.edu.vn/" class="eaut" target="_blank"
+                >Đại Học Công Nghệ Đông Á <br />
+                <span>Hà Nội</span></a
+              >
+              <p>
+                Cơ sở đào tạo thực hành: <br />
+                <br />
+                Toà Nhà Polyco, Trịnh Văn Bô, Nam Từ Liêm, Hà Nội<br />
+                <br />
+                <strong>Điện thoại:</strong> 0243.555.2008 <br />
+                <br />
+                <strong>Email:</strong> tuyensinh@eaut.edu.vn<br />
+              </p>
+            </div>
+
+            <div class="col-lg-4 col-md-12 footer-info">
+              <a href="index.html" class="eaut"
+                >Đại Học Công Nghệ Đông Á <br />
+                <span> Khoa Công Nghệ Thông Tin </span></a
+              >
+              <p>
+                Cơ sở đào tạo thực hành: <br />
+                <br />
+                Toà Nhà Polyco, Trịnh Văn Bô, Nam Từ Liêm, Hà Nội<br />
+                <br />
+                <strong>Điện thoại:</strong> 024.6262.7797 <br />
+                <br />
+                <strong>Email:</strong> thanhct@eaut.edu.vn<br />
+              </p>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="img-footer">
+                <div class="footer-img">
+                  <img
+                    src="images/bo-cong-thuong.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <hr class="custom-hr2" />
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-under">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 text-lg-start text-center">
+              <div class="copyright">
+                Copyright © 2023 Đại học Công Nghệ Đông Á All rights reserved.
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="social-links mt-6">
+                <a
+                  href="https://www.facebook.com/khoacntteaut"
+                  class="facebook"
+                  target="_blank"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+                <a
+                  href="https://www.tiktok.com/@daihoccongnghedonga"
+                  class="tiktok"
+                  target="_blank"
+                  ><i class="fab fa-tiktok"></i
+                ></a>
+                <a
+                  href="https://www.youtube.com/@dhcnDongA"
+                  class="youtube"
+                  target="_blank"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+                <a
+                  href="https://www.facebook.com/messages/t/105486557893424"
+                  class="messenger"
+                  target="_blank"
+                  ><i class="fab fa-facebook-messenger"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS File -->
+    <script src="vendor/jquery/jquery-3.6.3.min.js"></script>
+    <script src="vendor/AOS/aos@2.3.1_dist_aos.js"></script>
+    <script src="vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="vendor/swiperjs/swiper-bundle1.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- JS -->
+    <script src="js/general.js"></script>
+    <script src="js/nghien-cuu.js"></script>
+  </body>
+</html>
