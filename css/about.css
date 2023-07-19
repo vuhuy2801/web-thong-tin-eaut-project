@@ -16,7 +16,9 @@ body {
 
 /* end banner area */
 
-
+.banner-area img {
+  width: 100%;
+}
 
 /* introduce Area */
 .introduce-area {
@@ -151,7 +153,12 @@ body {
   color: #1e3769;
   font-size: 180px;
   transition: 0.3s;
- 
+}
+
+.icon-value img {
+  padding-top: 20px;
+  width: 60%;
+  padding-bottom: 20px;
 }
 
 .icon-value {
@@ -353,52 +360,45 @@ font-size: 150px;
 }
 
 /* card info */
+
 .card-info {
-  /* width: 100%; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .card-info .content {
   display: flex;
-  height: 100%;
-  max-width: 670px;
   padding: 15px;
   background: #fff;
   border-radius: 12px;
   position: relative;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  margin-left: 15px;
 }
 
-.card-info .toggle {
-  position: absolute;
-  width: 50px;
-  height: 25px;
-  border-radius: 20px;
-  background: #092c3e;
-  right: 15px;
-  top: 13px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+
+.card-info .content {
+  overflow-x: auto;
 }
 
-.card-info .toggle .circle {
-  margin-left: 5px;
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
-  background: #fff;
-  transition: all 0.3s ease;
+.card-info .content .details {
+  width: auto;
+  max-width: 100%;
+  margin: 10px 0 20px 40px;
 }
 
 .card-info .image-box {
-  height: 250px;
-  width: 230px;
+  width: 250px;
+  height: 100%;
   border-radius: 12px;
-  padding: 3px;
-  /* background: #092c3e; */
+  padding: 1px;
 }
+
+.card-info .content .details .name {
+  font-size: 20px;
+}
+
 .card-info .image-box img {
   height: 100%;
   width: 100%;
@@ -407,63 +407,59 @@ font-size: 150px;
   border-radius: 12px;
 }
 
-.card-info .content .details {
-  width: 58%;
-  margin: 10px 0 20px 40px;
-  color: #092c3e;
-}
-
 .card-info .content .details .name {
   font-size: 23px;
   font-weight: 600;
   color: #ae9f6f;
 }
 .card-info .content .details .job {
+  padding-top: 10px;
   font-size: 18px;
   font-weight: bold;
 }
 .card-info .content .details p {
+  padding-top: 5px;
   font-size: 17px;
   margin-top: 6px;
 }
 
-.date-of-birt,
+.date-of-birth,
 .specialization {
+  padding-top: 5px;
   font-weight: bold;
   font-size: 18px;
 }
 
 #team .btn-get-started i{
-  margin-left: 5px;
-  color: white;
   position: relative;
   transition: all 0.5s ease-in-out;
 }
+.btn-get-started i{
+padding-left: 5px;
+}
+
 .btn-get-started:hover i {
   transform: translateX(5px); 
 }
 
 .btn-get-started {
   font-size: 18px;
-  letter-spacing: 1px;
   display: inline-block;
-  border-radius: 50px;
   transition: 0.5s;
-  color: #fff;
-  background: #1e3769;
+  color: #1e3769;
   text-decoration: none; 
   font-weight: bold;
   transition: all 0.5s ease-in-out;
   margin-top: 40px;
-  padding: 10px 20px 11px 20px;
+  padding: 0px 20px 11px 0px;
   position: relative;
 }
 
 .btn-get-started:hover {
-  background: #f9690e;
+  color: #f9690e;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 768px) {
   .btn-get-started {
     font-size: 13px;
     margin-top: 20px;
@@ -473,13 +469,28 @@ font-size: 150px;
   .specialization {
     font-size: 16px;
 }
+.card-info .content .details .job {
+  font-size: 16px
+}
+  .card-info .content .details .name {
+    font-size: 20px;
+  }
+  .team h2 {
+    font-size: 32px;
+  }
+  .date-of-birth,
+  .specialization {
+    font-size: 16px;
+  }
 
-.card-info .content .details .name {
-  font-size: 20px;
-}
-.team h2 {
-  font-size: 32px;
-}
+  .card-info .image-box {
+    width: 100%;
+    height: auto;
+  }
+  .card-info .content {
+    margin-top: 15px;
+    margin-left: 20px;
+  }
 }
 
 /* card info */

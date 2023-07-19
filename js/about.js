@@ -23,6 +23,7 @@ var swiper = new Swiper(".historySwiper", {
       },
     },
   });
+  
   new Swiper("#swiper-2", {
     slidesPerView: 1,
     centeredSlides: true,

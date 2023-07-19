@@ -10,9 +10,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
-  />
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/about.css" />
@@ -30,17 +30,32 @@
             <li>
               <a class="nav-link scrollto" href="/index.html">TRANG CHỦ</a>
             </li>
-            <li>
+            <li class="dropdown">
               <a class="nav-link scrollto active" href="about.html"
                 >GIỚI THIỆU</a
               >
+              <ul>
+                <li><a href="#">Khoa CNTT</a></li>
+                <li><a href="#">Giảng viên</a></li>
+                <li><a href="#">Cơ sở vật chất</a></li>
+              </ul>
             </li>
-            <li><a class="nav-link scrollto" href="#">ĐÀO TẠO</a></li>
-            <li><a class="nav-link scrollto" href="#">NGHIÊN CỨU</a></li>
-            <li><a class="nav-link scrollto" href="#">HỢP TÁC</a></li>
-            <li><a class="nav-link scrollto" href="#">Q&A</a></li>
             <li>
-              <a class="nav-link scrollto btn-tuyensinh" href="">TIN TỨC</a>
+              <a class="nav-link scrollto" href="dao-tao.html">ĐÀO TẠO</a>
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="nghien-cuu.html">NGHIÊN CỨU</a>
+            </li>
+            <li><a class="nav-link scrollto" href="#">HỢP TÁC</a></li>
+            <li><a class="nav-link scrollto" href="q&a.html">Q&A</a></li>
+            <li class="dropdown">
+              <a class="nav-link scrollto" href="news.html">TIN TỨC</a>
+              <ul>
+                <li><a href="news.html">Tin tức chung</a></li>
+                <li><a href="#">Tin thông báo</a></li>
+                <li><a href="#">Tin tuyển dụng</a></li>
+                <li><a href="#">Hoạt động đối ngoại</a></li>
+              </ul>
             </li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
@@ -50,22 +65,28 @@
           <div class="subnav-wrapper">
             <ul>
               <li>
-                <a class="nav-link scrollto active" href="/index.html"
+                <a class="nav-link scrollto" href="/index.html"
                   ><span class="icon-square"></span
                   ><i class="fas fa-home icon-home"></i
                 ></a>
               </li>
               <li>
-                <a class="nav-link scrollto" href="about.html">GIỚI THIỆU</a>
+                <a class="nav-link scrollto active" href="about.html"
+                  >GIỚI THIỆU</a
+                >
               </li>
-              <li><a class="nav-link scrollto" href="#">ĐÀO TẠO</a></li>
               <li>
-                <a class="nav-link scrollto" href="#">NGHIÊN CỨU</a>
+                <a class="nav-link scrollto" href="dao-tao.html">ĐÀO TẠO</a>
+              </li>
+              <li>
+                <a class="nav-link scrollto" href="nghien-cuu.html"
+                  >NGHIÊN CỨU</a
+                >
               </li>
               <li><a class="nav-link scrollto" href="#">HỢP TÁC</a></li>
-              <li><a class="nav-link scrollto" href="#">Q&A</a></li>
+              <li><a class="nav-link scrollto" href="q&a.html">Q&A</a></li>
               <li>
-                <a class="nav-link scrollto btn-tuyensinh" href="">TIN TỨC</a>
+                <a class="nav-link scrollto btn-tuyensinh" href="news.html">TIN TỨC</a>
               </li>
             </ul>
           </div>
@@ -74,7 +95,7 @@
     </header>
     <!-- End NAV -->
 
-    <!-- banner Area -->>
+    <!-- banner Area -->
     <section class="banner-area">
       <img src="images/banner-about.png" alt="" />
     </section>
@@ -83,7 +104,7 @@
     <div class="container">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb custom">
-          <li class="breadcrumb-item"><a href="#">TRANG CHỦ</a></li>
+          <li class="breadcrumb-item"><a href="index.html">TRANG CHỦ</a></li>
           <li class="breadcrumb-item"><a href="#">GIỚI THIỆU</a></li>
           <li class="breadcrumb-item active" aria-current="page">
             KHOA CÔNG NGHỆ THÔNG TIN
@@ -96,7 +117,7 @@
 
     <!-- introduce Area -->
     <section class="introduce-area">
-      <div class="container">
+      <div class="container" data-aos="fade-down">
         <div class="row">
           <div class="intro-left col-md-6 col-xl-6">
             <div class="introduce-text">
@@ -131,7 +152,7 @@
     <!-- Swiper -->
 
     <section class="history-begin">
-      <div class="container">
+      <div class="container" data-aos="fade-up">
         <div class="swiper historySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -189,7 +210,7 @@
           <div class="col-lg-4">
             <div class="core-values-box">
               <div class="icon-value">
-                <i class="fas fa-wifi"></i>
+                <img src="/images/quality_1212158.png" alt="" />
               </div>
               <h4 class="core-values-content">Chất Lượng</h4>
             </div>
@@ -198,7 +219,7 @@
           <div class="col-lg-4">
             <div class="core-values-box">
               <div class="icon-value">
-                <i class="fas fa-wifi"></i>
+                <img src="/images/checked_1926868.png" alt="" />
               </div>
               <h4 class="core-values-content">Ứng Dụng</h4>
             </div>
@@ -207,7 +228,7 @@
           <div class="col-lg-4">
             <div class="core-values-box">
               <div class="icon-value">
-                <i class="fas fa-wifi"></i>
+                <img src="/images/idea_8594032.png" alt="" />
               </div>
               <h4 class="core-values-content">Sáng Tạo</h4>
             </div>
@@ -219,7 +240,7 @@
 
     <!-- infrastructure area -->
     <section class="infrastructure">
-      <div class="container">
+      <div class="container" data-aos="fade-down">
         <div class="row title align-items-end">
           <div class="col-md-7 col-xl-7">
             <h2>Cơ sở vật chất</h2>
@@ -235,7 +256,7 @@
             </p>
           </div>
         </div>
-        <div class="row">
+        <div class="row" data-aos="fade-down">
           <div class="swiper" id="swiper-2">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -360,7 +381,7 @@
               type="text/html"
               width="1080"
               height="728"
-              src="https://www.youtube.com/embed/LryCrVaGobg?autoplay=0&mute=1"
+              src="https://www.youtube.com/embed/LryCrVaGobg?autoplay=1&mute=1"
               frameborder="0"
               allowfullscreen
             >
@@ -370,55 +391,62 @@
       </div>
     </section>
     <!-- end infrastructure area -->
-    <!-- team area -->
+
     <section class="team">
-      <div class="container">
+      <div class="container" data-aos="fade-up">
         <hr />
         <div class="row">
           <h2>Ban chủ nghiệm Khoa</h2>
-        </div>
-        <div class="row pt-5">
-          <div class="card-info">
-            <div class="content">
-              <div class="image-box">
-                <img src="images/tranxuanthanh.png" alt="dinh van thanh" />
-              </div>
-              <div class="details">
-                <div class="name">THS. Trần Xuân Thanh</div>
-                <div class="job">Trưởng Khoa</div>
-                <div class="date-of-birt"><b>Năm Sinh:</b>1954</div>
-                <div class="specialization">
-                  <b>Chuyên Ngành:</b> Khoa học máy tính
+          <div class="row pt-6">
+            <div class="col-lg-6">
+              <div class="card-info">
+                <div class="content">
+                  <div class="image-box" data-aos="fade-up-left">
+                    <img src="images/tranxuanthanh.png" alt="dinh van thanh" />
+                  </div>
+                  <div class="details" data-aos="fade-up-right">
+                    <div class="name">Ths. Trần Xuân Thanh</div>
+                    <div class="job">Trưởng Khoa</div>
+                    <div class="date-of-birth">Năm Sinh: 1954</div>
+                    <div class="specialization">
+                      <b>Chuyên Ngành:</b> Khoa học máy tính
+                    </div>
+                    <div class="d-flex justify-content-start">
+                      <a href="#" class="btn-get-started scrollto">Xem Chi Tiết<i class="fa fa-arrow-right"></i></a>
+                    </div>
+                  </div>
                 </div>
-                <div class="d-flex">
-                  <a href="#" class="btn-get-started scrollto">Xem Chi Tiết<i class="fa fa-arrow-right"></i></a>
-                </div>            
               </div>
             </div>
-          </div>
-        </div>
-        <div class="row pt-5">
-          <div class="card-info">
-            <div class="content">
-              <div class="image-box">
-                <img src="/images/maivanlinh.png" alt="dinh van thanh" />
-              </div>
-              <div class="details">
-                <div class="name">THS. Mai Văn Linh</div>
-                <div class="job">Phó Trưởng Khoa</div>
-                <div class="date-of-birt"><b>Năm Sinh:</b>1954</div>
-                <div class="specialization">
-                  <b>Chuyên Ngành:</b> Khoa học máy tính
+            <div class="col-lg-6">
+              <div class="card-info">
+                <div class="content">
+                  <div class="image-box" data-aos="fade-up-right">
+                    <img src="/images/maivanlinh.png" alt="dinh van thanh" />
+                  </div>
+                  <div class="details" data-aos="fade-up-left">
+                    <div class="name">Ths. Mai Văn Linh</div>
+                    <div class="job">Phó Trưởng Khoa</div>
+                    <div class="date-of-birth">Năm Sinh: 1954</div>
+                    <div class="specialization">
+                      <b>Chuyên Ngành:</b> Khoa học máy tính
+                    </div>
+                    <div class="d-flex justify-content-start">
+                      <a href="#" class="btn-get-started scrollto">Xem Chi Tiết<i class="fa fa-arrow-right"></i></a>
+                    </div>
+                  </div>
                 </div>
-                <div class="d-flex">
-                  <a href="#" class="btn-get-started scrollto">Xem Chi Tiết<i class="fa fa-arrow-right"></i></a>
-                </div>            
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    
+  <!-- End Team Section -->
+
+
+    
     <!-- end team area -->
 
     <!-- Footer -->
@@ -526,7 +554,6 @@
     <script src="vendor/jquery/jquery-3.6.3.min.js"></script>
     <script src="vendor/swiperjs/swiper-bundle1.min.js"></script>
     <script src="vendor/AOS/aos@2.3.1_dist_aos.js"></script>
-    <script src="https://www.youtube.com/iframe_api"></script>
 
     <!-- fontawesome icon -->
     <script
