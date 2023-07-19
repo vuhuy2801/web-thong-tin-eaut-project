@@ -108,7 +108,7 @@
   }
   
   .recent-blog-posts .post-box:hover .post-title a{
-    color: #4154f1;
+    color: #f9690e;
   }
   
   .recent-blog-posts .post-box:hover .post-img img {
@@ -180,9 +180,16 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
+
   .year-button.active {
     background-color: #1e3769;
     color: #fff;
+  }
+
+  .year-buttons .year-button:hover {
+    background-color: #1e3769;
+    color: #fff;
+
   }
 
   @media (max-width: 768px) {

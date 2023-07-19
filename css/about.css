@@ -58,7 +58,7 @@ body {
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 768px) {
   .introduce-area h2 {
     font-size: 32px;
   }
@@ -176,7 +176,7 @@ body {
   margin-top: 80px;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 768px) {
 .core-values h3 {
   font-size: 32px;
 }
@@ -333,7 +333,7 @@ font-size: 150px;
   height: 90%;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 768px) {
   .infrastructure {
     padding-top: 50px;
   }
