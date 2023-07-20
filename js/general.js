@@ -33,8 +33,49 @@
   window.addEventListener('scroll', scrollHandler);
   
   
+  const giớiThiệuDropdownMenu = document.getElementById("giới-thiệu-dropdown-menu");
+  const tinTứcDropdownMenu = document.getElementById("tin-tức-dropdown-menu");
+  const subnavLinks = document.querySelectorAll("#sub-navbar ul li a");
+  let isGiớiThiệuDropdownVisible = false;
+  let isTinTứcDropdownVisible = false;
+  document.getElementById("giới-thiệu-dropdown").addEventListener("click", (event) => {
+    event.preventDefault(); 
+    if (isTinTứcDropdownVisible) {
+      tinTứcDropdownMenu.style.display = "none";
+      isTinTứcDropdownVisible = false;
+    }
+    if (isGiớiThiệuDropdownVisible) {
+      giớiThiệuDropdownMenu.style.display = "none";
+      isGiớiThiệuDropdownVisible = false;
+    } else {
+      giớiThiệuDropdownMenu.style.display = "block";
+      isGiớiThiệuDropdownVisible = true;
+    }
+    subnavLinks.forEach(link => {
+      link.classList.remove("active");
+    });
+    event.target.classList.add("active");
+  });
 
- 
+  document.getElementById("tin-tức-dropdown").addEventListener("click", (event) => {
+    event.preventDefault(); 
+    if (isGiớiThiệuDropdownVisible) {
+      giớiThiệuDropdownMenu.style.display = "none";
+      isGiớiThiệuDropdownVisible = false;
+    }
+    if (isTinTứcDropdownVisible) {
+      tinTứcDropdownMenu.style.display = "none";
+      isTinTứcDropdownVisible = false;
+    } else {
+      tinTứcDropdownMenu.style.display = "block";
+      isTinTứcDropdownVisible = true;
+    }
+    subnavLinks.forEach(link => {
+      link.classList.remove("active");
+    });
+    event.target.classList.add("active");
+  });
+
 
   
   })()

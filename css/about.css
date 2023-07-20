@@ -186,6 +186,11 @@ body {
 .icon-value i {
 font-size: 150px;
 }
+
+.icon-value img {
+  width: 45%;
+}
+
 }
 
 /* infrastructure area */
@@ -430,15 +435,14 @@ font-size: 150px;
   font-size: 18px;
 }
 
-#team .btn-get-started i{
+.btn-get-started i{
   position: relative;
   transition: all 0.5s ease-in-out;
-}
-.btn-get-started i{
-padding-left: 5px;
+  padding-left: 5px;
 }
 
 .btn-get-started:hover i {
+  color: #f9690e;
   transform: translateX(5px); 
 }
 
@@ -491,6 +495,11 @@ padding-left: 5px;
     margin-top: 15px;
     margin-left: 20px;
   }
+}
+
+  
+#sub-navbar .dropdown a.active{
+  color: #f9690e;
 }
 
 /* card info */

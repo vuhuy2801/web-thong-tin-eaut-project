@@ -314,6 +314,7 @@ body {
     margin-top: 10px;
   }
 
+
   #navbar ul li {
     width: 100%;
     text-align: center;
@@ -400,16 +401,21 @@ body {
     transition: transform 0.5s, opacity 0.5s;
     opacity: 1;
     pointer-events: auto;
-    transition: opacity 0.5s ease;
     max-width: 100%;
   }
 
+
+
+  #sub-navbar .dropdown a.active{
+    color: #f9690e;
+  }
 
   #sub-navbar ul li a.active,
   #sub-navbar ul li a:hover {
     color: #f9690e;
   }
   
+
   
   #sub-navbar.active {
     color: #f9690e;
@@ -424,9 +430,13 @@ body {
     padding: 0;
     margin-top: 10px;
     list-style-type: none;
+    white-space: nowrap;
     overflow-x: auto;
-    overflow-y: hidden;
+    overflow-y: hidden; 
+    position: relative; 
+    z-index: 99;
   }
+  
 
   #sub-navbar ul::-webkit-scrollbar {
     display: none;
@@ -436,11 +446,14 @@ body {
     margin-top: 7px;
     margin-right: 7px;
     margin-bottom: 7px;
+    position: relative;
+  
   }
 
   #sub-navbar ul li:first-child a {
     position: sticky;
     left: 0;
+    z-index: 1000000;
   }
 
   #sub-navbar ul li a {
@@ -460,6 +473,8 @@ body {
   #sub-navbar ul li:first-child {
     position: sticky;
     left: 0;
+    z-index: 1000000;
+
   }
 
   #sub-navbar .icon-home {
@@ -486,6 +501,26 @@ body {
   #sub-navbar .btn-tuyensinh {
     padding-right: 15px;
   }
+
+  #sub-navbar ul .dropdown-menu {
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    border-radius: 4px;
+    display: none;
+    left: 0;
+    margin-top: 29px;
+    position: fixed;
+    z-index: 1000000;
+    white-space: nowrap;
+    width: 80%;
+    left: 17%;
+  }
+  
+  #sub-navbar ul .active .dropdown-menu {
+    display: block;
+  }
+
+
 }
 
 /* end header */
@@ -776,5 +811,4 @@ body {
 .post-box .post-title:hover {
   color: #f9690e;
 }
-
 
