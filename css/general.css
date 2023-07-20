@@ -110,20 +110,6 @@ body {
   color: #f9690e;
 }
 
-.navbar .btn-tuyensinh {
-  color: #1e3769;
-  border: none;
-  outline: none;
-  font-size: 15px;
-  cursor: pointer;
-  border-radius: 20px;
-  text-decoration: none;
-  transition: scale 0.2 ease;
-}
-
-.navbar .btn-tuyensinh:active {
-  scale: 0.95;
-}
 
 .mobile-nav-toggle {
   color: #222222;
@@ -245,17 +231,6 @@ body {
   border-radius: 10px;
 }
 
-.navbar-mobile .btn-tuyensinh {
-  background-color: #fff;
-  color: #1e3769;
-  border-radius: 0px;
-}
-
-.navbar-mobile .btn-tuyensinh:hover {
-  color: #f9690e;
-  background-color: #fff;
-  scale: none;
-}
 
 .navbar-mobile a,
 .navbar-mobile a:focus {
@@ -332,13 +307,6 @@ body {
     width: 100%;
     text-align: center;
   }
-
-  #navbar ul li a {
-    display: block;
-    padding: 12px;
-    font-size: 16px;
-  }
-
   #navbar ul li a:hover {
     background-color: #fff;
   }
@@ -489,9 +457,6 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
-  #sub-navbar .btn-tuyensinh {
-    padding-right: 15px;
-  }
 
   #sub-navbar ul .dropdown-menu {
     background: #fff;
