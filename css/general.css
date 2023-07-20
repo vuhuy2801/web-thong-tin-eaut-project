@@ -110,6 +110,20 @@ body {
   color: #f9690e;
 }
 
+.navbar .btn-tuyensinh {
+  color: #1e3769;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: scale 0.2 ease;
+}
+
+.navbar .btn-tuyensinh:active {
+  scale: 0.95;
+}
 
 .mobile-nav-toggle {
   color: #222222;
@@ -175,26 +189,7 @@ body {
     display: none;
   }
   .navbar .dropdown ul {
-    display: block;
-    position: absolute;
-    left: 14%;
-    height: 200px;
-    visibility: none;
-    border-radius: 4px;
-    /* top: 0px; */
-
-  }
-  .navbar .dropdown ul li {
-    max-width: 150px;
-  }
-  
-  .navbar .dropdown ul a {
-    padding: 10px 20px;
-    font-size: 14px;
-    text-transform: none;
-    font-weight: bold;
-    text-decoration: none;
-    color: #1e3769;
+    display: none;
   }
 }
 
@@ -230,6 +225,17 @@ body {
   border-radius: 10px;
 }
 
+.navbar-mobile .btn-tuyensinh {
+  background-color: #fff;
+  color: #1e3769;
+  border-radius: 0px;
+}
+
+.navbar-mobile .btn-tuyensinh:hover {
+  color: #f9690e;
+  background-color: #fff;
+  scale: none;
+}
 
 .navbar-mobile a,
 .navbar-mobile a:focus {
@@ -277,7 +283,7 @@ body {
 
 .navbar .dropdown:hover > ul {
   opacity: 1;
-  top: 10%;
+  top: 100%;
   visibility: visible;
 }
 
@@ -299,10 +305,27 @@ body {
 }
 
 @media (max-width: 768px) {
+  #navbar ul {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+
   #navbar ul li {
     width: 100%;
     text-align: center;
   }
+
+  #navbar ul li a {
+    display: block;
+    padding: 12px;
+    font-size: 16px;
+  }
+
   #navbar ul li a:hover {
     background-color: #fff;
   }
@@ -475,6 +498,9 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
+  #sub-navbar .btn-tuyensinh {
+    padding-right: 15px;
+  }
 
   #sub-navbar ul .dropdown-menu {
     background: #fff;
