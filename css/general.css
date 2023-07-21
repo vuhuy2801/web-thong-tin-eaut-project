@@ -317,7 +317,27 @@ body {
     color: #000;
     cursor: pointer;
   }
+  
+  .navbar a,
+  .navbar a:focus {
+    display: block;
+    padding: 10 7px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e3769;
+    white-space: nowrap;
+    transition: 0.3s;
+    position: relative;
+  }
 
+
+    .navbar-mobile ul {
+      display: block; 
+      justify-content: center; 
+      align-items: center; 
+      list-style: none;
+      padding: 0;
+  }
 
   #navbar.navbar-mobile {
     display: flex;
