@@ -2,6 +2,7 @@ let elmPagination = document.querySelector("#pagination");
 let elmBtnNext = document.querySelector("#btn-next");
 let elmBtnPrev = document.querySelector("#btn-prev");
 let elmPostList = document.querySelector("#postList");
+let elmTitleCategory = document.querySelector(".blog-title h3");
 let lastPage;
 const REGEX = /^[1-9]\d*$/;
 
@@ -61,6 +62,17 @@ elmPagination.addEventListener("click", function (e) {
   }
 });
 
+
+function getCategory(categoryID){
+  API_NEWS.get(`danh-mucs/${categoryID}`)
+  .then((response) =>{
+   elmTitleCategory.innerHTML = response.data.data.attributes.tendanhmuc;
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+}
+
 function getPaginationForNews(page) {
   return API_NEWS.get("bai-viets", {
     params: {
@@ -85,6 +97,8 @@ function getPaginationForNews(page) {
         },
       },
       fields: ["title", "description", "slug", "createdAt"],
+      sort: ['title:DESC'],
+      
     },
   })
     .then((response) => {
@@ -193,3 +207,4 @@ function statusButton() {
 
 
 getPaginationForNews(PAGES);
+getCategory(CATE_ID);
