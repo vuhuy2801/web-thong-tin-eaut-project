@@ -772,7 +772,13 @@ body {
   color: #fff;
   background-color: #f9690e;
 }
-
+.post-title a {
+  text-decoration: none;
+  color: #1e3769;
+}
+.post-title a:hover {
+  color: #f9690e;
+}
 
 .post-box .post-title {
   font-size: 18px;

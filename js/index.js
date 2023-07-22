@@ -25,4 +25,52 @@ new Swiper('.testimonials-slider', {
   });
 
 
+
+const API_URL = "http://api.vuhuy.xyz/api/";
+function getAndRenderPosts() {
+  const CATE_ID = 1;
+  fetch(`${API_URL}bai-viets?pagination[page]=1&pagination[pageSize]=6&filters[$and][0][danh_muc][id][$eq]=1&populate[headerImage][fields][]=formats&fields[]=title&fields[]=description&fields[]=slug&fields[]=createdAt&sort[]=createdAt:DESC`)
+    .then((response) => response.json())
+    .then((data) => {
+      if (data && data.data) {
+        const posts = data.data;
+        let html = "";
+        for (let i = 0; i < posts.length; i++) {
+          const post = posts[i];
+          const date = new Date(post.attributes.createdAt).toLocaleDateString("vi", {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          });
+          html += `
+            <div class="col-lg-4">
+              <div class="post-box">
+                <div class="post-img">
+                  <img
+                    src="http://api.vuhuy.xyz${post.attributes.headerImage.data.attributes.formats.small.url}"
+                    class="img-fluid"
+                    alt="${post.attributes.headerImage.data.attributes.formats.small.name}"
+                  />
+                </div>
+                <p class="post-date">${date}</p>
+                <h3 class="post-title">
+                  <a href="new.html?slug=${post.attributes.slug}">${post.attributes.title}</a>
+                </h3>
+                <p class="description">${post.attributes.description}</p>
+              </div>
+            </div>
+          `;
+        }
+        const postListElement = document.getElementById("postList");
+        postListElement.innerHTML = html;
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+getAndRenderPosts();
+
+
   
