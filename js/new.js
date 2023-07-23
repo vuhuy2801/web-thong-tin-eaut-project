@@ -19,6 +19,7 @@ function getPostContent() {
       if(response.data.data == ""){
        return;
       }
+      console.log(response.data.data);
       renderPostContent(response.data.data[0].attributes);
       // elmHeadTitle.innerHTML = response.data.data.title;
       // renderPostContent(response.data.data);
@@ -31,12 +32,14 @@ function getPostContent() {
 
 
 function renderPostContent(data) {
-
+  dayjs.locale("vi");
+  const CUSTOM_DATE = dayjs(data.createdAt);
+  let date = CUSTOM_DATE.format("dddd, DD/MM/YYYY");
   let str = `
   <div class="post-meta">
-  <span class="date">EAUT-CNTT</span>
+  <span class="date">${data.author.data.attributes.name}</span>
   <span class="mx-1">&bullet;</span>
-  <span>Thứ Sáu, 21/10/2022</span>
+  <span>${date}</span>
 </div>
  <h1 class="mb-5">${data.title}
  </h1>
