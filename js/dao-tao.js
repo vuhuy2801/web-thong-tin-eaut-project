@@ -4,9 +4,7 @@ const API_NEWS = axios.create({
   baseURL: "http://api.vuhuy.xyz/api/",
 });
 
-
-
-function getPaginationForNews() {
+function getPostNews() {
   return API_NEWS.get("bai-viets", {
     params: {
       pagination: {
@@ -38,8 +36,6 @@ function renderPostNews(data) {
   let str = "";
 
   for (let i = 0; i < data.length; i++) {
-   
-
     str += ` 
 
     <div class="post-item border-bottom">
@@ -55,7 +51,6 @@ function renderPostNews(data) {
   elmPostItem.innerHTML += str;
 }
 
-
 // reponsive for education program
 $(window).bind("resize load", function () {
   if ($(this).width() <= 1200) {
@@ -68,5 +63,4 @@ $(window).bind("resize load", function () {
 });
 // reponsive for education program
 
-
-getPaginationForNews()
+getPostNews();

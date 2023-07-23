@@ -1,23 +1,65 @@
 let elmSinglePost = document.querySelector(".single-post");
+let elmPostItem = document.querySelector("#post-new");
 
 const VALUE_SEARCH_PARAMS = new URLSearchParams(window.location.search);
 const ARTICLES_ID = VALUE_SEARCH_PARAMS.get("slug");
 const URL_DETAILS = `bai-viets?populate=*&filters[$and][0][slug][$eq]=${ARTICLES_ID}`;
-
-
-
 const API_NEWS = axios.create({
-  baseURL: "http://api.vuhuy.xyz/api/"
- 
+  baseURL: "http://api.vuhuy.xyz/api/",
 });
 
+function getPostNews() {
+  return API_NEWS.get("bai-viets", {
+    params: {
+      pagination: {
+        page: 1,
+        pageSize: 6,
+      },
+      populate: {
+        headerImage: {
+          fields: ["formats"],
+        },
+      },
+      fields: ["title", "slug", "createdAt"],
+      sort: ["id:DESC"],
+    },
+  })
+    .then((response) => {
+      renderPostNews(response.data.data);
+      // lastPage = response.data.meta.pagination.pageCount;
+      // renderPaginationButton(page);
+      // statusButton();
+      // return response;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
 
+function renderPostNews(data) {
+  let str = "";
+
+  for (let i = 0; i < data.length; i++) {
+    str += ` 
+
+    <div class="post-item border-bottom">
+    <a href="new.html?slug=${data[i].attributes.slug}">
+    <img src="http://api.vuhuy.xyz${data[i].attributes.headerImage.data.attributes.formats.small.url}" alt="${data[i].attributes.headerImage.data.attributes.formats.small.name}" />
+    <h5 class="title">
+    ${data[i].attributes.title}
+    </h5>
+    </a
+      >
+    </div>`; // render articles
+  }
+  elmPostItem.innerHTML += str;
+}
 
 function getPostContent() {
   API_NEWS.get(URL_DETAILS)
     .then((response) => {
-      if(response.data.data == ""){
-       return;
+      if (response.data.data == "") {
+        return;
       }
       console.log(response.data.data);
       renderPostContent(response.data.data[0].attributes);
@@ -26,10 +68,8 @@ function getPostContent() {
     })
     .catch((error) => {
       console.log(error);
-    
     });
 }
-
 
 function renderPostContent(data) {
   dayjs.locale("vi");
@@ -44,26 +84,11 @@ function renderPostContent(data) {
  <h1 class="mb-5">${data.title}
  </h1>
  ${data.content}
-  `
-  
+  `;
+
   elmSinglePost.innerHTML = str;
 }
 
 getPostContent();
 
-var navContainer = document.getElementById('pills-tab');
-navContainer.addEventListener('click', function(event) {
-  if (event.target.classList.contains('nav-link')) {
-    var navLinks = navContainer.querySelectorAll('.nav-link');
-    navLinks.forEach(function(navLink) {
-      navLink.classList.remove('active', 'underline');
-    });
-    event.target.classList.add('active', 'underline');
-    var targetId = event.target.getAttribute('data-bs-target');
-    var targetContent = document.querySelector(targetId);
-    document.querySelectorAll('.tab-pane').forEach(function(content) {
-      content.classList.remove('show', 'active');
-    });
-    targetContent.classList.add('show', 'active');
-  }
-});
+getPostNews();

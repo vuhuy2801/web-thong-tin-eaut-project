@@ -97,7 +97,7 @@ function getPaginationForNews(page) {
         },
       },
       fields: ["title", "description", "slug", "createdAt"],
-      sort: ['title:DESC'],
+      sort: ['id:DESC'],
       
     },
   })
