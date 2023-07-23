@@ -1,3 +1,59 @@
+let elmPostItem = document.querySelector("#post-new");
+
+const API_NEWS = axios.create({
+  baseURL: "http://api.vuhuy.xyz/api/",
+});
+
+
+
+function getPaginationForNews() {
+  return API_NEWS.get("bai-viets", {
+    params: {
+      pagination: {
+        page: 1,
+        pageSize: 6,
+      },
+      populate: {
+        headerImage: {
+          fields: ["formats"],
+        },
+      },
+      fields: ["title", "slug", "createdAt"],
+      sort: ["id:DESC"],
+    },
+  })
+    .then((response) => {
+      renderPostNews(response.data.data);
+      // lastPage = response.data.meta.pagination.pageCount;
+      // renderPaginationButton(page);
+      // statusButton();
+      // return response;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+
+function renderPostNews(data) {
+  let str = "";
+
+  for (let i = 0; i < data.length; i++) {
+   
+
+    str += ` 
+
+    <div class="post-item border-bottom">
+    <a href="new.html?slug=${data[i].attributes.slug}">
+    <img src="http://api.vuhuy.xyz${data[i].attributes.headerImage.data.attributes.formats.small.url}" alt="${data[i].attributes.headerImage.data.attributes.formats.small.name}" />
+    <h5 class="title">
+    ${data[i].attributes.title}
+    </h5>
+    </a
+      >
+    </div>`; // render articles
+  }
+  elmPostItem.innerHTML += str;
+}
 
 
 // reponsive for education program
@@ -11,3 +67,6 @@ $(window).bind("resize load", function () {
   }
 });
 // reponsive for education program
+
+
+getPaginationForNews()

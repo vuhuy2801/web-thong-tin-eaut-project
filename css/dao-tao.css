@@ -71,17 +71,22 @@
 }
 
 .news .post-item {
+  margin-bottom: 20px;
+
 }
 .news .post-item img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-.news .post-item .title a {
+.news .post-item a {
   color: #09316b;
   text-decoration: none;
   font-size: 18px;
 }
-.news .post-item .title a:hover {
+.news .post-item a:hover {
   text-decoration: underline;
 }
+
+
