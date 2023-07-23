@@ -239,6 +239,34 @@
       <!-- education program-->
       <div class="education-about">
         <div class="container" data-aos="fade-up">
+          <div class="modal fade" id="youtubeModalLabel" tabindex="-1" aria-labelledby="youtubeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog modal-xl ">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="youtubeModalLabelLabel">NGÀNH CÔNG NGHỆ THÔNG TIN</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="video-wrapper">
+                    <iframe
+                      id="ytplayer"
+                      type="text/html"
+                      width="1080"
+                      height="728"
+                      src="https://www.youtube.com/embed/c69TGT3Qe-8?autoplay=0&mute=1"
+                      frameborder="0"
+                      allowfullscreen
+                    >
+                    </iframe>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+              </div>
+            </div>
+          </div>
           <hr class="custom-hr" />
           <div class="row">
             <div class="col-lg-6">
@@ -260,10 +288,9 @@
                   <a href="dao-tao.html" class="btn-get-started scrollto"
                     >Tìm Hiểu Thêm <i class="fa fa-arrow-right"></i
                   ></a>
-                  <a
-                    href="https://youtu.be/c69TGT3Qe-8"
+                  <a           
                     class="btn-watch-video"
-                    target="_blank"
+                    data-bs-toggle="modal" data-bs-target="#youtubeModalLabel"
                     ><i class="fa fa-play"></i><span>Xem Video</span></a
                   >
                 </div>
