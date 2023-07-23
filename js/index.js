@@ -1,35 +1,73 @@
+let elmCarouselInner = document.querySelector(".carousel-inner");
 
-new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 40
+const API_NEWS = axios.create({
+  baseURL: "http://api.vuhuy.xyz/api/",
+});
+
+function getBanner() {
+  return API_NEWS.get("banner-trang-chus", {
+    params: {
+      populate: {
+        image: {
+          fields: ["name", "url"],
+        },
       },
+    },
+  })
+    .then((response) => {
+      rennderBanner(response.data.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
 
-      1200: {
-        slidesPerView: 3,
-      }
-    }
-  });
+function rennderBanner(data) {
+  let str = "";
+  for (let i = 0; i < data.length; i++) {
+    const isActive = i === 1 ? "active" : "";
+    str += `<div class="carousel-item ${isActive}">
+              <a class="" href="${data[i].attributes.urlTaget}" target="_blank">
+                <img src="http://api.vuhuy.xyz${data[i].attributes.image.data.attributes.url}" alt="${data[i].attributes.title}" />
+              </a>
+              </div>
+    `;
+  }
 
+  elmCarouselInner.innerHTML = str;
+}
 
+new Swiper(".testimonials-slider", {
+  speed: 600,
+  loop: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  slidesPerView: "auto",
+  pagination: {
+    el: ".swiper-pagination",
+    type: "bullets",
+    clickable: true,
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 40,
+    },
+
+    1200: {
+      slidesPerView: 3,
+    },
+  },
+});
 
 const API_URL = "http://api.vuhuy.xyz/api/";
 function getAndRenderPosts() {
   const CATE_ID = 1;
-  fetch(`${API_URL}bai-viets?pagination[page]=1&pagination[pageSize]=6&filters[$and][0][danh_muc][id][$eq]=1&populate[headerImage][fields][]=formats&fields[]=title&fields[]=description&fields[]=slug&fields[]=createdAt&sort[]=createdAt:DESC`)
+  fetch(
+    `${API_URL}bai-viets?pagination[page]=1&pagination[pageSize]=6&filters[$and][0][danh_muc][id][$eq]=1&populate[headerImage][fields][]=formats&fields[]=title&fields[]=description&fields[]=slug&fields[]=createdAt&sort[]=createdAt:DESC`
+  )
     .then((response) => response.json())
     .then((data) => {
       if (data && data.data) {
@@ -37,12 +75,15 @@ function getAndRenderPosts() {
         let html = "";
         for (let i = 0; i < posts.length; i++) {
           const post = posts[i];
-          const date = new Date(post.attributes.createdAt).toLocaleDateString("vi", {
-            weekday: "long",
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          });
+          const date = new Date(post.attributes.createdAt).toLocaleDateString(
+            "vi",
+            {
+              weekday: "long",
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            }
+          );
           html += `
             <div class="col-lg-4">
               <div class="post-box">
@@ -70,16 +111,8 @@ function getAndRenderPosts() {
       console.log(error);
     });
 }
-getAndRenderPosts();
 
-
-
-
-const API_NEWS = axios.create({
-  baseURL: "http://api.vuhuy.xyz/api/",
-});
-
-function getChuNghiemKhoa() {
+function getGiangVienTieuBieu() {
   return API_NEWS.get("giang-viens", {
     params: {
       filters: {
@@ -95,7 +128,8 @@ function getChuNghiemKhoa() {
     },
   })
     .then((response) => {
-      const elmChuNgiemKhoaContent = document.querySelector(".contentgiangvien");
+      const elmChuNgiemKhoaContent =
+        document.querySelector(".contentgiangvien");
       elmChuNgiemKhoaContent.innerHTML = renderCardInfo(response.data.data);
       // return response;
     })
@@ -125,11 +159,6 @@ function renderCardInfo(data) {
   return strCard;
 }
 
-
-getChuNghiemKhoa();
-
-
-
-
-
-
+getGiangVienTieuBieu();
+getAndRenderPosts();
+getBanner();
