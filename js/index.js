@@ -73,4 +73,63 @@ function getAndRenderPosts() {
 getAndRenderPosts();
 
 
-  
+
+
+const API_NEWS = axios.create({
+  baseURL: "http://api.vuhuy.xyz/api/",
+});
+
+function getChuNghiemKhoa() {
+  return API_NEWS.get("giang-viens", {
+    params: {
+      filters: {
+        $and: [
+          {
+            displayindex: {
+              $eq: true,
+            },
+          },
+        ],
+      },
+      populate: "*",
+    },
+  })
+    .then((response) => {
+      const elmChuNgiemKhoaContent = document.querySelector(".contentgiangvien");
+      elmChuNgiemKhoaContent.innerHTML = renderCardInfo(response.data.data);
+      // return response;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+
+function renderCardInfo(data) {
+  let strCard = "";
+  for (let i = 0; i < data.length; i++) {
+    let customDate = dayjs(data[i].attributes.dateofbirth);
+    let date = customDate.format("YYYY");
+    strCard += `<div class="col-lg-3 col-md-6 col-6 col-md-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+      <div class="teacher">
+        <div class="teacher-img">
+          <img src="http://api.vuhuy.xyz${data[i].attributes.avatar.data.attributes.url}" class="img-fluid" alt="${data[i].attributes.avatar.data.attributes.url.hash}" />
+        </div>
+        <div class="teacher-info">
+          <h4>${data[i].attributes.name}</h4>
+          <span>Chuyên nghành: ${data[i].attributes.major}</span>
+        </div>
+      </div>
+    </div>`;
+  }
+
+  return strCard;
+}
+
+
+getChuNghiemKhoa();
+
+
+
+
+
+
