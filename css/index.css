@@ -50,8 +50,11 @@ body {
   opacity: 0.5; 
 }
 
-
-
+/* video */
+.modal-header .btn-close {
+  font-size: 1rem;
+  padding-right: 25px; 
+}
 /* End Banner */
 
   .custom-hr {
