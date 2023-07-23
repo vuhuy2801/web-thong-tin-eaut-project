@@ -13,9 +13,7 @@ const PAGES = parseInt(VALUE_SEARCH_PARAMS.get("page"));
 
 let currentPage = PAGES;
 
-const API_NEWS = axios.create({
-  baseURL: "http://api.vuhuy.xyz/api/",
-});
+
 
 if (!isValidId() || !isVaildPage()) {
   // Nếu giá trị không hợp lệ, điều hướng URL về trang index.html

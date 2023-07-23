@@ -4,9 +4,7 @@ let elmPostItem = document.querySelector("#post-new");
 const VALUE_SEARCH_PARAMS = new URLSearchParams(window.location.search);
 const ARTICLES_ID = VALUE_SEARCH_PARAMS.get("slug");
 const URL_DETAILS = `bai-viets?populate=*&filters[$and][0][slug][$eq]=${ARTICLES_ID}`;
-const API_NEWS = axios.create({
-  baseURL: "http://api.vuhuy.xyz/api/",
-});
+
 
 function getPostNews() {
   return API_NEWS.get("bai-viets", {
@@ -44,7 +42,7 @@ function renderPostNews(data) {
 
     <div class="post-item border-bottom">
     <a href="new.html?slug=${data[i].attributes.slug}">
-    <img src="http://api.vuhuy.xyz${data[i].attributes.headerImage.data.attributes.formats.small.url}" alt="${data[i].attributes.headerImage.data.attributes.formats.small.name}" />
+    <img src="https://api.vuhuy.xyz${data[i].attributes.headerImage.data.attributes.formats.small.url}" alt="${data[i].attributes.headerImage.data.attributes.formats.small.name}" />
     <h5 class="title">
     ${data[i].attributes.title}
     </h5>

@@ -15,9 +15,7 @@ elmBtnXemThem.addEventListener("click", function () {
   }
 });
 
-const API_NEWS = axios.create({
-  baseURL: "http://api.vuhuy.xyz/api/",
-});
+
 const URL_DATA = "nghien-cuu-khoa-hocs?populate=*";
 
 // event click year btn

@@ -13,9 +13,7 @@ elmBtnXemThem.addEventListener("click", function () {
   }
 });
 
-const API_NEWS = axios.create({
-  baseURL: "http://api.vuhuy.xyz/api/",
-});
+
 
 function getPaginationForNews(page) {
   return API_NEWS.get("bai-viets", {
@@ -74,7 +72,7 @@ function renderPostNews(data) {
           <div class="post-img">
           <a href="new.html?slug=${data[i].attributes.slug}">
             <img
-              src="http://api.vuhuy.xyz${data[i].attributes.headerImage.data.attributes.formats.small.url}"
+              src="https://api.vuhuy.xyz${data[i].attributes.headerImage.data.attributes.formats.small.url}"
               class="img-fluid"
               alt="${data[i].attributes.headerImage.data.attributes.formats.small.name}"
             />

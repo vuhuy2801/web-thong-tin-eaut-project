@@ -1,3 +1,9 @@
+
+const API_NEWS = axios.create({
+  baseURL: "https://api.vuhuy.xyz/api/",
+});
+
+
 (function() {
     "use strict";
   

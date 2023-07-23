@@ -28,9 +28,6 @@ elmBtnXemThemTwo.addEventListener("click", function () {
   }
 });
 
-const API_NEWS = axios.create({
-  baseURL: "http://api.vuhuy.xyz/api/",
-});
 
 function getChuNghiemKhoa() {
   return API_NEWS.get("giang-viens", {
@@ -65,7 +62,7 @@ function renderCardInfo(data) {
         <div class="card-info">
           <div class="content">
             <div class="image-box">
-              <img src="http://api.vuhuy.xyz${data[i].attributes.avatar.data.attributes.url}" alt="${data[i].attributes.avatar.data.attributes.url.hash}" />
+              <img src="https://api.vuhuy.xyz${data[i].attributes.avatar.data.attributes.url}" alt="${data[i].attributes.avatar.data.attributes.url.hash}" />
             </div>
             <div class="details">
               <div class="name">${data[i].attributes.name}</div>
