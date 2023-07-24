@@ -211,14 +211,19 @@
     border: 1px solid #ccc;
     border-radius: 6px;
   }
-  
+  .accordion-body input{
+    font-family: "Roboto", sans-serif;
+  }
+
   .accordion-body{
     color: #1e3769;
     font-size: 16px;
+    font-weight: 400;
   }
 
   .accordion-item button {
     font-size: 18px;
     color: #1e3769;
     padding-top: 20px;
+    font-weight: bold;
   }

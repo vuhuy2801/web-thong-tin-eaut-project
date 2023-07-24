@@ -1,11 +1,9 @@
 
-const API_NEWS = axios.create({
-  baseURL: "https://api.vuhuy.xyz/api/",
-});
+  const API_NEWS = axios.create({
+    baseURL: "https://api.vuhuy.xyz/api/",
+  });
 
 
-(function() {
-    "use strict";
   
   // Moblie nav
   $('.mobile-nav-toggle').on('click', function(e) {
@@ -38,23 +36,33 @@ const API_NEWS = axios.create({
   
   window.addEventListener('scroll', scrollHandler);
   
-  
-  const giớiThiệuDropdownMenu = document.getElementById("giới-thiệu-dropdown-menu");
-  const tinTứcDropdownMenu = document.getElementById("tin-tức-dropdown-menu");
+
+  $(document).ready(function() {
+    $(".myLink").click(function(event) {
+      event.preventDefault();
+    });
+  });
+
+
+
+  const dropdownGT = document.getElementById("giới-thiệu-dropdown-menu");
+  const dropdownTT = document.getElementById("tin-tức-dropdown-menu");
+
   const subnavLinks = document.querySelectorAll("#sub-navbar ul li a");
   let isGiớiThiệuDropdownVisible = false;
   let isTinTứcDropdownVisible = false;
+
   document.getElementById("giới-thiệu-dropdown").addEventListener("click", (event) => {
     event.preventDefault(); 
     if (isTinTứcDropdownVisible) {
-      tinTứcDropdownMenu.style.display = "none";
+      dropdownTT.style.display = "none";
       isTinTứcDropdownVisible = false;
     }
     if (isGiớiThiệuDropdownVisible) {
-      giớiThiệuDropdownMenu.style.display = "none";
+      dropdownGT.style.display = "none";
       isGiớiThiệuDropdownVisible = false;
     } else {
-      giớiThiệuDropdownMenu.style.display = "block";
+      dropdownGT.style.display = "block";
       isGiớiThiệuDropdownVisible = true;
     }
     subnavLinks.forEach(link => {
@@ -66,14 +74,14 @@ const API_NEWS = axios.create({
   document.getElementById("tin-tức-dropdown").addEventListener("click", (event) => {
     event.preventDefault(); 
     if (isGiớiThiệuDropdownVisible) {
-      giớiThiệuDropdownMenu.style.display = "none";
+      dropdownGT.style.display = "none";
       isGiớiThiệuDropdownVisible = false;
     }
     if (isTinTứcDropdownVisible) {
-      tinTứcDropdownMenu.style.display = "none";
+      dropdownTT.style.display = "none";
       isTinTứcDropdownVisible = false;
     } else {
-      tinTứcDropdownMenu.style.display = "block";
+      dropdownTT.style.display = "block";
       isTinTứcDropdownVisible = true;
     }
     subnavLinks.forEach(link => {
@@ -84,5 +92,4 @@ const API_NEWS = axios.create({
 
 
   
-  })()
   

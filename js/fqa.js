@@ -24,20 +24,3 @@
   });
   
 
-
-  function toggleAccordion(targetID, targetItem) {
-    const isActive = targetItem.classList.contains('active');
-    const allItems = document.querySelectorAll('.list-group-item');
-  
-    // Loops through all items and removes 'active' class
-    allItems.forEach(item => item.classList.remove('active'));
-  
-    // If the target item is not already active, add the 'active' class to it
-    if (!isActive) {
-      targetItem.classList.add('active');
-    }
-  
-    // Collapse or expand the target accordion element
-    $("#" + targetID).collapse("toggle");
-  }
-  

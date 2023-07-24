@@ -100,7 +100,7 @@ function getPaginationForNews(page) {
     },
   })
     .then((response) => {
-      console.log(response.data);
+      // console.log(response.data);
       renderPostNews(response.data.data);
       lastPage = response.data.meta.pagination.pageCount;
       renderPaginationButton(page);
