@@ -22,7 +22,7 @@ body {
 
 .contact-title h1:before {
   content: "";
-  width: 50px;
+  width: 40px;
   height: 2px;
   background: #1e3769;
   display: inline-block;
@@ -32,7 +32,7 @@ body {
 }
 .contact-title h1:after {
   content: "";
-  width: 50px;
+  width: 40px;
   height: 2px;
   background: #1e3769;
   display: inline-block;
@@ -95,4 +95,31 @@ body {
   background-color: #1e3769;
   border: none;
   border-radius: 4px;
+}
+
+@media (max-width: 1200px) {
+  .contact-title h1:before {
+    right: 59%;
+  }
+  .contact-title h1:after {
+    left: 59%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .contact-title h1:before {
+    right: 61%;
+  }
+  .contact-title h1:after {
+    left: 61%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-title h1:before {
+    right: 67%;
+  }
+  .contact-title h1:after {
+    left: 67%;
+  }
 }
