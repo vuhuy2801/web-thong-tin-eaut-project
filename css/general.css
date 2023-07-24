@@ -373,7 +373,7 @@ body {
     top: 86px;
     left: 0;
     padding-right: 20px;
-    z-index: 9999;
+    /* z-index: 9999; */
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     white-space: nowrap;
@@ -413,7 +413,7 @@ body {
     overflow-x: auto;
     overflow-y: hidden; 
     position: relative; 
-    z-index: 99;
+    /* z-index: 9999; */
   }
   
 
@@ -429,11 +429,6 @@ body {
   
   }
 
-  #sub-navbar ul li:first-child a {
-    position: sticky;
-    left: 0;
-    z-index: 1000000;
-  }
 
   #sub-navbar ul li a {
     display: block;
@@ -452,7 +447,7 @@ body {
   #sub-navbar ul li:first-child {
     position: sticky;
     left: 0;
-    z-index: 1000000;
+    z-index: 9999;
 
   }
 
@@ -486,7 +481,7 @@ body {
     left: 0;
     margin-top: 29px;
     position: fixed;
-    z-index: 1000000;
+    /* z-index: 1000000; */
     white-space: nowrap;
     width: 80%;
     left: 17%;
