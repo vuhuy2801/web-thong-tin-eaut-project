@@ -27,7 +27,7 @@ function getPaginationForNews(page) {
           {
             danh_muc: {
               id: {
-                $eq: 5,
+                $eq: 6,
               },
             },
           },
@@ -39,7 +39,7 @@ function getPaginationForNews(page) {
         },
       },
       fields: ["title", "description", "slug", "createdAt"],
-      sort: ["title:DESC"],
+      sort: ["id:DESC"],
     },
   })
     .then((response) => {
