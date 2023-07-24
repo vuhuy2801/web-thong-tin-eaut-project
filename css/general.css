@@ -767,6 +767,7 @@ body {
   padding: 8px 28px 8px 28px;
   position: relative;
   margin-bottom: 60px;
+  border: none;
 }
 .btn-get-watch:hover {
   color: #fff;
