@@ -1,7 +1,5 @@
 let elmCarouselInner = document.querySelector(".carousel-inner");
 
-
-
 function getBanner() {
   return API_NEWS.get("banner-trang-chus", {
     params: {
@@ -156,6 +154,61 @@ function renderCardInfo(data) {
 
   return strCard;
 }
+
+var swiper = new Swiper(".historySwiper", {
+  slidesPerView: 2,
+  spaceBetween: 30,
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    1200: {
+      slidesPerView: 5,
+      spaceBetween: 30,
+    },
+  },
+});
+
+new Swiper("#swiper-2", {
+  slidesPerView: 1,
+  centeredSlides: true,
+  spaceBetween: 24,
+  lazyLoading: true,
+  loop: true,
+  keyboard: {
+    enabled: true,
+  },
+  navigation: {
+    nextEl: "#nav-right",
+    prevEl: "#nav-left",
+  },
+});
+
+function onScroll() {
+  const elmScholarShip = document.querySelector(".scholarship");
+  const rect = elmScholarShip.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+
+  // Nếu phần tử counter xuất hiện trong viewport (cửa sổ hiển thị)
+  if (rect.top < windowHeight) {
+    $(".timer").countTo(); // Gọi hàm decimalCounter khi scroll đến phần tử counter
+    window.removeEventListener("scroll", onScroll); // Gỡ bỏ sự kiện scroll sau khi gọi hàm
+  }
+}
+
+window.addEventListener("scroll", onScroll);
 
 getGiangVienTieuBieu();
 getAndRenderPosts();
