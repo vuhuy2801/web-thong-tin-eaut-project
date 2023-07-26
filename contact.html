@@ -24,30 +24,30 @@
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="/css/contact.css" />
     <meta
-    name="description"
-    content="Khoa Công nghệ Thông tin theo hướng ứng dụng”."
-  />
-  <meta property="og:site_name" content="EAUT - Khoa Công nghệ thông tin" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Trang chủ - EAUT" />
-  <meta
-    property="og:description"
-    content="Trường Đại học Công Nghệ Đông Á (EAUT) với triết lý giáo dục của nhà trường “Học phải có việc làm”."
-  />
-  <link
-    rel="icon"
-    href="https://eaut.edu.vn/wp-content/uploads/2023/07/cropped-th7umbnail-32x32.png"
-    sizes="32x32"
-  />
-  <link
-    rel="icon"
-    href="https://eaut.edu.vn/wp-content/uploads/2023/07/cropped-th7umbnail-192x192.png"
-    sizes="192x192"
-  />
-  <meta
-    name="msapplication-TileImage"
-    content="https://eaut.edu.vn/wp-content/uploads/2023/07/cropped-th7umbnail-270x270.png"
-  />
+      name="description"
+      content="Khoa Công nghệ Thông tin theo hướng ứng dụng”."
+    />
+    <meta property="og:site_name" content="EAUT - Khoa Công nghệ thông tin" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Trang chủ - EAUT" />
+    <meta
+      property="og:description"
+      content="Trường Đại học Công Nghệ Đông Á (EAUT) với triết lý giáo dục của nhà trường “Học phải có việc làm”."
+    />
+    <link
+      rel="icon"
+      href="https://eaut.edu.vn/wp-content/uploads/2023/07/cropped-th7umbnail-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="https://eaut.edu.vn/wp-content/uploads/2023/07/cropped-th7umbnail-192x192.png"
+      sizes="192x192"
+    />
+    <meta
+      name="msapplication-TileImage"
+      content="https://eaut.edu.vn/wp-content/uploads/2023/07/cropped-th7umbnail-270x270.png"
+    />
   </head>
   <body>
     <!-- Nav -->
@@ -62,7 +62,7 @@
               <a class="nav-link scrollto" href="/index.html">TRANG CHỦ</a>
             </li>
             <li class="dropdown">
-              <a class="nav-link scrollto" href="about.html">GIỚI THIỆU</a>
+              <a class="nav-link scrollto active" href="about.html">GIỚI THIỆU</a>
               <ul>
                 <li><a href="about.html">Khoa CNTT</a></li>
                 <li><a href="giang-vien.html">Giảng viên</a></li>
@@ -78,7 +78,7 @@
             <li>
               <a class="nav-link scrollto" href="hop-tac.html">HỢP TÁC</a>
             </li>
-            <li><a class="nav-link scrollto active" href="q&a.html">Q&A</a></li>
+            <li><a class="nav-link scrollto " href="q&a.html">Q&A</a></li>
             <li class="dropdown">
               <a class="nav-link scrollto" href="news.html?id=1&page=1"
                 >TIN TỨC</a
@@ -107,9 +107,9 @@
                   <i class="fas fa-home icon-home"></i>
                 </a>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown ">
                 <a
-                  class="nav-link dropdown-toggle"
+                  class="nav-link active dropdown-toggle"
                   href="about.html"
                   id="giới-thiệu-dropdown"
                   role="button"
@@ -131,7 +131,9 @@
                       >Giảng viên</a
                     >
                   </li>
-                  <li><a class="dropdown-item" href="contact.html">Liên hệ</a></li>
+                  <li>
+                    <a class="dropdown-item" href="contact.html">Liên hệ</a>
+                  </li>
                 </ul>
               </li>
               <li>
@@ -146,7 +148,7 @@
                 <a class="nav-link scrollto" href="hop-tac.html">HỢP TÁC</a>
               </li>
               <li>
-                <a class="nav-link scrollto active" href="q&a.html">Q&A</a>
+                <a class="nav-link scrollto " href="q&a.html">Q&A</a>
               </li>
 
               <li class="nav-item dropdown">
@@ -243,8 +245,14 @@
                   <div class="info-item" data-aos="fade" data-aos-delay="200">
                     <i class="fas fa-map-marker-alt"></i>
                     <h3>Địa chỉ</h3>
-                    <p>Đường Trịnh Văn Bô</p>
-                    <p>Nam Từ Liêm - Hà Nội</p>
+                    <p><a
+                      href="https://goo.gl/maps/3MqDm7sDtt1PzCRx6"
+                      target="_blank"
+                      >Tầng 7 Tòa nhà Đinh Trọng Dật,Đường CN1,
+                      Nam Từ Liêm - Hà Nội</a
+                    ></p>
+
+                    
                   </div>
                 </div>
                 <!-- End Info Item -->
@@ -253,8 +261,8 @@
                   <div class="info-item" data-aos="fade" data-aos-delay="300">
                     <i class="fas fa-phone-alt"></i>
                     <h3>Điện thoại</h3>
-                    <p>+ 0243.555.2008</p>
-                    <p>+ 024.6262.7797</p>
+                    <p><a href="tel:02435552008">+ 0243.555.2008</a></p>
+                    <p><a href="tel:02462627797">+ 024.6262.7797</a></p>
                   </div>
                 </div>
                 <!-- End Info Item -->
@@ -263,8 +271,16 @@
                   <div class="info-item" data-aos="fade" data-aos-delay="400">
                     <i class="fas fa-envelope"></i>
                     <h3>Email</h3>
-                    <p>tuyensinh@eaut.edu.vn</p>
-                    <p>thanhct@eaut.edu.vn</p>
+                    <p>
+                      <a href="mailto:tuyensinh@eaut.edu.vn"
+                        >tuyensinh@eaut.edu.vn</a
+                      >
+                    </p>
+                    <p>
+                      <a href="mailto:thanhct@eaut.edu.vn"
+                        >thanhct@eaut.edu.vn</a
+                      >
+                    </p>
                   </div>
                 </div>
                 <!-- End Info Item -->
@@ -282,11 +298,15 @@
             </div>
 
             <div class="col-lg-6">
+              
               <form
                 class="form-contact"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
+              <div class="alert alert-danger d-none" role="alert" id="errorField">
+                
+              </div>
                 <div class="row gy-4">
                   <div class="col-md-6">
                     <input
@@ -295,6 +315,7 @@
                       class="form-control"
                       placeholder="Họ Tên"
                       required
+                      id="nameInput"
                     />
                   </div>
 
@@ -305,6 +326,7 @@
                       name="email"
                       placeholder="Email"
                       required
+                      id="emailInput"
                     />
                   </div>
 
@@ -315,6 +337,7 @@
                       name="subject"
                       placeholder="Chủ Đề"
                       required
+                      id="subjectInput"
                     />
                   </div>
 
@@ -325,11 +348,12 @@
                       rows="6"
                       placeholder="Nhập nội dung tại đây ..."
                       required
+                      id="messageInput"
                     ></textarea>
                   </div>
 
                   <div class="col-md-12 text-center">
-                    <button type="submit">Gửi tin nhắn</button>
+                    <button id="btnContactSubmit">Gửi tin nhắn</button>
                   </div>
                 </div>
               </form>
@@ -338,6 +362,26 @@
           </div>
         </div>
       </section>
+
+      <div class="modal fade" id="modalResult" tabindex="-1" aria-labelledby="modalResultLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modalResultLabel">
+                Kết quả
+              </h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modalResultBody">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                Đóng
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- End Contact Section -->
     </main>
 
@@ -380,20 +424,20 @@
             </div>
 
             <div class="col-lg-4">
-            <div class="map-footer">
-               <div class="map-footer">
-                <div class="google-maps">
-                  <iframe
-                   src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d352.59226842763456!2d105.74239779616752!3d21.04104813885808!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313455f4de26c41d%3A0x3caf45c212f5f665!2zVG_DoCBuaMOgIMSQaW5oIFRy4buNbmcgROG6rXQ!5e0!3m2!1svi!2s!4v1690395421853!5m2!1svi!2s"
-                   width="600"
-                   height="450"
-                   style="border:0;"
-                   allowfullscreen=""
-                   loading="lazy"
-                  ></iframe>
+              <div class="map-footer">
+                <div class="map-footer">
+                  <div class="google-maps">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d352.59226842763456!2d105.74239779616752!3d21.04104813885808!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313455f4de26c41d%3A0x3caf45c212f5f665!2zVG_DoCBuaMOgIMSQaW5oIFRy4buNbmcgROG6rXQ!5e0!3m2!1svi!2s!4v1690395421853!5m2!1svi!2s"
+                      width="600"
+                      height="450"
+                      style="border: 0"
+                      allowfullscreen=""
+                      loading="lazy"
+                    ></iframe>
+                  </div>
                 </div>
               </div>
-            </div>
             </div>
           </div>
           <div class="col-lg-12">
@@ -461,7 +505,11 @@
 
     <!-- JS -->
     <script src="js/general.js"></script>
-    <script src="js/fqa.js"></script>
-    <script src="https://w.ladicdn.com/ladichat/sdk.js" id="64c0291bcb19aa0012d7c95a_64c0297aa96c3b0012ef7616" async></script>
+    <script src="js/contact.js"></script>
+    <script
+      src="https://w.ladicdn.com/ladichat/sdk.js"
+      id="64c0291bcb19aa0012d7c95a_64c0297aa96c3b0012ef7616"
+      async
+    ></script>
   </body>
 </html>

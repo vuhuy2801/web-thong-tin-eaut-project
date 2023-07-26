@@ -123,3 +123,13 @@ body {
     left: 67%;
   }
 }
+
+
+
+.info-item p a{
+  color: #1e3769;
+  text-decoration: none;
+}
+.info-item p a:hover{
+  color: #f9690e;
+}
