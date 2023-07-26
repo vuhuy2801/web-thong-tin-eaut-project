@@ -128,15 +128,15 @@ function renderFaqData(data) {
   for (let i = 0; i < data.length; i++) {
     str += `
       <div class="accordion-item">
-      <h2 class="accordion-header" id="flush-heading${data[i].attributes.id}">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse${data[i].attributes.id}" aria-expanded="false" aria-controls="flush-collapse${data[i].attributes.id}">
+      <h2 class="accordion-header" id="flush-heading${data[i].id}">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse${data[i].id}" aria-expanded="false" aria-controls="flush-collapse${data[i].id}">
         ${data[i].attributes.nameQuestion}: <br>
         ${data[i].attributes.question}
         </button>
       </h2>
-      <div id="flush-collapse${data[i].attributes.id}" class="accordion-collapse collapse" aria-labelledby="flush-heading${data[i].attributes.id}" data-bs-parent="#accordionFaq">
+      <div id="flush-collapse${data[i].id}" class="accordion-collapse collapse" aria-labelledby="flush-heading${data[i].id}" data-bs-parent="#accordionFaq">
       <div class="accordion-body">
-      Trả lời bởi: ${data[i].attributes.author.data.attributes.name} (admin) <br>
+      Trả lời: <br>
       ${data[i].attributes.answer}
       </div>
       </div>
