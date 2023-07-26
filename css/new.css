@@ -109,8 +109,9 @@ body {
 
 
 .single-post img{
+  padding-left: 0px !important;
   margin: 0px auto;
-  width: 100%;
+  width: 100% !important;
 }
 
 
@@ -119,3 +120,14 @@ body {
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif !important;
 }
+
+.single-post div{
+  padding-left: 0px !important;
+  
+}
+
+.single-post h2,
+.single-post h3{
+  color: #1e3769 !important;
+    width: 100% !important;
+ }
