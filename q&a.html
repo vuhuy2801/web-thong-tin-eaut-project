@@ -248,6 +248,9 @@
                                   required
                                   id="nameInput"
                                 />
+                                <div class="invalid-feedback" id="nameError">
+                                  Vui lòng nhập họ tên.
+                                </div>
                               </div>
 
                               <div class="col-md-6">
@@ -259,6 +262,9 @@
                                   required
                                   id="emailInput"
                                 />
+                                <div class="invalid-feedback" id="emailError">
+                                  Vui lòng nhập địa chỉ email hợp lệ.
+                                </div>
                               </div>
 
                               <div class="col-md-12">
@@ -284,7 +290,9 @@
                                   placeholder="Nhập nội dung tại đây ..."
                                   required
                                   id="contentInput"
-                                ></textarea>
+                                ></textarea> <div class="invalid-feedback" id="contentError">
+                                  Vui lòng nhập nội dung câu hỏi.
+                                </div>
                               </div>
 
                             
@@ -322,8 +330,29 @@
           </div>
         </div>
       </div>
+
+      <div class="modal fade" id="modalResult" tabindex="-1" aria-labelledby="modalResultLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modalResultLabel">
+                Kết quả
+              </h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="modalResultBody">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                Đóng
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
+   
     <!-- Footer -->
 
     <footer id="footer" class="footer">
