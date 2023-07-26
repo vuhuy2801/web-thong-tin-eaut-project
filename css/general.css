@@ -668,6 +668,8 @@ body {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
+  min-height: 464.9px;
+
 }
 
 .post-box .post-img {
@@ -744,6 +746,9 @@ body {
     font-size: 32px;
     margin-bottom: 50px;
   }
+.post-box {
+  min-height: 434px;
+}
 }
 
 
