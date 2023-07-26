@@ -227,3 +227,12 @@
     padding-top: 20px;
     font-weight: bold;
   }
+
+  .form-select{
+    font-size: 18px;
+  }
+
+  .btn-question{
+    padding-bottom: 8px;
+    align-self: flex-end;
+  }

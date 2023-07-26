@@ -747,21 +747,22 @@ body {
 }
 
 
+@media screen and (max-width: 800px) {
+  .btn-get-watch, .form-select{
+    font-size: 14px !important;
+  }
+}
+
 .btn-get-watch {
-  margin-top: 50px;
   font-size: 18px;
   letter-spacing: 1px;
-  display: inline-block;
   border-radius: 4px;
   transition: 0.5s;
   color: #fff;
   background: #1e3769;
-  text-decoration: none;
   font-weight: bold;
   transition: all 0.5s ease-in-out;
   padding: 8px 28px 8px 28px;
-  position: relative;
-  margin-bottom: 60px;
   border: none;
 }
 .btn-get-watch:hover {

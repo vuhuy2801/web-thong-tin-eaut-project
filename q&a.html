@@ -185,337 +185,136 @@
         <div class="row">
           <div class="col-xl-12 pa-0">
             <div class="container mt-sm-60 mt-30">
-              <div class="hk-row">
+              <div class="row">
+                <div class="col-xl-4 col-md-6 col mb-2">
+                  <span>Chọn chủ đề:</span>
+                  <select
+                    class="form-select"
+                    id="toppicId"
+                  >
+                    <option value="chuong-trinh-hoc" selected>
+                      Khung chương trình đào tạo
+                    </option>
+                    <option value="dang-ky-mon-hoc">Đăng ký môn học</option>
+                    <option value="thuc-tap-chuyen-nganh">Thực tập chuyên ngành</option>
+                    <option value="cau-hoi-khac">Câu hỏi khác</option>
+                  </select>
+                </div>
+                <div class="col-xl-3 col ms-auto btn-question">
+                  <button
+                    type="button"
+                    class="btn-get-watch"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalSendQuetions"
+                    style="width: 100%"
+                  >
+                    Đặt câu hỏi ?
+                  </button>
+
+                  <!-- Modal -->
+                  <div
+                    class="modal fade"
+                    id="modalSendQuetions"
+                    tabindex="-1"
+                    aria-labelledby="modalSendQuetionsLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="modalSendQuetionsLabel">
+                            Đặt câu hỏi
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">
+                          <form
+                            class="form-contact"
+                            data-aos="fade-up"
+                            data-aos-delay="200"
+                          >
+                            <div class="row gy-4">
+                              <div class="col-md-6">
+                                <input
+                                  type="text"
+                                  name="name"
+                                  class="form-control"
+                                  placeholder="Họ Tên"
+                                  required
+                                  id="nameInput"
+                                />
+                              </div>
+
+                              <div class="col-md-6">
+                                <input
+                                  type="email"
+                                  class="form-control"
+                                  name="email"
+                                  placeholder="Email"
+                                  required
+                                  id="emailInput"
+                                />
+                              </div>
+
+                              <div class="col-md-12">
+                                <span>Chọn chủ đề:</span>
+                                <select
+                                class="form-select"
+                                id="topicIdInput"
+                              >
+                              <option value="chuong-trinh-hoc" selected>
+                                Khung chương trình đào tạo
+                              </option>
+                              <option value="dang-ky-mon-hoc">Đăng ký môn học</option>
+                              <option value="thuc-tap-chuyen-nganh">Thực tập chuyên ngành</option>
+                              <option value="cau-hoi-khac">Câu hỏi khác</option>
+                              </select>
+                              </div>
+
+                              <div class="col-md-12">
+                                <textarea
+                                  class="form-control"
+                                  name="message"
+                                  rows="6"
+                                  placeholder="Nhập nội dung tại đây ..."
+                                  required
+                                  id="contentInput"
+                                ></textarea>
+                              </div>
+
+                            
+                            </div>
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Hủy
+                          </button>
+                          <button type="button" class="btn btn-primary" id="btnQuestionSubmit">
+                            Gửi đi
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
                 <div class="col-xl-12">
                   <div
                     class="accordion accordion-flush"
-                    id="accordionFlushExample"
+                    id="accordionFaq"
                   >
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingOne">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#flush-collapseOne"
-                          aria-expanded="false"
-                          aria-controls="flush-collapseOne"
-                        >
-                        Công nghệ thông tin (CNTT) là gì?
-                        </button>
-                      </h2>
-                      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne">
-                        <div class="accordion-body">
-                          CNTT là lĩnh vực nghiên cứu, thiết kế, phát triển và quản lý hệ thống thông tin, bao gồm phần mềm, phần cứng, mạng, và ứng dụng của chúng.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingTwo">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#flush-collapseTwo"
-                          aria-expanded="false"
-                          aria-controls="flush-collapseTwo"
-                        >
-                        Các phân ngành chính trong khoa Công nghệ thông tin là gì?
-                        </button>
-                      </h2>
-                      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo">
-                        <div class="accordion-body">
-                          Các phân ngành chính trong khoa Công nghệ thông tin bao gồm: Khoa học máy tính, Mạng và An toàn thông tin, Công nghệ phần mềm, Trí tuệ nhân tạo, Thương mại điện tử và Quản lý dự án CNTT.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingThree">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#flush-collapseThree"
-                          aria-expanded="false"
-                          aria-controls="flush-collapseThree"
-                        >
-                        Trình bày các bước quy trình phát triển phần mềm thông thường?
-                        </button>
-                      </h2>
-                      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree">
-                        <div class="accordion-body">
-                          Các bước quy trình phát triển phần mềm thông thường bao gồm: Thu thập yêu cầu, Thiết kế hệ thống, Lập kế hoạch, Phát triển mã nguồn, Kiểm thử, Triển khai và Bảo trì.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingFour">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#flush-collapseFour"
-                          aria-expanded="false"
-                          aria-controls="flush-collapseFour"
-                        >
-                        Trí tuệ nhân tạo (AI) là gì và ứng dụng của nó trong thế giới thực?
-                        </button>
-                      </h2>
-                      <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour">
-                        <div class="accordion-body">
-                          Trí tuệ nhân tạo là một lĩnh vực trong CNTT liên quan đến việc phát triển các hệ thống có khả năng tự động học và thực hiện các nhiệm vụ mà trước đây chỉ có con người mới thực hiện được. Ứng dụng của AI có thể là các hệ thống tự lái, nhận dạng giọng nói, phân loại hình ảnh, dự đoán dữ liệu, và nhiều lĩnh vực khác.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingFive">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#flush-collapseFive"
-                          aria-expanded="false"
-                          aria-controls="flush-collapseFive"
-                        >
-                        Sự khác biệt giữa phần mềm mã nguồn mở và phần mềm đóng?
-                        </button>
-                      </h2>
-                      <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive">
-                        <div class="accordion-body">
-                          Phần mềm mã nguồn mở là phần mềm mà mã nguồn của nó được công khai và có sẵn cho mọi người sử dụng, tùy chỉnh và phát triển tiếp. Trong khi đó, phần mềm đóng là phần mềm có mã nguồn không công khai, người dùng chỉ được sử dụng mà không thể thay đổi hay truy cập mã nguồn.                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingSix">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#flush-collapseSix"
-                          aria-expanded="false"
-                          aria-controls="flush-collapseSix"
-                        >
-                        Cơ hội nghề nghiệp trong lĩnh vực Công nghệ thông tin là gì?
-                        </button>
-                      </h2>
-                      <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix">
-                        <div class="accordion-body">
-                          Cơ hội nghề nghiệp trong Công nghệ thông tin rất đa dạng và phong phú, bao gồm: lập trình viên, chuyên gia bảo mật mạng, chuyên viên trí tuệ nhân tạo, kỹ sư phần mềm, chuyên viên hỗ trợ kỹ thuật, chuyên gia mạng, quản trị hệ thống, quản lý dự án CNTT và nhiều vị trí khác.                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingSeven">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#flush-collapseSeven"
-                          aria-expanded="false"
-                          aria-controls="flush-collapseSeven"
-                        >
-                        Làm thế nào để bảo vệ máy tính khỏi các cuộc tấn công mạng?
-                        </button>
-                      </h2>
-                      <div
-                        id="flush-collapseSeven"
-                        class="accordion-collapse collapse"
-                        aria-labelledby="flush-headingSeven"
-                        data-bs-parent="#accordionFlushExample"
-                      >
-                        <div class="accordion-body">
-                          Để bảo vệ máy tính khỏi các cuộc tấn công mạng, bạn có thể thực hiện những biện pháp như cập nhật hệ điều hành và phần mềm định kỳ, sử dụng phần mềm diệt virus, tường lửa, hạn chế truy cập vào các trang web không đáng tin cậy, và tránh mở tập tin đính kèm không rõ nguồn gốc trong email hay các tin nhắn không xác đáng.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingEight">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#flush-collapseEight"
-                          aria-expanded="false"
-                          aria-controls="flush-collapseEight"
-                        >
-                        Khái niệm "Đám mây" (Cloud Computing) là gì và lợi ích của việc sử dụng nó?
-                        </button>
-                      </h2>
-                      <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight">
-                        <div class="accordion-body">
-                          Đám mây là một khái niệm trong Công nghệ thông tin mô tả việc lưu trữ và truy cập dữ liệu, ứng dụng và tài nguyên qua Internet thay vì lưu trữ trên máy tính cá nhân hoặc máy chủ cục bộ. Lợi ích của việc sử dụng đám mây bao gồm khả năng mở rộng linh hoạt, tiết kiệm chi phí cơ sở hạ tầng, dễ dàng truy cập từ mọi nơi, đảm bảo tính bảo mật và sao lưu dữ liệu dễ dàng.                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingNine">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#flush-collapseNine"
-                          aria-expanded="false"
-                          aria-controls="flush-collapseNine"
-                        >
-                        Internet of Things (IoT) là gì và các ứng dụng phổ biến của nó?
-                        </button>
-                      </h2>
-                      <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine">
-                        <div class="accordion-body">
-                          Internet of Things (IoT) là mạng lưới các thiết bị và đối tượng được kết nối với nhau thông qua Internet, cho phép chúng trao đổi dữ liệu và thông tin. Các ứng dụng phổ biến của IoT bao gồm hệ thống thông minh trong nhà, xe tự lái, quản lý năng lượng thông minh, y tế điện tử, quản lý thành phố thông minh và nông nghiệp thông minh.                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingTen">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#flush-collapseTen"
-                          aria-expanded="false"
-                          aria-controls="flush-collapseTen"
-                        >
-                        Sự khác biệt giữa "Học máy" (Machine Learning) và "Học sâu" (Deep Learning)?
-                        </button>
-                      </h2>
-                      <div
-                        id="flush-collapseTen"
-                        class="accordion-collapse collapse"
-                        aria-labelledby="flush-headingTen"
-                        data-bs-parent="#accordionFlushExample"
-                      >
-                        <div class="accordion-body">
-                          Học máy là một phương pháp trong Trí tuệ nhân tạo mà máy tính học từ dữ liệu và kinh nghiệm để thực hiện một nhiệm vụ cụ thể mà không cần được lập trình trực tiếp. Học sâu là dạng của học máy, sử dụng mạng lưới các lớp nơ-ron nhân tạo để học và hiểu dữ liệu phức tạp. Deep Learning được sử dụng rộng rãi trong nhận dạng hình ảnh, xử lý ngôn ngữ tự nhiên và nhiều ứng dụng khác.                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingEleven">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#flush-collapseEleven"
-                          aria-expanded="false"
-                          aria-controls="flush-collapseEleven"
-                        >
-                        Agile và Waterfall là hai phương pháp phát triển phần mềm phổ biến, sự khác biệt giữa chúng là gì?
-                        </button>
-                      </h2>
-                      <div
-                        id="flush-collapseEleven"
-                        class="accordion-collapse collapse"
-                        aria-labelledby="flush-headingEleven"
-                        data-bs-parent="#accordionFlushExample"
-                      >
-                        <div class="accordion-body">
-                          Waterfall là một phương pháp phát triển phần mềm truyền thống, tuần tự, trong đó các bước như lập kế hoạch, thiết kế, phát triển, kiểm thử và triển khai được thực hiện một cách tuần tự. Agile là một phương pháp linh hoạt hơn, chia quy trình thành các pha ngắn gọn
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingTwele">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#flush-collapseTwele"
-                          aria-expanded="false"
-                          aria-controls="flush-collapseTwele"
-                        >
-                        Câu hỏi: Tầm quan trọng của bảo mật thông tin trong CNTT là gì và làm thế nào để đảm bảo an toàn thông tin?
-                        </button>
-                      </h2>
-                      <div
-                        id="flush-collapseTwele"
-                        class="accordion-collapse collapse"
-                        aria-labelledby="flush-headingTwele"
-                        data-bs-parent="#accordionFlushExample"
-                      >
-                        <div class="accordion-body">
-                          Bảo mật thông tin là vô cùng quan trọng trong CNTT để bảo vệ dữ liệu và hệ thống khỏi các cuộc tấn công, lừa đảo và xâm nhập. Để đảm bảo an toàn thông tin, có thể áp dụng các biện pháp như: sử dụng hệ thống mã hóa, cài đặt các giải pháp bảo mật mạng, cập nhật thường xuyên để bảo mật các lỗ hổng, đảm bảo quản lý danh tính và quyền truy cập hợp lý, và đào tạo nhân viên về lĩnh vực bảo mật.                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingthirteen">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#flush-collapsethirteen"
-                          aria-expanded="false"
-                          aria-controls="flush-collapsethirteen"
-                        >
-                        Trường có sử dụng kết quả đánh giá năng lực ADM của đại học quốc gia không?
-                        </button>
-                      </h2>
-                      <div
-                        id="flush-collapsethirteen"
-                        class="accordion-collapse collapse"
-                        aria-labelledby="flush-headingthirteen"
-                        data-bs-parent="#accordionFlushExample"
-                      >
-                        <div class="accordion-body">
-                          Trường không sử dụng kết quả đó.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingfourteen">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#flush-collapsefourteen"
-                          aria-expanded="false"
-                          aria-controls="flush-collapsefourteen"
-                        >
-                        Môn trải nghiệm thực tế là gì? Có bắt buộc không? Học ngành CNTT có liên quan gì đến nhà máy ở Canon, Microsoft…?
-                        </button>
-                      </h2>
-                      <div
-                        id="flush-collapsefourteen"
-                        class="accordion-collapse collapse"
-                        aria-labelledby="flush-headingfourteen"
-                        data-bs-parent="#accordionFlushExample"
-                      >
-                        <div class="accordion-body">
-                          Trường Đại học Công nghệ Đông Á triển khai kì học “Vừa làm – Vừa học” đối với tất cả các khóa học để cải cách, đổi mới trong công tác dạy và học cho sinh viên, nhằm đào tạo một đội ngũ cử nhân tương lai đủ khả năng hoàn thành xuất sắc các công việc được giao phó và cũng để khẳng định uy tín của nhà trường trong tương lai nên Ban Giám hiệu nhà trường coi đây là công tác trọng tâm. <br>
-                          – Kì học này là bắt buộc với tất cả sinh viên của Trường Đại học Công nghệ Đông Á. <br>
-                          – Mục đích của kì học này là để các em sinh viên nâng cao nhận thức, học hỏi cách làm việc của các công ty, tập đoàn lớn. Do đó, dù em đang học ngành gì, chương trình này cũng đều có ý nghĩa. <br>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h2 class="accordion-header" id="flush-headingFiveteen">
-                        <button
-                          class="accordion-button collapsed"
-                          type="button"
-                          data-bs-toggle="collapse"
-                          data-bs-target="#flush-collapseFiveteen"
-                          aria-expanded="false"
-                          aria-controls="flush-collapseFiveteen"
-                        >
-                        Em nộp hồ sơ trực tuyến có ý nghĩa gì? Nộp hồ sơ trực tuyến xong thì làm gì?                        
-                      </button>
-                      </h2>
-                      <div
-                        id="flush-collapseFiveteen"
-                        class="accordion-collapse collapse"
-                        aria-labelledby="flush-headingFiveteen"
-                        data-bs-parent="#accordionFlushExample"
-                      >
-                        <div class="accordion-body">
-                          Xét tuyển trực tuyến giúp nhà trường biết thông tin cá nhân, học lực của em để tư vấn cho em chọn ngành học hợp lý. Nếu em đủ điểm như trong giấy báo xét tuyển trực tuyến, em chỉ cần mang học bạ, giấy chứng nhận tốt nghiệp để tới nhập học. <br>
-                          Sau khi đăng ký trực tuyến, trường sẽ liên hệ với em để tư vấn về nhu cầu học của em. Trong trường hợp còn đang phân vân giữa các ngành học hoặc, em có thể:<br>
-                          <br>
-                          Inbox trực tiếp qua facebook: Trường Đại học Công nghệ Đông Á<br>
-                          <br>
-                          Nhắn tin vào hộp thư trực tuyến ở góc phải website để nhận tư vấn: www.eaut.edu.vn/<br>
-                          <br>
-                          Đăng ký trực tuyển: Tại đây<br>
-                          <br>
-                          Gọi về hotline: 024 6262 7797 hoặc 024 3555 2008        <br>                
-                        </div>
-                      </div>
-                    </div>
+
                   </div>
                 </div>
               </div>
