@@ -186,6 +186,9 @@ new Swiper("#swiper-2", {
   centeredSlides: true,
   spaceBetween: 24,
   lazyLoading: true,
+  autoplay: {
+    delay: 3500, 
+  },
   loop: true,
   keyboard: {
     enabled: true,
@@ -207,19 +210,6 @@ function onScroll() {
     window.removeEventListener("scroll", onScroll); // Gỡ bỏ sự kiện scroll sau khi gọi hàm
   }
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  let swiper = new Swiper("#swiper-2", {
-    autoplay: {
-      delay: 4000, 
-    },
-    loop: true,
-    navigation: {
-      nextEl: "#nav-right",
-      prevEl: "#nav-left",
-    },
-  });
-});
 
 
 window.addEventListener("scroll", onScroll);
