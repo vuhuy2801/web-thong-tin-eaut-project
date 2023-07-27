@@ -155,7 +155,7 @@ function renderCardInfo(data) {
   return strCard;
 }
 
-var swiper = new Swiper(".historySwiper", {
+let swiper = new Swiper(".historySwiper", {
   slidesPerView: 2,
   spaceBetween: 30,
   breakpoints: {
@@ -207,6 +207,20 @@ function onScroll() {
     window.removeEventListener("scroll", onScroll); // Gỡ bỏ sự kiện scroll sau khi gọi hàm
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  let swiper = new Swiper("#swiper-2", {
+    autoplay: {
+      delay: 4000, 
+    },
+    loop: true,
+    navigation: {
+      nextEl: "#nav-right",
+      prevEl: "#nav-left",
+    },
+  });
+});
+
 
 window.addEventListener("scroll", onScroll);
 
