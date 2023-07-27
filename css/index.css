@@ -142,6 +142,8 @@ body {
   line-height: 1;
   text-decoration: none;
   font-weight: 450;
+  margin-bottom: 0px;
+  cursor: pointer;
 }
 
 .education-left .btn-watch-video span {
