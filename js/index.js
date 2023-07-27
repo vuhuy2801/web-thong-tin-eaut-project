@@ -1,4 +1,5 @@
 let elmCarouselInner = document.querySelector(".carousel-inner");
+let elmCarouselIndicators = document.querySelector(".carousel-indicators");
 
 function getBanner() {
   return API_NEWS.get("banner-trang-chus", {
@@ -20,17 +21,29 @@ function getBanner() {
 
 function rennderBanner(data) {
   let str = "";
+  let strbtn = "";
   for (let i = 0; i < data.length; i++) {
-    const isActive = i === 1 ? "active" : "";
+    const isActive = i === 0 ? "active" : "";
     str += `<div class="carousel-item ${isActive}">
               <a class="" href="${data[i].attributes.urlTaget}" target="_blank">
                 <img src="https://api.vuhuy.xyz${data[i].attributes.image.data.attributes.url}" alt="${data[i].attributes.title}" />
               </a>
               </div>
     `;
+    strbtn +=`
+            <button
+              type="button"
+              data-bs-target="#carousel"
+              data-bs-slide-to="${i}"
+              class="${isActive}"
+              aria-label="Slide ${i+1}"
+            ></button>
+    `
   }
 
+
   elmCarouselInner.innerHTML = str;
+  elmCarouselIndicators.innerHTML = strbtn;
 }
 
 new Swiper(".testimonials-slider", {
@@ -155,31 +168,6 @@ function renderCardInfo(data) {
   return strCard;
 }
 
-let swiper = new Swiper(".historySwiper", {
-  slidesPerView: 2,
-  spaceBetween: 30,
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    // when window width is >= 480px
-    480: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    },
-    // when window width is >= 640px
-    640: {
-      slidesPerView: 3,
-      spaceBetween: 30,
-    },
-    1200: {
-      slidesPerView: 5,
-      spaceBetween: 30,
-    },
-  },
-});
 
 new Swiper("#swiper-2", {
   slidesPerView: 1,
