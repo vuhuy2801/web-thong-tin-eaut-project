@@ -4,17 +4,36 @@ let elmTtnQuestionSubmit = document.querySelector("#btnQuestionSubmit");
 let elmModalSendQuetions = new bootstrap.Modal("#modalSendQuetions", {
   keyboard: false,
 });
+let isSubmitCompleted = false;
+let btnQuestionSubmit = document.getElementById("btnQuestionSubmit");
+
+
+function waitsubmit(){
+  btnQuestionSubmit.classList.add("loading");
+  setTimeout(() => {
+    btnQuestionSubmit.classList.remove("loading");
+    isSubmitCompleted = true; 
+    sendSuccess();
+    btnQuestionSubmit.disabled = false; 
+  }, 1500);
+}
+
+
 
 elmToppicId.addEventListener("change", () => {
   getDataFaq(elmToppicId.value);
 });
 
 function sendSuccess() {
+  if (!isSubmitCompleted) {
+    return;
+  }
   const name = $("#nameInput").val();
   const email = $("#emailInput").val();
   const content = $("#contentInput").val();
   elmModalSendQuetions.hide();
   showSuccessModal(name, content, email);
+  isSubmitCompleted = false;
 }
 
 function isValidEmail(email) {
@@ -37,7 +56,9 @@ elmTtnQuestionSubmit.addEventListener("click", () => {
   const nameError = document.getElementById("nameError");
   const emailError = document.getElementById("emailError");
   const contentError = document.getElementById("contentError");
-
+  if (btnQuestionSubmit.disabled) {
+    return; // Nếu nút đã bị disable, không thực hiện bất kỳ hành động gì
+  }
   if (!name) {
     nameInput.classList.add("is-invalid");
     nameError.style.display = "block";
@@ -70,6 +91,7 @@ elmTtnQuestionSubmit.addEventListener("click", () => {
   if (!name || !email || !content) {
     return;
   }
+  waitsubmit();
 
   const dataSend = {
     data: {
@@ -180,3 +202,4 @@ $(document).ready(function () {
 });
 
 getDataFaq(elmToppicId.value);
+

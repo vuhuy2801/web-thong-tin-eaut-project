@@ -235,3 +235,77 @@
     padding-bottom: 8px;
     align-self: flex-end;
   }
+.btn-secondary{
+  padding: 8px 16px;
+  border: none;
+  border-radius: 2px;
+}
+
+  #btnQuestionSubmit {
+    position: relative;
+    background-color: #1e3769;
+    border-radius: 2px;
+    border: none;
+    padding: 8px 36px;
+    outline: none;
+    cursor: pointer;
+  }
+
+  #btnQuestionSubmit:active {
+    background-color: #f9690e;
+  }
+ 
+  .button-text{
+    transition: all 0.2s;
+  }
+
+
+  /* .btn-primary::after {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    
+    border: 4px solid transparent;
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: button-loading-spinner 1s ease infinite;
+
+  } */
+  .loading-spinner {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 4px solid transparent;
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: button-loading-spinner 1s ease infinite;
+    visibility: hidden;
+}
+
+
+.loading {
+  pointer-events: none;
+}
+
+.loading .button-text {
+  opacity: 0;
+}
+
+.loading .loading-spinner {
+  visibility: visible;
+}
+  @keyframes button-loading-spinner {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  }
