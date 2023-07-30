@@ -3,6 +3,7 @@ let elmBtnNext = document.querySelector("#btn-next");
 let elmBtnPrev = document.querySelector("#btn-prev");
 let elmPostList = document.querySelector("#postList");
 let elmTitleCategory = document.querySelector(".blog-title h3");
+
 let lastPage;
 const REGEX = /^[1-9]\d*$/;
 
@@ -72,6 +73,10 @@ function getCategory(categoryID){
 }
 
 function getPaginationForNews(page) {
+  elmPostList.innerHTML = "";
+  console.log(loader)
+
+  loader.classList.remove("d-none");
   return API_NEWS.get("bai-viets", {
     params: {
       pagination: {
@@ -105,10 +110,13 @@ function getPaginationForNews(page) {
       lastPage = response.data.meta.pagination.pageCount;
       renderPaginationButton(page);
       statusButton();
+      loader.classList.add("d-none");
       // return response;
+      // elmLoadingMessage.style.display = "none";
     })
     .catch((error) => {
       console.log(error);
+      // elmLoadingMessage.style.display = "none";
     });
 }
 
@@ -204,5 +212,7 @@ function statusButton() {
 
 
 
+
 getPaginationForNews(PAGES);
 getCategory(CATE_ID);
+
