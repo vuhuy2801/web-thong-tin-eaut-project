@@ -1,7 +1,20 @@
 let elmCarouselInner = document.querySelector(".carousel-inner");
 let elmCarouselIndicators = document.querySelector(".carousel-indicators");
+let isLoading = true;
+
+function showLoader() {
+  document.querySelector(".loader").classList.remove("loader-hidden");
+}
+
+function hideLoader() {
+  document.querySelector(".loader").classList.add("d-none");
+}
+
+
+
 
 function getBanner() {
+  showLoader();
   return API_NEWS.get("banner-trang-chus", {
     params: {
       populate: {
@@ -12,6 +25,7 @@ function getBanner() {
     },
   })
     .then((response) => {
+      hideLoader();
       rennderBanner(response.data.data);
     })
     .catch((error) => {
@@ -44,6 +58,8 @@ function rennderBanner(data) {
 
   elmCarouselInner.innerHTML = str;
   elmCarouselIndicators.innerHTML = strbtn;
+  isLoading = false; // Đánh dấu việc tải dữ liệu đã hoàn thành
+  hideLoader();
 }
 
 new Swiper(".testimonials-slider", {
@@ -195,12 +211,25 @@ function onScroll() {
   // Nếu phần tử counter xuất hiện trong viewport (cửa sổ hiển thị)
   if (rect.top < windowHeight) {
     $(".timer").countTo(); // Gọi hàm decimalCounter khi scroll đến phần tử counter
-    window.removeEventListener("scroll", onScroll); // Gỡ bỏ sự kiện scroll sau khi gọi hàm
+    window.removeEventListener("scroll", onScroll); 
   }
 }
 
 
 window.addEventListener("scroll", onScroll);
+
+function checkLoadingStatus() {
+  if (isLoading) {
+    showLoader(); 
+  } else {
+    hideLoader(); 
+  }
+}
+
+// Thêm sự kiện kiểm tra sau khi tải trang
+document.addEventListener("DOMContentLoaded", checkLoadingStatus);
+
+
 
 getGiangVienTieuBieu();
 getAndRenderPosts();
