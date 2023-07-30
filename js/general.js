@@ -1,4 +1,11 @@
 let elmSubNavbar = document.getElementById("sub-navbar");
+let loader = document.querySelector(".loader");
+const dropdownGT = document.getElementById("dropDownGT");
+const dropdownTT = document.getElementById("dropDownTT");
+
+const subnavLinks = document.querySelectorAll("#sub-navbar ul li a");
+let isGioithieudropdownvisible = false;
+let isTintucdropdownvisible = false;
 
 const API_NEWS = axios.create({
   baseURL: "https://api.vuhuy.xyz/api/",
@@ -46,27 +53,21 @@ $(document).ready(function () {
   });
 });
 
-const dropdownGT = document.getElementById("giới-thiệu-dropdown-menu");
-const dropdownTT = document.getElementById("tin-tức-dropdown-menu");
-
-const subnavLinks = document.querySelectorAll("#sub-navbar ul li a");
-let isGiớiThiệuDropdownVisible = false;
-let isTinTứcDropdownVisible = false;
 
 document
-  .getElementById("giới-thiệu-dropdown")
+  .getElementById("gioiThieudd")
   .addEventListener("click", (event) => {
     event.preventDefault();
-    if (isTinTứcDropdownVisible) {
+    if (isTintucdropdownvisible) {
       dropdownTT.style.display = "none";
-      isTinTứcDropdownVisible = false;
+      isTintucdropdownvisible = false;
     }
-    if (isGiớiThiệuDropdownVisible) {
+    if (isGioithieudropdownvisible) {
       dropdownGT.style.display = "none";
-      isGiớiThiệuDropdownVisible = false;
+      isGioithieudropdownvisible = false;
     } else {
       dropdownGT.style.display = "block";
-      isGiớiThiệuDropdownVisible = true;
+      isGioithieudropdownvisible = true;
     }
     subnavLinks.forEach((link) => {
       link.classList.remove("active");
@@ -75,22 +76,24 @@ document
   });
 
 document
-  .getElementById("tin-tức-dropdown")
+  .getElementById("tinTucdd")
   .addEventListener("click", (event) => {
     event.preventDefault();
-    if (isGiớiThiệuDropdownVisible) {
+    if (isGioithieudropdownvisible) {
       dropdownGT.style.display = "none";
-      isGiớiThiệuDropdownVisible = false;
+      isGioithieudropdownvisible = false;
     }
-    if (isTinTứcDropdownVisible) {
+    if (isTintucdropdownvisible) {
       dropdownTT.style.display = "none";
-      isTinTứcDropdownVisible = false;
+      isTintucdropdownvisible = false;
     } else {
       dropdownTT.style.display = "block";
-      isTinTứcDropdownVisible = true;
+      isTintucdropdownvisible = true;
     }
     subnavLinks.forEach((link) => {
       link.classList.remove("active");
     });
     event.target.classList.add("active");
   });
+
+  
