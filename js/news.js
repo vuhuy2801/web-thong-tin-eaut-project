@@ -110,6 +110,7 @@ function getPaginationForNews(page) {
       lastPage = response.data.meta.pagination.pageCount;
       renderPaginationButton(page);
       statusButton();
+      // console.log(loader);
       loader.classList.add("d-none");
       // return response;
       // elmLoadingMessage.style.display = "none";

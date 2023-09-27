@@ -2,7 +2,6 @@ let elmSubNavbar = document.getElementById("sub-navbar");
 let loader = document.querySelector(".loader");
 const dropdownGT = document.getElementById("dropDownGT");
 const dropdownTT = document.getElementById("dropDownTT");
-
 const subnavLinks = document.querySelectorAll("#sub-navbar ul li a");
 let isGioithieudropdownvisible = false;
 let isTintucdropdownvisible = false;
@@ -24,8 +23,8 @@ function scrollHandler() {
   if (!isScrolling) {
     isScrolling = true;
     window.addEventListener("scroll", function () {
-      var headerHeight = document.getElementById("header").offsetHeight;
-      var scrollPosition =
+      let headerHeight = document.getElementById("header").offsetHeight;
+      let scrollPosition =
         window.scrollY ||
         document.documentElement.scrollTop ||
         document.body.scrollTop ||
