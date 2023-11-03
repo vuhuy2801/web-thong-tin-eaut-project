@@ -14,8 +14,6 @@ const PAGES = parseInt(VALUE_SEARCH_PARAMS.get("page"));
 
 let currentPage = PAGES;
 
-
-
 if (!isValidId() || !isVaildPage()) {
   // Nếu giá trị không hợp lệ, điều hướng URL về trang index.html
   window.location.href = "/index.html";
@@ -61,20 +59,18 @@ elmPagination.addEventListener("click", function (e) {
   }
 });
 
-
-function getCategory(categoryID){
+function getCategory(categoryID) {
   API_NEWS.get(`danh-mucs/${categoryID}`)
-  .then((response) =>{
-   elmTitleCategory.innerHTML = response.data.data.attributes.tendanhmuc;
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+    .then((response) => {
+      elmTitleCategory.innerHTML = response.data.data.attributes.tendanhmuc;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 }
 
 function getPaginationForNews(page) {
   elmPostList.innerHTML = "";
-  console.log(loader)
 
   loader.classList.remove("d-none");
   return API_NEWS.get("bai-viets", {
@@ -100,8 +96,7 @@ function getPaginationForNews(page) {
         },
       },
       fields: ["title", "description", "slug", "createdAt"],
-      sort: ['id:DESC'],
-      
+      sort: ["id:DESC"],
     },
   })
     .then((response) => {
@@ -211,9 +206,21 @@ function statusButton() {
   }
 }
 
+$(document).ready(function () {
+  // Lấy URL của trang hiện tại
+  var currentPageURL = window.location.href;
 
+  // Lặp qua các mục trong navbar và kiểm tra xem URL của mục có khớp với URL hiện tại không
+  $(".nav-item.nav-link").each(function () {
+    var navItemURL = $(this).attr("href");
 
+    if (currentPageURL.indexOf(navItemURL) !== -1) {
+      $(this).addClass("active");
+    } else {
+      $(this).removeClass("active");
+    }
+  });
+});
 
 getPaginationForNews(PAGES);
 getCategory(CATE_ID);
-
