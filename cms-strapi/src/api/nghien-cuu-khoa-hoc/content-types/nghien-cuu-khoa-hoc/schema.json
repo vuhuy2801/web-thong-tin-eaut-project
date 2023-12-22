@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nghien_cuu_khoa_hocs",
+  "info": {
+    "singularName": "nghien-cuu-khoa-hoc",
+    "pluralName": "nghien-cuu-khoa-hocs",
+    "displayName": "nghiên cứu khoa học",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "nameStudent": {
+      "type": "text"
+    },
+    "Class": {
+      "type": "text"
+    },
+    "year": {
+      "type": "date"
+    },
+    "nameGiangVien": {
+      "type": "text"
+    }
+  }
+}

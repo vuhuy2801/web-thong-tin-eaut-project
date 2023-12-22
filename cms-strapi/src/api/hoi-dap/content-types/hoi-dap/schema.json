@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hoi_daps",
+  "info": {
+    "singularName": "hoi-dap",
+    "pluralName": "hoi-daps",
+    "displayName": "hỏi đáp",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "question": {
+      "type": "text",
+      "required": true
+    },
+    "answer": {
+      "type": "text"
+    },
+    "active": {
+      "type": "boolean",
+      "default": false
+    },
+    "nameQuestion": {
+      "type": "text",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "topic": {
+      "type": "enumeration",
+      "enum": [
+        "chuong-trinh-hoc",
+        "dang-ky-mon-hoc",
+        "thuc-tap-chuyen-nganh",
+        "cau-hoi-khac"
+      ],
+      "required": true,
+      "default": "cau-hoi-khac"
+    }
+  }
+}

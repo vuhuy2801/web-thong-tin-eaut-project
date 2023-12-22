@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "danh_mucs",
+  "info": {
+    "singularName": "danh-muc",
+    "pluralName": "danh-mucs",
+    "displayName": "danh mục",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tendanhmuc": {
+      "type": "string"
+    },
+    "bai_viets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::bai-viet.bai-viet",
+      "mappedBy": "danh_muc"
+    }
+  }
+}

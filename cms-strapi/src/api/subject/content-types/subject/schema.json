@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subjects",
+  "info": {
+    "singularName": "subject",
+    "pluralName": "subjects",
+    "displayName": "bộ môn",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "giang_viens": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::giang-vien.giang-vien",
+      "mappedBy": "bo_mon"
+    }
+  }
+}

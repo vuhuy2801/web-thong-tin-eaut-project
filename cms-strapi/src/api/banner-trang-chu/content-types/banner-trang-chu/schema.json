@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "banner_trang_chus",
+  "info": {
+    "singularName": "banner-trang-chu",
+    "pluralName": "banner-trang-chus",
+    "displayName": "banner trang chủ",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "urlTaget": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "giang_viens",
+  "info": {
+    "singularName": "giang-vien",
+    "pluralName": "giang-viens",
+    "displayName": "giảng viên",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "dateofbirth": {
+      "type": "date"
+    },
+    "major": {
+      "type": "string"
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "bo_mon": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::subject.subject",
+      "inversedBy": "giang_viens"
+    },
+    "position": {
+      "type": "enumeration",
+      "enum": [
+        "Trưởng khoa",
+        "Phó trưởng khoa",
+        "Trưởng bộ môn",
+        "Phó trưởng bộ môn",
+        "Giảng viên"
+      ]
+    },
+    "displayindex": {
+      "type": "boolean"
+    }
+  }
+}
