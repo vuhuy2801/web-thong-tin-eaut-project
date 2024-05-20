@@ -38,7 +38,7 @@ function renderPostNews(data) {
 
     <div class="post-item border-bottom">
     <a href="new.html?slug=${data[i].attributes.slug}">
-    <img src="https://api.vuhuy.xyz${data[i].attributes.headerImage.data.attributes.formats.small.url}" alt="${data[i].attributes.headerImage.data.attributes.formats.small.name}" />
+    <img src="https://api.vuhuy.site${data[i].attributes.headerImage.data.attributes.formats.small.url}" alt="${data[i].attributes.headerImage.data.attributes.formats.small.name}" />
     <h5 class="title">
     ${data[i].attributes.title}
     </h5>
