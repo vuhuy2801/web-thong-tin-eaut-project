@@ -7,7 +7,7 @@ let isGioithieudropdownvisible = false;
 let isTintucdropdownvisible = false;
 
 const API_NEWS = axios.create({
-    baseURL: "https://api.vuhuy.xyz/api/",
+    baseURL: "https://api.vuhuy.site/api/",
 });
 
 // Moblie nav

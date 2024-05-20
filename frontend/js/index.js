@@ -40,7 +40,7 @@ function rennderBanner(data) {
     const isActive = i === 0 ? "active" : "";
     str += `<div class="carousel-item ${isActive}">
               <a class="" href="${data[i].attributes.urlTaget}" target="_blank">
-                <img src="https://api.vuhuy.xyz${data[i].attributes.image.data.attributes.url}" alt="${data[i].attributes.title}" />
+                <img src="https://api.vuhuy.site${data[i].attributes.image.data.attributes.url}" alt="${data[i].attributes.title}" />
               </a>
               </div>
     `;
@@ -87,7 +87,7 @@ new Swiper(".testimonials-slider", {
   },
 });
 
-const API_URL = "https://api.vuhuy.xyz/api/";
+const API_URL = "https://api.vuhuy.site/api/";
 function getAndRenderPosts() {
   const CATE_ID = 1;
   fetch(
@@ -114,7 +114,7 @@ function getAndRenderPosts() {
               <div class="post-box">
                 <div class="post-img">
                   <img
-                    src="https://api.vuhuy.xyz${post.attributes.headerImage.data.attributes.formats.small.url}"
+                    src="https://api.vuhuy.site${post.attributes.headerImage.data.attributes.formats.small.url}"
                     class="img-fluid"
                     alt="${post.attributes.headerImage.data.attributes.formats.small.name}"
                   />
@@ -171,7 +171,7 @@ function renderCardInfo(data) {
     strCard += `<div class="col-lg-3 col-md-6 col-6 col-md-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
       <div class="teacher">
         <div class="teacher-img">
-          <img src="https://api.vuhuy.xyz${data[i].attributes.avatar.data.attributes.url}" class="img-fluid" alt="${data[i].attributes.avatar.data.attributes.url.hash}" />
+          <img src="https://api.vuhuy.site${data[i].attributes.avatar.data.attributes.url}" class="img-fluid" alt="${data[i].attributes.avatar.data.attributes.url.hash}" />
         </div>
         <div class="teacher-info">
           <h4>${data[i].attributes.name}</h4>

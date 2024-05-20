@@ -72,7 +72,7 @@ function renderPostNews(data) {
           <div class="post-img">
           <a href="new.html?slug=${data[i].attributes.slug}">
             <img
-              src="https://api.vuhuy.xyz${data[i].attributes.headerImage.data.attributes.formats.small.url}"
+              src="https://api.vuhuy.site${data[i].attributes.headerImage.data.attributes.formats.small.url}"
               class="img-fluid"
               alt="${data[i].attributes.headerImage.data.attributes.formats.small.name}"
             />
