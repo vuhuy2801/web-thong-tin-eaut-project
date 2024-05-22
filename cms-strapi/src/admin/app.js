@@ -58,7 +58,7 @@ const config = {
       "Auth.form.rememberMe.label": "Nhớ tôi",
       "Auth.form.username.label": "Tên đăng nhập",
       "Auth.form.username.placeholder": "Kai Doe",
-      "Auth.form.welcome.subtitle": "Đăng nhập vào tài khoản Strapi của bạn",
+      "Auth.form.welcome.subtitle": "Đăng nhập vào tài khoản EAUT của bạn",
       "Auth.form.welcome.title": "Chào mừng!",
       "Auth.link.forgot-password": "Quên mật khẩu?",
       "Auth.link.ready": "Sẵn sàng đăng nhập?",
