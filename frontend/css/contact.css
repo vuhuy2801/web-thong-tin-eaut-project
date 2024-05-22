@@ -9,7 +9,7 @@ body {
 }
 
 #main {
-  padding-top: 5rem;
+  margin-top: 4.5rem;
 }
 .hr-breadcrumb {
   margin-bottom: 40px;
@@ -124,12 +124,10 @@ body {
   }
 }
 
-
-
-.info-item p a{
+.info-item p a {
   color: #1e3769;
   text-decoration: none;
 }
-.info-item p a:hover{
+.info-item p a:hover {
   color: #f9690e;
 }
