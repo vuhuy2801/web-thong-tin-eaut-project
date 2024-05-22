@@ -5,7 +5,6 @@ const VALUE_SEARCH_PARAMS = new URLSearchParams(window.location.search);
 const ARTICLES_ID = VALUE_SEARCH_PARAMS.get("slug");
 const URL_DETAILS = `bai-viets?populate=*&filters[$and][0][slug][$eq]=${ARTICLES_ID}`;
 
-
 function getPostNews() {
   return API_NEWS.get("bai-viets", {
     params: {
@@ -43,9 +42,9 @@ function renderPostNews(data) {
     <div class="post-item border-bottom">
     <a href="new.html?slug=${data[i].attributes.slug}">
     <img src="https://api.vuhuy.site${data[i].attributes.headerImage.data.attributes.formats.small.url}" alt="${data[i].attributes.headerImage.data.attributes.formats.small.name}" />
-    <h5 class="title">
+    <p >
     ${data[i].attributes.title}
-    </h5>
+    </p>
     </a
       >
     </div>`; // render articles
@@ -79,7 +78,7 @@ function renderPostContent(data) {
   <span class="mx-1">&bullet;</span>
   <span>${date}</span>
 </div>
- <h1 class="mb-5">${data.title}
+ <h1 class="title mb-5">${data.title}
  </h1>
  ${data.content}
   `;

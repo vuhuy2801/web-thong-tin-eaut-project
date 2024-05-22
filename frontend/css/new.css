@@ -86,6 +86,7 @@ body {
 }
 
 .news h4 {
+  font-weight: bold;
   text-align: center;
 }
 
@@ -98,6 +99,18 @@ body {
   object-fit: cover;
 }
 
+.news p {
+  margin-top: 4px;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 550;
+  text-transform: lowercase;
+}
+
+.news p::first-letter {
+  text-transform: uppercase;
+}
+
 .news .post-item a {
   color: #09316b;
   text-decoration: none;
@@ -107,27 +120,23 @@ body {
   text-decoration: underline;
 }
 
-
-.single-post img{
+.single-post img {
   padding-left: 0px !important;
   margin: 0px auto;
   width: 100% !important;
 }
 
-
-
-.single-post strong{
+.single-post strong {
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif !important;
 }
 
-.single-post div{
+.single-post div {
   padding-left: 0px !important;
-  
 }
 
 .single-post h2,
-.single-post h3{
+.single-post h3 {
   color: #1e3769 !important;
-    width: 100% !important;
- }
+  width: 100% !important;
+}
