@@ -24,6 +24,18 @@
 }
 /* end info-majors */
 
+.news p {
+  margin-top: 4px;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 550;
+  text-transform: lowercase;
+}
+
+.news p::first-letter {
+  text-transform: uppercase;
+}
+
 /* education-program */
 
 .education-program {
@@ -67,12 +79,13 @@
 }
 
 .news h4 {
+  font-weight: bold;
+
   text-align: center;
 }
 
 .news .post-item {
   margin-bottom: 20px;
-
 }
 .news .post-item img {
   width: 100%;
@@ -88,5 +101,3 @@
 .news .post-item a:hover {
   text-decoration: underline;
 }
-
-

@@ -1,7 +1,5 @@
 let elmPostItem = document.querySelector("#post-new");
 
-
-
 function getPostNews() {
   return API_NEWS.get("bai-viets", {
     params: {
@@ -39,9 +37,9 @@ function renderPostNews(data) {
     <div class="post-item border-bottom">
     <a href="new.html?slug=${data[i].attributes.slug}">
     <img src="https://api.vuhuy.site${data[i].attributes.headerImage.data.attributes.formats.small.url}" alt="${data[i].attributes.headerImage.data.attributes.formats.small.name}" />
-    <h5 class="title">
+    <p >
     ${data[i].attributes.title}
-    </h5>
+    </p>
     </a
       >
     </div>`; // render articles
