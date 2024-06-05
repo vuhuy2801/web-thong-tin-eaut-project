@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -153,4 +154,8 @@ figcaption {
 
 .image_resized {
 margin: auto;
+}
+
+ul, li {
+  font-size: 18px;
 }
