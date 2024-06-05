@@ -71,11 +71,6 @@ function renderCardInfo(data) {
               <div class="specialization">
                 <b>Chuyên Ngành:</b> ${data[i].attributes.major}
               </div>
-              <div class="d-flex justify-content-start">
-                <a href="#" class="btn-get-started scrollto"
-                  >Xem Chi Tiết<i class="fa fa-arrow-right"></i
-                ></a>
-              </div>
             </div>
           </div>
         </div>
