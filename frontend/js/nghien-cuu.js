@@ -151,11 +151,11 @@ function renderTableData(data, year) {
                     <table class="table table-striped table-hover">
                       <thead>
                         <tr>
-                          <th>STT</th>
-                          <th>Tên đề tài</th>
-                          <th>Giảng viên hướng dẫn</th>
-                          <th>Sinh viên</th>
-                          <th>Lớp</th>
+                          <th  style="width:10%" >STT</th>
+                          <th  style="width:30%">Tên đề tài</th>
+                          <th  style="width:20%">Giảng viên hướng dẫn</th>
+                          <th style="width:20%">Sinh viên</th>
+                          <th  style="width:10%" >Lớp</th>
                         </tr>
                       </thead>
                       <tbody>`;
