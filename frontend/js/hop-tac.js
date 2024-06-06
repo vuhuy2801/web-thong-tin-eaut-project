@@ -13,8 +13,6 @@ elmBtnXemThem.addEventListener("click", function () {
   }
 });
 
-
-
 function getPaginationForNews(page) {
   return API_NEWS.get("bai-viets", {
     params: {
@@ -81,7 +79,7 @@ function renderPostNews(data) {
           <p class="post-date">${date}</p>
   
           <h3 class="post-title">
-            <a href="new.html?slug=${data[i].attributes.slug}">${data[i].attributes.title}</a>
+            <a href="new.html?slug=${data[i].attributes.slug}" class="title-link">${data[i].attributes.title}</a>
           </h3>
           <p class="description">
           ${data[i].attributes.description}

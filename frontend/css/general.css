@@ -764,6 +764,15 @@ body {
   color: #f9690e;
 }
 
+.post-title .title-link {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Số dòng tối đa để hiển thị */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
 .post-box .post-title {
   font-size: 18px;
   color: #1e3769;
